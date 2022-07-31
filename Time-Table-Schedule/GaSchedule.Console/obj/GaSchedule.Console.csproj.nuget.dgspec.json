@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mish\\Source\\Repos\\backend\\Time-Table-Schedule\\GaSchedule.Console\\GaSchedule.Console.csproj": {}
+    "C:\\Users\\Mish\\source\\repos\\backend\\Time-Table-Schedule\\GaSchedule.Console\\GaSchedule.Console.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mish\\Source\\Repos\\backend\\Time-Table-Schedule\\GaSchedule.Algorithm\\GaSchedule.Algorithm.csproj": {
+    "C:\\Users\\Mish\\source\\repos\\backend\\Time-Table-Schedule\\GaSchedule.Algorithm\\GaSchedule.Algorithm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mish\\Source\\Repos\\backend\\Time-Table-Schedule\\GaSchedule.Algorithm\\GaSchedule.Algorithm.csproj",
+        "projectUniqueName": "C:\\Users\\Mish\\source\\repos\\backend\\Time-Table-Schedule\\GaSchedule.Algorithm\\GaSchedule.Algorithm.csproj",
         "projectName": "GaSchedule.Algorithm",
-        "projectPath": "C:\\Users\\Mish\\Source\\Repos\\backend\\Time-Table-Schedule\\GaSchedule.Algorithm\\GaSchedule.Algorithm.csproj",
+        "projectPath": "C:\\Users\\Mish\\source\\repos\\backend\\Time-Table-Schedule\\GaSchedule.Algorithm\\GaSchedule.Algorithm.csproj",
         "packagesPath": "C:\\Users\\Mish\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mish\\Source\\Repos\\backend\\Time-Table-Schedule\\GaSchedule.Algorithm\\obj\\",
+        "outputPath": "C:\\Users\\Mish\\source\\repos\\backend\\Time-Table-Schedule\\GaSchedule.Algorithm\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages"
@@ -64,14 +64,14 @@
         }
       }
     },
-    "C:\\Users\\Mish\\Source\\Repos\\backend\\Time-Table-Schedule\\GaSchedule.Console\\GaSchedule.Console.csproj": {
+    "C:\\Users\\Mish\\source\\repos\\backend\\Time-Table-Schedule\\GaSchedule.Console\\GaSchedule.Console.csproj": {
       "version": "1.2.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mish\\Source\\Repos\\backend\\Time-Table-Schedule\\GaSchedule.Console\\GaSchedule.Console.csproj",
+        "projectUniqueName": "C:\\Users\\Mish\\source\\repos\\backend\\Time-Table-Schedule\\GaSchedule.Console\\GaSchedule.Console.csproj",
         "projectName": "GaSchedule",
-        "projectPath": "C:\\Users\\Mish\\Source\\Repos\\backend\\Time-Table-Schedule\\GaSchedule.Console\\GaSchedule.Console.csproj",
+        "projectPath": "C:\\Users\\Mish\\source\\repos\\backend\\Time-Table-Schedule\\GaSchedule.Console\\GaSchedule.Console.csproj",
         "packagesPath": "C:\\Users\\Mish\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mish\\Source\\Repos\\backend\\Time-Table-Schedule\\GaSchedule.Console\\obj\\",
+        "outputPath": "C:\\Users\\Mish\\source\\repos\\backend\\Time-Table-Schedule\\GaSchedule.Console\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages"
@@ -94,8 +94,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Mish\\Source\\Repos\\backend\\Time-Table-Schedule\\GaSchedule.Algorithm\\GaSchedule.Algorithm.csproj": {
-                "projectPath": "C:\\Users\\Mish\\Source\\Repos\\backend\\Time-Table-Schedule\\GaSchedule.Algorithm\\GaSchedule.Algorithm.csproj"
+              "C:\\Users\\Mish\\source\\repos\\backend\\Time-Table-Schedule\\GaSchedule.Algorithm\\GaSchedule.Algorithm.csproj": {
+                "projectPath": "C:\\Users\\Mish\\source\\repos\\backend\\Time-Table-Schedule\\GaSchedule.Algorithm\\GaSchedule.Algorithm.csproj"
               }
             }
           }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mish\\Source\\Repos\\backend\\Time-Table-Schedule\\GA.API\\GA.API.csproj": {}
+    "C:\\Users\\Mish\\source\\repos\\backend\\Time-Table-Schedule\\GA.API\\GA.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mish\\Source\\Repos\\backend\\Time-Table-Schedule\\GA.API\\GA.API.csproj": {
+    "C:\\Users\\Mish\\source\\repos\\backend\\Time-Table-Schedule\\GA.API\\GA.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mish\\Source\\Repos\\backend\\Time-Table-Schedule\\GA.API\\GA.API.csproj",
+        "projectUniqueName": "C:\\Users\\Mish\\source\\repos\\backend\\Time-Table-Schedule\\GA.API\\GA.API.csproj",
         "projectName": "GA.API",
-        "projectPath": "C:\\Users\\Mish\\Source\\Repos\\backend\\Time-Table-Schedule\\GA.API\\GA.API.csproj",
+        "projectPath": "C:\\Users\\Mish\\source\\repos\\backend\\Time-Table-Schedule\\GA.API\\GA.API.csproj",
         "packagesPath": "C:\\Users\\Mish\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mish\\Source\\Repos\\backend\\Time-Table-Schedule\\GA.API\\obj\\",
+        "outputPath": "C:\\Users\\Mish\\source\\repos\\backend\\Time-Table-Schedule\\GA.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages"
