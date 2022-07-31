@@ -1,4 +1,7 @@
+using GA.API.Contracts;
 using GA.API.Data;
+using GA.API.Mappings;
+using GA.API.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,11 +32,24 @@ namespace GA.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddAutoMapper(typeof(Maps));
+
+            services.AddScoped<IClassRepository, ClassRepository>();
+            services.AddScoped<ICourseRepository, CourseRepository>();
+            services.AddScoped<IGroupRepository, GroupRepository>();
+            services.AddScoped<IProcessDataRepository, ProcessDataRepository>();
+            services.AddScoped<IProfRepository, ProfRepository>();
+            services.AddScoped<IRoomRepository, RoomRepository>();
+
+
+
+
             services.AddCors(o =>
             {
                 o.AddPolicy("CorsPolicy", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             });
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(op =>
+op.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore); 
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "GA.API", Version = "v1" });

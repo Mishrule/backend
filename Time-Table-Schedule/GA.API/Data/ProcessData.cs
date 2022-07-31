@@ -9,7 +9,7 @@ namespace GA.API.Data
 {
     [Keyless]
     [NotMapped]
-    public class Data
+    public class ProcessData
     {
       //  [NotMapped]
         public virtual Prof Prof { get; set; }
