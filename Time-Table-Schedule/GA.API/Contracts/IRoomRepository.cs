@@ -8,5 +8,7 @@ namespace GA.API.Contracts
 {
     interface IRoomRepository : IRepositoryBase<Room>
     {
+        Task<bool> isExists(string name);
+        Task<Room> FindById(string name);
     }
 }

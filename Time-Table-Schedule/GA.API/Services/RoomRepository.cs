@@ -4,29 +4,60 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace GA.API.Services
 {
     public class RoomRepository : IRoomRepository
     {
-        public Task<bool> Create(Room entity)
+        private readonly ApplicationDbContext _db;
+        public RoomRepository(ApplicationDbContext db)
+        {
+            _db = db;
+        }
+        public async Task<bool> Create(Room entity)
+        {
+            await _db.Rooms.AddAsync(entity);
+            return await Save();
+        }
+
+        public async Task<bool> Delete(Room entity)
+        {
+            _db.Rooms.Remove(entity);
+            return await Save();
+        }
+
+        public async Task<IList<Room>> FindAll()
+        {
+            var rooms = await _db.Rooms.ToListAsync();
+            return rooms;
+        }
+
+        public async Task<Room> FindById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<bool> Delete(Room entity)
+        public async Task<Room> FindById(string name)
         {
-            throw new NotImplementedException();
+            if (await isExists(name))
+            {
+                var room = await _db.Rooms.FirstOrDefaultAsync(r => r.Name == name);
+                return room;
+            }
+            else
+            {
+                return new Room()
+                {
+                    Name = $"Sorry Nothing Matches the {name} Selected"
+                };
+            }
         }
 
-        public Task<IList<Room>> FindAll()
+        public async Task<bool> isExists(string name)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<Room> FindById(int id)
-        {
-            throw new NotImplementedException();
+            var isExists = await _db.Rooms.AnyAsync(r => r.Name == name);
+            return isExists;
         }
 
         public Task<bool> isExists(int id)
@@ -34,14 +65,16 @@ namespace GA.API.Services
             throw new NotImplementedException();
         }
 
-        public Task<bool> Save()
+        public async Task<bool> Save()
         {
-            throw new NotImplementedException();
+            var changes = await _db.SaveChangesAsync();
+            return changes > 0;
         }
 
-        public Task<bool> Update(Room entity)
+        public async Task<bool> Update(Room entity)
         {
-            throw new NotImplementedException();
+            _db.Rooms.Update(entity);
+            return await Save();
         }
     }
 }

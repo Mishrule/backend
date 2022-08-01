@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3YfVXTsD/azxmu//2bbnIm8bC0pSTrCSrJ8WObRYdqMauJs7EcBwEEgVNK25jiLlv6vps8FaFHgva0c4fJr9xA==",
+  "dgSpecHash": "4sRjtaGJcELhrg7OqL1nRkAddliDRbgrZpnE8EHiqpLjd78QcU+t0K4Y5h3gmsdef9Cbdn3vgrErED8FYR31dQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mishr\\Source\\Repos\\backend\\Time-Table-Schedule\\GaSchedule.Algorithm\\GaSchedule.Algorithm.csproj",
+  "projectFilePath": "C:\\Users\\mishr\\Source\\Repos\\Mishrule\\backend\\Time-Table-Schedule\\GaSchedule.Algorithm\\GaSchedule.Algorithm.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

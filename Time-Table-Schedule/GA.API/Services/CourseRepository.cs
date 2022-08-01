@@ -4,44 +4,71 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace GA.API.Services
 {
     public class CourseRepository : ICourseRepository
     {
-        public Task<bool> Create(Course entity)
+        private readonly ApplicationDbContext _db;
+
+        public CourseRepository(ApplicationDbContext db)
         {
-            throw new NotImplementedException();
+            _db = db;
         }
 
-        public Task<bool> Delete(Course entity)
+        public async Task<bool> Create(Course entity)
         {
-            throw new NotImplementedException();
+            await _db.Courses.AddAsync(entity);
+            return await Save();
         }
 
-        public Task<IList<Course>> FindAll()
+        public async Task<bool> Delete(Course entity)
         {
-            throw new NotImplementedException();
+            _db.Courses.Remove(entity);
+            return await Save();
         }
 
-        public Task<Course> FindById(int id)
+        public async Task<IList<Course>> FindAll()
         {
-            throw new NotImplementedException();
+            var courses = await _db.Courses.ToListAsync();
+            return courses;
         }
 
-        public Task<bool> isExists(int id)
+        public async Task<Course> FindById(int id)
         {
-            throw new NotImplementedException();
+            if (await isExists(id))
+            {
+                var course = await _db.Courses.FirstOrDefaultAsync(c => c.Id == id);
+                return course;
+            }
+            else
+            {
+                return new Course()
+                {
+                    Name = $"Sorry Nothing Matches the {id} Selected"
+                };
+            }
+
+            
         }
 
-        public Task<bool> Save()
+        public async Task<bool> isExists(int id)
         {
-            throw new NotImplementedException();
+            var isExists = await _db.Courses.AnyAsync(c => c.Id == id);
+            return isExists;
         }
 
-        public Task<bool> Update(Course entity)
+        public async Task<bool> Save()
         {
-            throw new NotImplementedException();
+            var changes = await _db.SaveChangesAsync();
+            return changes > 0;
+        }
+
+        public async Task<bool> Update(Course entity)
+        {
+             _db.Courses.Update(entity);
+            return await Save();
         }
     }
 }

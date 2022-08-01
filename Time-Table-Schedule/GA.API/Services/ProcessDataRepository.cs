@@ -4,11 +4,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace GA.API.Services
 {
     public class ProcessDataRepository : IProcessDataRepository
     {
+        private readonly ApplicationDbContext _db;
+        public ProcessDataRepository(ApplicationDbContext db)
+        {
+            _db = db;
+        }
         public Task<bool> Create(ProcessData entity)
         {
             throw new NotImplementedException();
@@ -19,9 +25,16 @@ namespace GA.API.Services
             throw new NotImplementedException();
         }
 
-        public Task<IList<ProcessData>> FindAll()
+        public async Task<IList<ProcessData>> FindAll()
         {
-            throw new NotImplementedException();
+            var data = await _db.Datas.Include(c=>c.Course)
+                .Include(p=>p.Prof)
+                .Include(co => co.Course)
+                .Include(r=>r.Room)
+                .Include(g=>g.Group)
+                .Include(c=>c.Class)
+                .ToListAsync();
+            return data;
         }
 
         public Task<ProcessData> FindById(int id)

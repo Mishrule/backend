@@ -4,44 +4,59 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace GA.API.Services
 {
     public class GroupRepository : IGroupRepository
     {
-        public Task<bool> Create(Group entity)
+        private readonly ApplicationDbContext _db;
+
+        public GroupRepository(ApplicationDbContext db)
         {
-            throw new NotImplementedException();
+            _db = db;
         }
 
-        public Task<bool> Delete(Group entity)
+        public async Task<bool> Create(Group entity)
         {
-            throw new NotImplementedException();
+            await _db.Groups.AddAsync(entity);
+            return await Save();
         }
 
-        public Task<IList<Group>> FindAll()
+        public async Task<bool> Delete(Group entity)
         {
-            throw new NotImplementedException();
+            _db.Groups.Remove(entity);
+            return await Save();
         }
 
-        public Task<Group> FindById(int id)
+        public async Task<IList<Group>> FindAll()
         {
-            throw new NotImplementedException();
+            var groups = await _db.Groups.ToListAsync();
+            return groups;
         }
 
-        public Task<bool> isExists(int id)
+        public async Task<Group> FindById(int id)
         {
-            throw new NotImplementedException();
+            var group = await _db.Groups.FirstOrDefaultAsync(g => g.Id == id);
+            return group;
         }
 
-        public Task<bool> Save()
+        public async Task<bool> isExists(int id)
         {
-            throw new NotImplementedException();
+            var isExists = await _db.Groups.AnyAsync(q => q.Id == id);
+            return isExists;
         }
 
-        public Task<bool> Update(Group entity)
+        public async Task<bool> Save()
         {
-            throw new NotImplementedException();
+            var changes = await _db.SaveChangesAsync();
+            return changes > 0;
+        }
+
+        public async Task<bool> Update(Group entity)
+        {
+            _db.Groups.Update(entity);
+            return await Save();
         }
     }
 }
