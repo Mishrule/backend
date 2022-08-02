@@ -17,25 +17,25 @@ namespace GA.API.Services
             _db = db;
         }
 
-        public async Task<bool> Create(Course entity)
+        public async Task<bool> CreateAsync(Course entity)
         {
             await _db.Courses.AddAsync(entity);
-            return await Save();
+            return await SaveAsync();
         }
 
         public async Task<bool> Delete(Course entity)
         {
             _db.Courses.Remove(entity);
-            return await Save();
+            return await SaveAsync();
         }
 
-        public async Task<IList<Course>> FindAll()
+        public async Task<IList<Course>> GetAll()
         {
             var courses = await _db.Courses.ToListAsync();
             return courses;
         }
 
-        public async Task<Course> FindById(int id)
+        public async Task<Course> GetById(int id)
         {
             if (await isExists(id))
             {
@@ -59,16 +59,16 @@ namespace GA.API.Services
             return isExists;
         }
 
-        public async Task<bool> Save()
+        public async Task<bool> SaveAsync()
         {
             var changes = await _db.SaveChangesAsync();
             return changes > 0;
         }
 
-        public async Task<bool> Update(Course entity)
+        public async Task<bool> UpdateAsync(Course entity)
         {
              _db.Courses.Update(entity);
-            return await Save();
+            return await SaveAsync();
         }
     }
 }

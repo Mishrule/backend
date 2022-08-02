@@ -15,25 +15,25 @@ namespace GA.API.Services
         {
             _db = db;
         }
-        public async Task<bool> Create(Room entity)
+        public async Task<bool> CreateAsync(Room entity)
         {
             await _db.Rooms.AddAsync(entity);
-            return await Save();
+            return await SaveAsync();
         }
 
         public async Task<bool> Delete(Room entity)
         {
             _db.Rooms.Remove(entity);
-            return await Save();
+            return await SaveAsync();
         }
 
-        public async Task<IList<Room>> FindAll()
+        public async Task<IList<Room>> GetAll()
         {
             var rooms = await _db.Rooms.ToListAsync();
             return rooms;
         }
 
-        public async Task<Room> FindById(int id)
+        public async Task<Room> GetById(int id)
         {
             throw new NotImplementedException();
         }
@@ -65,16 +65,16 @@ namespace GA.API.Services
             throw new NotImplementedException();
         }
 
-        public async Task<bool> Save()
+        public async Task<bool> SaveAsync()
         {
             var changes = await _db.SaveChangesAsync();
             return changes > 0;
         }
 
-        public async Task<bool> Update(Room entity)
+        public async Task<bool> UpdateAsync(Room entity)
         {
             _db.Rooms.Update(entity);
-            return await Save();
+            return await SaveAsync();
         }
     }
 }

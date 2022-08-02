@@ -17,25 +17,25 @@ namespace GA.API.Services
             _db = db;
         }
 
-        public async Task<bool> Create(Group entity)
+        public async Task<bool> CreateAsync(Group entity)
         {
             await _db.Groups.AddAsync(entity);
-            return await Save();
+            return await SaveAsync();
         }
 
         public async Task<bool> Delete(Group entity)
         {
             _db.Groups.Remove(entity);
-            return await Save();
+            return await SaveAsync();
         }
 
-        public async Task<IList<Group>> FindAll()
+        public async Task<IList<Group>> GetAll()
         {
             var groups = await _db.Groups.ToListAsync();
             return groups;
         }
 
-        public async Task<Group> FindById(int id)
+        public async Task<Group> GetById(int id)
         {
             var group = await _db.Groups.FirstOrDefaultAsync(g => g.Id == id);
             return group;
@@ -47,16 +47,16 @@ namespace GA.API.Services
             return isExists;
         }
 
-        public async Task<bool> Save()
+        public async Task<bool> SaveAsync()
         {
             var changes = await _db.SaveChangesAsync();
             return changes > 0;
         }
 
-        public async Task<bool> Update(Group entity)
+        public async Task<bool> UpdateAsync(Group entity)
         {
             _db.Groups.Update(entity);
-            return await Save();
+            return await SaveAsync();
         }
     }
 }

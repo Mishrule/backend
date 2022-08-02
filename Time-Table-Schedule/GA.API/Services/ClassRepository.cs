@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GA.API.DTOs;
 using Microsoft.EntityFrameworkCore;
 
 namespace GA.API.Services
@@ -17,19 +18,19 @@ namespace GA.API.Services
             _db = db;
         }
 
-        public async Task<bool> Create(Class entity)
+        public async Task<bool> CreateAsync(Class entity)
         {
             await _db.Classes.AddAsync(entity);
-            return await Save();
+            return await SaveAsync();
         }
 
         public async Task<bool> Delete(Class entity)
         {
             _db.Classes.Remove(entity);
-            return await Save();
+            return await SaveAsync();
         }
 
-        public async Task<IList<Class>> FindAll()
+        public async Task<IList<Class>> GetAll()
         {
             var books = await _db.Classes
                 .Include(p => p.Professor)
@@ -39,7 +40,7 @@ namespace GA.API.Services
             return books;
         }
 
-        public async Task<Class> FindById(int id)
+        public async Task<Class> GetById(int id)
         {
             throw new NotImplementedException();
         }
@@ -49,12 +50,12 @@ namespace GA.API.Services
             throw new NotImplementedException();
         }
 
-        public Task<bool> Save()
+        public Task<bool> SaveAsync()
         {
             throw new NotImplementedException();
         }
 
-        public Task<bool> Update(Class entity)
+        public Task<bool> UpdateAsync(Class entity)
         {
             throw new NotImplementedException();
         }

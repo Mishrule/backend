@@ -15,7 +15,7 @@ namespace GA.API.Services
         {
             _db = db;
         }
-        public Task<bool> Create(ProcessData entity)
+        public Task<bool> CreateAsync(ProcessData entity)
         {
             throw new NotImplementedException();
         }
@@ -25,7 +25,7 @@ namespace GA.API.Services
             throw new NotImplementedException();
         }
 
-        public async Task<IList<ProcessData>> FindAll()
+        public async Task<IList<ProcessData>> GetAll()
         {
             var data = await _db.Datas.Include(c=>c.Course)
                 .Include(p=>p.Prof)
@@ -37,7 +37,7 @@ namespace GA.API.Services
             return data;
         }
 
-        public Task<ProcessData> FindById(int id)
+        public Task<ProcessData> GetById(int id)
         {
             throw new NotImplementedException();
         }
@@ -47,12 +47,12 @@ namespace GA.API.Services
             throw new NotImplementedException();
         }
 
-        public Task<bool> Save()
+        public Task<bool> SaveAsync()
         {
             throw new NotImplementedException();
         }
 
-        public Task<bool> Update(ProcessData entity)
+        public Task<bool> UpdateAsync(ProcessData entity)
         {
             throw new NotImplementedException();
         }

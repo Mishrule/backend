@@ -16,6 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Serilog;
 
 namespace GA.API
 {
@@ -24,6 +25,9 @@ namespace GA.API
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            Log.Logger = new LoggerConfiguration()
+                .ReadFrom.Configuration(Configuration)
+                .CreateLogger();
         }
 
         public IConfiguration Configuration { get; }
@@ -34,6 +38,7 @@ namespace GA.API
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddAutoMapper(typeof(Maps));
 
+           
             services.AddScoped<IClassRepository, ClassRepository>();
             services.AddScoped<ICourseRepository, CourseRepository>();
             services.AddScoped<IGroupRepository, GroupRepository>();
