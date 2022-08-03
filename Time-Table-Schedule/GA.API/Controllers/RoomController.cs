@@ -7,75 +7,70 @@ using GA.API.Data;
 using GA.API.DTOs;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Abstractions;
 using Microsoft.Extensions.Logging;
 
 namespace GA.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class GroupController : ControllerBase
+    public class RoomController : ControllerBase
     {
-        private readonly IGroupRepository _groupRepository;
-        private readonly ILogger<GroupController> _logger;
+        private readonly ILogger<RoomController> _logger;
+        private readonly IRoomRepository _roomRepository;
         private readonly IMapper _mapper;
 
-        public GroupController(IGroupRepository groupRepository, ILogger<GroupController> logger, IMapper mapper)
+        public RoomController(ILogger<RoomController> logger, IRoomRepository roomRepository, IMapper mapper)
         {
-            _groupRepository = groupRepository;
             _logger = logger;
+            _roomRepository = roomRepository;
             _mapper = mapper;
         }
+
         /// <summary>
-        /// Get all Groups
+        /// Get All Rooms
         /// </summary>
-        /// <returns>List of Groups</returns>
+        /// <returns>A List of Rooms</returns>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-
-        public async Task<IActionResult> GetGroups()
+        public async Task<IActionResult> GetRooms()
         {
             var location = GetControllerActionNames();
             try
             {
-                _logger.LogInformation($"{location}: Endpoint Initialized");
-                var groups = await _groupRepository.GetAll();
-                var response = _mapper.Map<IList<GroupDto>>(groups);
-                _logger.LogInformation($"{location}: Endpoint Complete");
+                _logger.LogInformation($"{location}: Attempted Call");
+                var rooms = await _roomRepository.GetAll();
+                var response = _mapper.Map<IList<RoomDto>>(rooms);
+                _logger.LogInformation($"{location}: Successful");
                 return Ok(response);
             }
             catch (Exception e)
             {
-                _logger.LogError($"{location}: Error got @ {e.Message}");
                 return InternalError($"{location}: {e.Message} - {e.InnerException}");
             }
         }
 
         /// <summary>
-        /// Gets a Group by Id
+        /// Gets a Room by Id
         /// </summary>
         /// <param name="id"></param>
-        /// <returns>A Group record</returns>
+        /// <returns>A Room record</returns>
         [HttpGet("{id:int}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> GetGroup(int id)
+        public async Task<IActionResult> GetBook(int id)
         {
             var location = GetControllerActionNames();
-
             try
             {
                 _logger.LogInformation($"{location}: Attempted Call for id: {id}");
-                var group = await _groupRepository.GetById(id);
-                if (group == null)
+                var room = await _roomRepository.GetById(id);
+                if (room == null)
                 {
                     _logger.LogWarning($"{location}: Failed to retrieve record with id: {id}");
                     return NotFound();
                 }
-
-                var response = _mapper.Map<GroupDto>(group);
+                var response = _mapper.Map<RoomDto>(room);
                 _logger.LogInformation($"{location}: Successfully got record with id: {id}");
                 return Ok(response);
             }
@@ -84,23 +79,22 @@ namespace GA.API.Controllers
                 return InternalError($"{location}: {e.Message} - {e.InnerException}");
             }
         }
-
         /// <summary>
-        /// Creates a new Group
+        /// Creates a new book
         /// </summary>
-        /// <param name="groupDTO"></param>
-        /// <returns>Group Object</returns>
+        /// <param name="roomDto"></param>
+        /// <returns>Room Object</returns>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Create(CreateGroupDto groupDto)
+        public async Task<IActionResult> Create(CreateRoomDto roomDto)
         {
             var location = GetControllerActionNames();
             try
             {
                 _logger.LogInformation($"{location}: Create Attempted");
-                if (groupDto == null)
+                if (roomDto == null)
                 {
                     _logger.LogWarning($"{location}: Empty Request was submitted");
                     return BadRequest(ModelState);
@@ -110,14 +104,14 @@ namespace GA.API.Controllers
                     _logger.LogWarning($"{location}: Data was Incomplete");
                     return BadRequest(ModelState);
                 }
-                var group = _mapper.Map<Group>(groupDto);
-                var isSuccess = await _groupRepository.CreateAsync(group);
+                var room = _mapper.Map<Room>(roomDto);
+                var isSuccess = await _roomRepository.CreateAsync(room);
                 if (!isSuccess)
                 {
                     return InternalError($"{location}: Creation failed");
                 }
                 _logger.LogInformation($"{location}: Creation was successful");
-                return Created("Create", new {group = group });
+                return Created("Create", new {book = room });
             }
             catch (Exception e)
             {
@@ -125,31 +119,31 @@ namespace GA.API.Controllers
             }
         }
         /// <summary>
-        /// Update a Group by Id
+        /// Update a Room by Id
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="groupDto"></param>
+        /// <param name="roomDto"></param>
         /// <returns></returns>
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Update(int id, GroupDto groupDto)
+        public async Task<IActionResult> Update(int id, RoomDto roomDTO)
         {
             var location = GetControllerActionNames();
             try
             {
-                _logger.LogInformation($"{location}: Update Attempted on record with id: {id} ");
-                if (id < 1 || groupDto == null || id != groupDto.Id)
+                _logger.LogInformation($"{location}: Update Attempted on record with name: {id} ");
+                if (id < 1 || roomDTO == null || id != roomDTO.Id)
                 {
-                    _logger.LogWarning($"{location}: Update failed with bad data - id: {id}");
+                    _logger.LogWarning($"{location}: Update failed with bad data - name: {id}");
                     return BadRequest();
                 }
-                var isExists = await _groupRepository.isExists(id);
+                var isExists = await _roomRepository.isExists(id);
                 if (!isExists)
                 {
-                    _logger.LogWarning($"{location}: Failed to retrieve record with id: {id}");
+                    _logger.LogWarning($"{location}: Failed to retrieve record with name: {id}");
                     return NotFound();
                 }
                 if (!ModelState.IsValid)
@@ -157,13 +151,13 @@ namespace GA.API.Controllers
                     _logger.LogWarning($"{location}: Data was Incomplete");
                     return BadRequest(ModelState);
                 }
-                var group = _mapper.Map<Group>(groupDto);
-                var isSuccess = await _groupRepository.UpdateAsync(group);
+                var room = _mapper.Map<Room>(roomDTO);
+                var isSuccess = await _roomRepository.UpdateAsync(room);
                 if (!isSuccess)
                 {
-                    return InternalError($"{location}: Update failed for record with id: {id}");
+                    return InternalError($"{location}: Update failed for record with name: {id}");
                 }
-                _logger.LogInformation($"{location}: Record with id: {id} successfully updated");
+                _logger.LogInformation($"{location}: Record with name: {id} successfully updated");
                 return NoContent();
             }
             catch (Exception e)
@@ -173,7 +167,7 @@ namespace GA.API.Controllers
         }
 
         /// <summary>
-        /// Removes an Remove by id
+        /// Removes an Room by id
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -187,25 +181,25 @@ namespace GA.API.Controllers
             var location = GetControllerActionNames();
             try
             {
-                _logger.LogInformation($"{location}: Delete Attempted on record with id: {id} ");
-                if (id < 1)
+                _logger.LogInformation($"{location}: Delete Attempted on record with name: {id} ");
+                if (id < 0)
                 {
-                    _logger.LogWarning($"{location}: Delete failed with bad data - id: {id}");
+                    _logger.LogWarning($"{location}: Delete failed with bad data - name: {id}");
                     return BadRequest();
                 }
-                var isExists = await _groupRepository.isExists(id);
+                var isExists = await _roomRepository.isExists(id);
                 if (!isExists)
                 {
                     _logger.LogWarning($"{location}: Failed to retrieve record with id: {id}");
                     return NotFound();
                 }
-                var group = await _groupRepository.GetById(id);
-                var isSuccess = await _groupRepository.Delete(group);
+                var book = await _roomRepository.GetById(id);
+                var isSuccess = await _roomRepository.Delete(book);
                 if (!isSuccess)
                 {
-                    return InternalError($"{location}: Delete failed for record with id: {id}");
+                    return InternalError($"{location}: Delete failed for record with name: {id}");
                 }
-                _logger.LogInformation($"{location}: Record with id: {id} successfully deleted");
+                _logger.LogInformation($"{location}: Record with id: name: {id} successfully deleted");
                 return NoContent();
             }
             catch (Exception e)
@@ -213,6 +207,7 @@ namespace GA.API.Controllers
                 return InternalError($"{location}: {e.Message} - {e.InnerException}");
             }
         }
+
 
 
         private string GetControllerActionNames()
@@ -228,6 +223,5 @@ namespace GA.API.Controllers
             _logger.LogError(message);
             return StatusCode(500, "Something went wrong. Please contact the Administrator");
         }
-
     }
 }

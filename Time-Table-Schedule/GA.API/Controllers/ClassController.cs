@@ -37,6 +37,7 @@ namespace GA.API.Controllers
 
         public async Task<IActionResult> GetClasses()
         {
+            var location = GetControllerActionNames();
             try
             {
                 _logger.LogInformation("Endpoint Initialized");
@@ -48,7 +49,7 @@ namespace GA.API.Controllers
             catch (Exception e)
             {
                 _logger.LogError($"Error got @ {e.Message}");
-                return null;
+                return InternalError($"{location}: {e.Message} - {e.InnerException}");
             }
         }
 
@@ -57,10 +58,10 @@ namespace GA.API.Controllers
         /// </summary>
         /// <param name="classEntity"></param>
         /// <returns></returns>
-        [HttpGet("{id:int}")]
+        [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Create(ClassDto entity)
+        public async Task<IActionResult> Create(CreateClassDto entity)
         {
             _logger.LogInformation("Initializing Create Class Endpoint");
             if (entity == null)
@@ -115,5 +116,18 @@ namespace GA.API.Controllers
             return NoContent();
         }
         */
+        private string GetControllerActionNames()
+        {
+            var controller = ControllerContext.ActionDescriptor.ControllerName;
+            var action = ControllerContext.ActionDescriptor.ActionName;
+
+            return $"{controller} - {action}";
+        }
+
+        private ObjectResult InternalError(string message)
+        {
+            _logger.LogError(message);
+            return StatusCode(500, "Something went wrong. Please contact the Administrator");
+        }
     }
 }

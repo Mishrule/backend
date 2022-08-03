@@ -49,6 +49,39 @@ namespace GA.API.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Classes",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ProfId = table.Column<int>(type: "int", nullable: false),
+                    CourseId = table.Column<int>(type: "int", nullable: false),
+                    Duration = table.Column<int>(type: "int", nullable: false),
+                    Lab = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Classes", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ClassFilters",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ProfId = table.Column<int>(type: "int", nullable: false),
+                    CourseId = table.Column<int>(type: "int", nullable: false),
+                    Duration = table.Column<int>(type: "int", nullable: false),
+                    Lab = table.Column<bool>(type: "bit", nullable: false),
+                    GroupId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ClassFilters", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Courses",
                 columns: table => new
                 {
@@ -59,20 +92,6 @@ namespace GA.API.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Courses", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Groups",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Size = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Groups", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -92,12 +111,15 @@ namespace GA.API.Migrations
                 name: "Rooms",
                 columns: table => new
                 {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Lab = table.Column<bool>(type: "bit", nullable: false),
                     Size = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
+                    table.PrimaryKey("PK_Rooms", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -207,23 +229,66 @@ namespace GA.API.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Classes",
+                name: "Groups",
                 columns: table => new
                 {
-                    Professor = table.Column<int>(type: "int", nullable: false),
-                    Course = table.Column<int>(type: "int", nullable: false),
-                    Duration = table.Column<int>(type: "int", nullable: false),
-                    Lab = table.Column<bool>(type: "bit", nullable: false),
-                    GroupID = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ClassId = table.Column<int>(type: "int", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Size = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Groups", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Groups_Classes_ClassId",
+                        column: x => x.ClassId,
+                        principalTable: "Classes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Datas",
+                columns: table => new
+                {
+                    ProfId = table.Column<int>(type: "int", nullable: false),
+                    CourseId = table.Column<int>(type: "int", nullable: false),
+                    RoomId = table.Column<int>(type: "int", nullable: true),
+                    GroupId1 = table.Column<int>(type: "int", nullable: true),
+                    ClassesId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.ForeignKey(
-                        name: "FK_Classes_Groups_GroupID",
-                        column: x => x.GroupID,
-                        principalTable: "Groups",
+                        name: "FK_Datas_Classes_ClassesId",
+                        column: x => x.ClassesId,
+                        principalTable: "Classes",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Datas_Courses_CourseId",
+                        column: x => x.CourseId,
+                        principalTable: "Courses",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Datas_Groups_GroupId1",
+                        column: x => x.GroupId1,
+                        principalTable: "Groups",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Datas_Profs_ProfId",
+                        column: x => x.ProfId,
+                        principalTable: "Profs",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Datas_Rooms_RoomId",
+                        column: x => x.RoomId,
+                        principalTable: "Rooms",
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
@@ -266,9 +331,34 @@ namespace GA.API.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Classes_GroupID",
-                table: "Classes",
-                column: "GroupID");
+                name: "IX_Datas_ClassesId",
+                table: "Datas",
+                column: "ClassesId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Datas_CourseId",
+                table: "Datas",
+                column: "CourseId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Datas_GroupId1",
+                table: "Datas",
+                column: "GroupId1");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Datas_ProfId",
+                table: "Datas",
+                column: "ProfId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Datas_RoomId",
+                table: "Datas",
+                column: "RoomId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Groups_ClassId",
+                table: "Groups",
+                column: "ClassId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -289,16 +379,10 @@ namespace GA.API.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Classes");
+                name: "ClassFilters");
 
             migrationBuilder.DropTable(
-                name: "Courses");
-
-            migrationBuilder.DropTable(
-                name: "Profs");
-
-            migrationBuilder.DropTable(
-                name: "Rooms");
+                name: "Datas");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
@@ -307,7 +391,19 @@ namespace GA.API.Migrations
                 name: "AspNetUsers");
 
             migrationBuilder.DropTable(
+                name: "Courses");
+
+            migrationBuilder.DropTable(
                 name: "Groups");
+
+            migrationBuilder.DropTable(
+                name: "Profs");
+
+            migrationBuilder.DropTable(
+                name: "Rooms");
+
+            migrationBuilder.DropTable(
+                name: "Classes");
         }
     }
 }

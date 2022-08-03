@@ -90,7 +90,7 @@ namespace GA.API.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Create(CourseDto courseDto)
+        public async Task<IActionResult> Create(CreateCourseDto courseDto)
         {
             try
             {

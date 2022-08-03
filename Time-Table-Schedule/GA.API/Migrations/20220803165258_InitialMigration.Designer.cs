@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GA.API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220730230234_InitialMigration")]
+    [Migration("20220803165258_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,24 +26,55 @@ namespace GA.API.Migrations
 
             modelBuilder.Entity("GA.API.Data.Class", b =>
                 {
-                    b.Property<int>("Course")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("CourseId")
                         .HasColumnType("int");
 
                     b.Property<int>("Duration")
                         .HasColumnType("int");
 
-                    b.Property<int>("GroupID")
+                    b.Property<bool>("Lab")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ProfId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Classes");
+                });
+
+            modelBuilder.Entity("GA.API.Data.ClassFilter", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Duration")
+                        .HasColumnType("int");
+
+                    b.Property<int>("GroupId")
                         .HasColumnType("int");
 
                     b.Property<bool>("Lab")
                         .HasColumnType("bit");
 
-                    b.Property<int>("Professor")
+                    b.Property<int>("ProfId")
                         .HasColumnType("int");
 
-                    b.HasIndex("GroupID");
+                    b.HasKey("Id");
 
-                    b.ToTable("Classes");
+                    b.ToTable("ClassFilters");
                 });
 
             modelBuilder.Entity("GA.API.Data.Course", b =>
@@ -70,6 +101,9 @@ namespace GA.API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<int>("ClassId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
@@ -78,7 +112,39 @@ namespace GA.API.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ClassId");
+
                     b.ToTable("Groups");
+                });
+
+            modelBuilder.Entity("GA.API.Data.ProcessData", b =>
+                {
+                    b.Property<int>("ClassesId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("GroupId1")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProfId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("RoomId")
+                        .HasColumnType("int");
+
+                    b.HasIndex("ClassesId");
+
+                    b.HasIndex("CourseId");
+
+                    b.HasIndex("GroupId1");
+
+                    b.HasIndex("ProfId");
+
+                    b.HasIndex("RoomId");
+
+                    b.ToTable("Datas");
                 });
 
             modelBuilder.Entity("GA.API.Data.Prof", b =>
@@ -99,6 +165,12 @@ namespace GA.API.Migrations
 
             modelBuilder.Entity("GA.API.Data.Room", b =>
                 {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
                     b.Property<bool>("Lab")
                         .HasColumnType("bit");
 
@@ -107,6 +179,8 @@ namespace GA.API.Migrations
 
                     b.Property<int>("Size")
                         .HasColumnType("int");
+
+                    b.HasKey("Id");
 
                     b.ToTable("Rooms");
                 });
@@ -309,15 +383,54 @@ namespace GA.API.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("GA.API.Data.Class", b =>
+            modelBuilder.Entity("GA.API.Data.Group", b =>
                 {
-                    b.HasOne("GA.API.Data.Group", "Group")
-                        .WithMany()
-                        .HasForeignKey("GroupID")
+                    b.HasOne("GA.API.Data.Class", "Class")
+                        .WithMany("Groups")
+                        .HasForeignKey("ClassId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("Class");
+                });
+
+            modelBuilder.Entity("GA.API.Data.ProcessData", b =>
+                {
+                    b.HasOne("GA.API.Data.Class", "Classes")
+                        .WithMany()
+                        .HasForeignKey("ClassesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("GA.API.Data.Course", "Course")
+                        .WithMany()
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("GA.API.Data.Group", "Group")
+                        .WithMany()
+                        .HasForeignKey("GroupId1");
+
+                    b.HasOne("GA.API.Data.Prof", "Prof")
+                        .WithMany()
+                        .HasForeignKey("ProfId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("GA.API.Data.Room", "Room")
+                        .WithMany()
+                        .HasForeignKey("RoomId");
+
+                    b.Navigation("Classes");
+
+                    b.Navigation("Course");
+
                     b.Navigation("Group");
+
+                    b.Navigation("Prof");
+
+                    b.Navigation("Room");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -369,6 +482,11 @@ namespace GA.API.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("GA.API.Data.Class", b =>
+                {
+                    b.Navigation("Groups");
                 });
 #pragma warning restore 612, 618
         }

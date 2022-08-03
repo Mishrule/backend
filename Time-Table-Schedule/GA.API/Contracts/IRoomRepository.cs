@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GA.API.Contracts
 {
-    interface IRoomRepository : IRepositoryBase<Room>
+    public interface IRoomRepository : IRepositoryBase<Room>
     {
         Task<bool> isExists(string name);
         Task<Room> FindById(string name);

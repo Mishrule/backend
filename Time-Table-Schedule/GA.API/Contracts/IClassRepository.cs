@@ -9,5 +9,6 @@ namespace GA.API.Contracts
 {
     public interface IClassRepository : IRepositoryBase<Class>
     {
+        Task<IList<ClassFilter>> GetAllClassFilter();
     }
 }

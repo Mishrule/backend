@@ -32,13 +32,15 @@ namespace GA.API.Services
 
         public async Task<IList<Class>> GetAll()
         {
-            var books = await _db.Classes
-                .Include(p => p.Professor)
-                .Include(c => c.Course)
-                .Include(g => g.Group)
+            var classes = await _db.Classes
+               // .Include(p => p.Prof)
+                //.Include(c => c.Course)
+                .Include(g => g.Groups)
                 .ToListAsync();
-            return books;
+            return classes;
         }
+
+        
 
         public async Task<Class> GetById(int id)
         {
@@ -50,14 +52,22 @@ namespace GA.API.Services
             throw new NotImplementedException();
         }
 
-        public Task<bool> SaveAsync()
+        public async Task<bool> SaveAsync()
         {
-            throw new NotImplementedException();
+            var changes = await _db.SaveChangesAsync();
+            return changes > 0;
+            ;
         }
 
         public Task<bool> UpdateAsync(Class entity)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<IList<ClassFilter>> GetAllClassFilter()
+        {
+            var classes = await _db.Classes.ToListAsync();
+            return (IList<ClassFilter>)classes;
         }
     }
 }

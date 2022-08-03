@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GA.API.Contracts
 {
-    interface IProfRepository : IRepositoryBase<Prof>
+   public interface IProfRepository : IRepositoryBase<Prof>
     {
     }
 }

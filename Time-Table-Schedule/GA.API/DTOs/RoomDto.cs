@@ -5,7 +5,13 @@ using System.Threading.Tasks;
 
 namespace GA.API.DTOs
 {
-    public class RoomDto
+    public class RoomDto: CreateRoomDto
+    {
+        public int Id { get; set; }
+        
+    }
+
+    public class CreateRoomDto
     {
         public string Name { get; set; }
         public bool Lab { get; set; }

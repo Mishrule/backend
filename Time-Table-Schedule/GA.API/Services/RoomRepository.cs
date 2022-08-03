@@ -35,7 +35,18 @@ namespace GA.API.Services
 
         public async Task<Room> GetById(int id)
         {
-            throw new NotImplementedException();
+            if (await isExists(id))
+            {
+                var room = await _db.Rooms.FirstOrDefaultAsync(r => r.Id == id);
+                return room;
+            }
+            else
+            {
+                return new Room()
+                {
+                    Name = $"Sorry Nothing Matches the {id} Selected"
+                };
+            }
         }
 
         public async Task<Room> FindById(string name)
@@ -60,9 +71,10 @@ namespace GA.API.Services
             return isExists;
         }
 
-        public Task<bool> isExists(int id)
+        public async Task<bool> isExists(int id)
         {
-            throw new NotImplementedException();
+            var isExists = await _db.Rooms.AnyAsync(r => r.Id == id);
+            return isExists;
         }
 
         public async Task<bool> SaveAsync()

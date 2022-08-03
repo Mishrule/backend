@@ -32,7 +32,7 @@ namespace GA.API.Services
                 .Include(co => co.Course)
                 .Include(r=>r.Room)
                 .Include(g=>g.Group)
-                .Include(c=>c.Class)
+                .Include(c=>c.Classes)
                 .ToListAsync();
             return data;
         }
