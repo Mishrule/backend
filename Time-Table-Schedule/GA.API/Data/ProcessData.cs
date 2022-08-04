@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 
 namespace GA.API.Data
 {
-    [Keyless]
-    [NotMapped]
-    public class Data
+    public class ProcessData
     {
-      //  [NotMapped]
+        public int Id { get; set; }
+        public int ProfId { get; set; }
         public virtual Prof Prof { get; set; }
-      //  [NotMapped]
+        public int CourseId { get; set; }
         public virtual Course Course { get; set; }
-      //  [NotMapped]
+        public int RoomId { get; set; }
         public virtual Room Room { get; set; }
-      //  [NotMapped]
+        //[NotMapped]
+        public int GroupId { get; set; }
         public virtual Group Group { get; set; }
-      //  [NotMapped]
+        public int ClassId { get; set; }
         public virtual Class Class { get; set; }
     }
 }

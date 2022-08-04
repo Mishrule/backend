@@ -7,15 +7,15 @@ using GaSchedule.Algorithm;
 
 namespace GaSchedule
 {
-    public class JsonOutput
-    {
-        private const int ROOM_COLUMN_NUMBER = Constant.DAYS_NUM + 1;
-        private const int ROOM_ROW_NUMBER = Constant.DAY_HOURS + 1;
+	public class JsonOutput
+	{
+		private const int ROOM_COLUMN_NUMBER = Constant.DAYS_NUM + 1;
+		private const int ROOM_ROW_NUMBER = Constant.DAY_HOURS + 1;
 
 		private static char[] CRITERIAS = { 'R', 'S', 'L', 'P', 'G'};
 		private static string[] CRITERIAS_DESCR = { "Current room has {0}overlapping", "Current room has {0}enough seats", "Current room with {0}enough computers if they are required",
 			"Professors have {0}overlapping classes", "Student groups has {0}overlapping classes" };
-		private static string[] PERIODS = {"", "9 - 10", "10 - 11", "11 - 12", "12 - 13", "13 - 14", "14 - 15", "15 - 16", "16 - 17", "17 - 18", "18 - 19", "19 - 20", "20 - 21" };
+		private static string[] PERIODS = {"", "6.00am - 7.00am", "7.00am - 8.00am", "8.00am - 9.00am", "9.00am - 10.00am", "10.00am - 11.00am", "11.00am - 12.00pm", "12.30pm -1.30pm", "1.30pm - 2.30pm", "2.30pm - 3.30pm", "3.30pm - 4.30pm", "4.30pm - 5.30pm", "5.30pm - 6.30pm"};
 		private static string[] WEEK_DAYS = { "MON", "TUE", "WED", "THU", "FRI"};
 
 		private static string GetRoomJson(Room room)
@@ -75,15 +75,15 @@ namespace GaSchedule
 				sb.Append("\"Remarks\": [");
 
 				for (int i=0; i< CRITERIAS.Length; ++i)
-                {
+				{
 					sb.Append("{");
 					if(solution.Criteria[ci + i])
-                    {
+					{
 						sb.Append("\"Ok\": \"");
 						sb.Append(string.Format(CRITERIAS_DESCR[i], (i == 1 || i == 2) ? "" : "no ")).Append("\"");
 					}
 					else
-                    {
+					{
 						sb.Append("\"Fail\": \"");
 						sb.Append(string.Format(CRITERIAS_DESCR[i], (i == 1 || i == 2) ? "not " : "")).Append("\"");
 					}
@@ -101,7 +101,7 @@ namespace GaSchedule
 		}
 
 		private static string GetCell(string content, int duration)
-        {
+		{
 			if (duration == 0)
 				return "{}";
 
