@@ -15,7 +15,8 @@ namespace GA.API.Data
         public DbSet<Prof> Profs { get; set; }
         public DbSet<Course> Courses { get; set; }
         public DbSet<Class> Classes { get; set; }
-        public DbSet<Data> Datas { get; set; }
+        public DbSet<ClassFilter> ClassFilters { get; set; }
+        public DbSet<ProcessData> Datas { get; set; }
 
     }
 }

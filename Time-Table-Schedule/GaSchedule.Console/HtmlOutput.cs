@@ -18,8 +18,9 @@ namespace GaSchedule
 		private static string[] CRITERIAS_DESCR = { "Current room has {0}overlapping", "Current room has {0}enough seats", "Current room with {0}enough computers if they are required",
 			"Professors have {0}overlapping classes", "Student groups has {0}overlapping classes" };
 		//private static string[] PERIODS = {"", "9 - 10", "10 - 11", "11 - 12", "12 - 13", "13 - 14", "14 - 15", "15 - 16", "16 - 17", "17 - 18", "18 - 19", "19 - 20", "20 - 21" };
-		private static string[] PERIODS = { "", "6 - 7", "7 - 8", "8 - 9", "9 - 10", "10 - 11", "11 - 12", "12.30 - 1.30", "1.30 - 2.30", "2.30 - 3.30", "3.30 - 4.30", "4.30 - 5.30", "5.30 - 6.30" };
-		private static string[] WEEK_DAYS = { "MON", "TUE", "WED", "THU", "FRI"};
+		//private static string[] PERIODS = { "", "6 - 7", "7 - 8", "8 - 9", "9 - 10", "10 - 11", "11 - 12", "12.30 - 1.30", "1.30 - 2.30", "2.30 - 3.30", "3.30 - 4.30", "4.30 - 5.30", "5.30 - 6.30" };
+		private static string[] PERIODS = {"", "6.00am - 7.00am", "7.00am - 8.00am", "8.00am - 9.00am", "9.00am - 10.00am", "10.00am - 11.00am", "11.00am - 12.00pm", "12.30pm -1.30pm", "1.30pm - 2.30pm", "2.30pm - 3.30pm", "3.30pm - 4.30pm", "4.30pm - 5.30pm", "5.30pm - 6.30pm" };
+	private static string[] WEEK_DAYS = { "MON", "TUE", "WED", "THU", "FRI"};
 
 		private static string GetTableHeader(Room room)
 		{

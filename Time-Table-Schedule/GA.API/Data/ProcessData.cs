@@ -8,18 +8,17 @@ using System.Threading.Tasks;
 namespace GA.API.Data
 {
     [Keyless]
-    [NotMapped]
-    public class Data
+    public class ProcessData
     {
-      //  [NotMapped]
+        public int ProfId { get; set; }
         public virtual Prof Prof { get; set; }
-      //  [NotMapped]
+        public int CourseId { get; set; }
         public virtual Course Course { get; set; }
-      //  [NotMapped]
         public virtual Room Room { get; set; }
-      //  [NotMapped]
+        [NotMapped]
+        public int GroupId { get; set; }
         public virtual Group Group { get; set; }
-      //  [NotMapped]
-        public virtual Class Class { get; set; }
+        public int ClassesId { get; set; }
+        public virtual Class Classes { get; set; }
     }
 }
