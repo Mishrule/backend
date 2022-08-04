@@ -1,8 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-#nullable disable
-
 namespace GA.API.Migrations
 {
     public partial class InitialMigration : Migration
@@ -259,14 +257,14 @@ namespace GA.API.Migrations
                     CourseId = table.Column<int>(type: "int", nullable: false),
                     RoomId = table.Column<int>(type: "int", nullable: false),
                     GroupId = table.Column<int>(type: "int", nullable: false),
-                    ClassesId = table.Column<int>(type: "int", nullable: false)
+                    ClassId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Datas", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Datas_Classes_ClassesId",
-                        column: x => x.ClassesId,
+                        name: "FK_Datas_Classes_ClassId",
+                        column: x => x.ClassId,
                         principalTable: "Classes",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -336,9 +334,9 @@ namespace GA.API.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Datas_ClassesId",
+                name: "IX_Datas_ClassId",
                 table: "Datas",
-                column: "ClassesId");
+                column: "ClassId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Datas_CourseId",
