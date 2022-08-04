@@ -253,14 +253,17 @@ namespace GA.API.Migrations
                 name: "Datas",
                 columns: table => new
                 {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     ProfId = table.Column<int>(type: "int", nullable: false),
                     CourseId = table.Column<int>(type: "int", nullable: false),
-                    RoomId = table.Column<int>(type: "int", nullable: true),
-                    GroupId1 = table.Column<int>(type: "int", nullable: true),
+                    RoomId = table.Column<int>(type: "int", nullable: false),
+                    GroupId = table.Column<int>(type: "int", nullable: false),
                     ClassesId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
+                    table.PrimaryKey("PK_Datas", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Datas_Classes_ClassesId",
                         column: x => x.ClassesId,
@@ -274,10 +277,11 @@ namespace GA.API.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Datas_Groups_GroupId1",
-                        column: x => x.GroupId1,
+                        name: "FK_Datas_Groups_GroupId",
+                        column: x => x.GroupId,
                         principalTable: "Groups",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_Datas_Profs_ProfId",
                         column: x => x.ProfId,
@@ -288,7 +292,8 @@ namespace GA.API.Migrations
                         name: "FK_Datas_Rooms_RoomId",
                         column: x => x.RoomId,
                         principalTable: "Rooms",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -341,9 +346,9 @@ namespace GA.API.Migrations
                 column: "CourseId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Datas_GroupId1",
+                name: "IX_Datas_GroupId",
                 table: "Datas",
-                column: "GroupId1");
+                column: "GroupId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Datas_ProfId",

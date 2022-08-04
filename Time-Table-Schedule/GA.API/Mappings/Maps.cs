@@ -22,6 +22,7 @@ namespace GA.API.Mappings
             CreateMap<Course, CreateCourseDto>().ReverseMap();
             
             CreateMap<ProcessData, ProcessDataDto>().ReverseMap();
+            CreateMap<ProcessData, CreateProcessDataDto>().ReverseMap();
             
             CreateMap<Prof, ProfDto>().ReverseMap();
             CreateMap<Prof, CreateProfDto>().ReverseMap();

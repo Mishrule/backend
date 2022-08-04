@@ -4,6 +4,7 @@ using GA.API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GA.API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220804170354_InitialMigration")]
+    partial class InitialMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -123,7 +125,7 @@ namespace GA.API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("ClassId")
+                    b.Property<int>("ClassesId")
                         .HasColumnType("int");
 
                     b.Property<int>("CourseId")
@@ -140,7 +142,7 @@ namespace GA.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ClassId");
+                    b.HasIndex("ClassesId");
 
                     b.HasIndex("CourseId");
 
@@ -400,9 +402,9 @@ namespace GA.API.Migrations
 
             modelBuilder.Entity("GA.API.Data.ProcessData", b =>
                 {
-                    b.HasOne("GA.API.Data.Class", "Class")
+                    b.HasOne("GA.API.Data.Class", "Classes")
                         .WithMany()
-                        .HasForeignKey("ClassId")
+                        .HasForeignKey("ClassesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -430,7 +432,7 @@ namespace GA.API.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Class");
+                    b.Navigation("Classes");
 
                     b.Navigation("Course");
 

@@ -44,6 +44,7 @@ namespace GA.API.Data
         public int Duration { get; set; }
         public bool Lab { get; set; }
 
+       // public string Group { get; set; }
         public virtual IList<Group> Groups { get; set; }
     }
         //private readonly List<Group> _groups = new List<Group>();

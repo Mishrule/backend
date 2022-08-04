@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using GA.API.Contracts;
@@ -42,7 +43,16 @@ namespace GA.API.Controllers
             {
                 _logger.LogInformation("Endpoint Initialized");
                 var classes = await _classRepository.GetAll();
+                
                 var response = _mapper.Map<IList<ClassDto>>(classes);
+                //var stringConvert = "";
+                //foreach (var classDto in response)
+                //{
+                //    stringConvert += classDto.Group;
+                //}
+
+                //var numbers = stringConvert?.Split(',')?.Select(Int32.Parse)?.ToList();
+                //response.Where(q => q.Groups.Add(numbers));
                 _logger.LogInformation("Endpoint Complete");
                 return Ok(response);
             }
@@ -76,6 +86,13 @@ namespace GA.API.Controllers
                 return BadRequest(ModelState);
             }
 
+            //var numbers = entity.Groups;
+            //List<string> strings = numbers.ConvertAll<string>(x => x.ToString());
+
+            //entity.Group = String.Join(", ", strings);
+
+
+            
             var createClass = _mapper.Map<Class>(entity);
             var isSuccess = await _classRepository.CreateAsync(createClass);
             if (!isSuccess)

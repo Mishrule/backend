@@ -50,6 +50,50 @@ namespace GA.API.Controllers
             }
         }
 
+        /// <summary>
+        /// Creates a new Group
+        /// </summary>
+        /// <param name="CreateData"></param>
+        /// <returns>Group Object</returns>
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> Create(CreateProcessDataDto createDataDto)
+        {
+            var location = GetControllerActionNames();
+            try
+            {
+                _logger.LogInformation($"{location}: Create Attempted");
+                if (createDataDto == null)
+                {
+                    _logger.LogWarning($"{location}: Empty Request was submitted");
+                    return BadRequest(ModelState);
+                }
+
+                if (!ModelState.IsValid)
+                {
+                    _logger.LogWarning($"{location}: Data was Incomplete");
+                    return BadRequest(ModelState);
+                }
+
+                var data = _mapper.Map<ProcessData>(createDataDto);
+                var isSuccess = await _dataRepository.CreateAsync(data);
+                if (!isSuccess)
+                {
+                    return InternalError($"{location}: Creation failed");
+                }
+
+                _logger.LogInformation($"{location}: Creation was successful");
+                return Created("Create", new {data = data});
+            }
+            catch (Exception e)
+            {
+                return InternalError($"{location}: {e.Message} - {e.InnerException}");
+            }
+        }
+
+
         private string GetControllerActionNames()
         {
             var controller = ControllerContext.ActionDescriptor.ControllerName;

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GA.API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220803165258_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20220804174354_RenameClassesToClasss")]
+    partial class RenameClassesToClasss
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -119,26 +119,34 @@ namespace GA.API.Migrations
 
             modelBuilder.Entity("GA.API.Data.ProcessData", b =>
                 {
-                    b.Property<int>("ClassesId")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("ClassId")
                         .HasColumnType("int");
 
                     b.Property<int>("CourseId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("GroupId1")
+                    b.Property<int>("GroupId")
                         .HasColumnType("int");
 
                     b.Property<int>("ProfId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("RoomId")
+                    b.Property<int>("RoomId")
                         .HasColumnType("int");
 
-                    b.HasIndex("ClassesId");
+                    b.HasKey("Id");
+
+                    b.HasIndex("ClassId");
 
                     b.HasIndex("CourseId");
 
-                    b.HasIndex("GroupId1");
+                    b.HasIndex("GroupId");
 
                     b.HasIndex("ProfId");
 
@@ -385,20 +393,18 @@ namespace GA.API.Migrations
 
             modelBuilder.Entity("GA.API.Data.Group", b =>
                 {
-                    b.HasOne("GA.API.Data.Class", "Class")
+                    b.HasOne("GA.API.Data.Class", null)
                         .WithMany("Groups")
                         .HasForeignKey("ClassId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Class");
                 });
 
             modelBuilder.Entity("GA.API.Data.ProcessData", b =>
                 {
-                    b.HasOne("GA.API.Data.Class", "Classes")
+                    b.HasOne("GA.API.Data.Class", "Class")
                         .WithMany()
-                        .HasForeignKey("ClassesId")
+                        .HasForeignKey("ClassId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -410,7 +416,9 @@ namespace GA.API.Migrations
 
                     b.HasOne("GA.API.Data.Group", "Group")
                         .WithMany()
-                        .HasForeignKey("GroupId1");
+                        .HasForeignKey("GroupId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("GA.API.Data.Prof", "Prof")
                         .WithMany()
@@ -420,9 +428,11 @@ namespace GA.API.Migrations
 
                     b.HasOne("GA.API.Data.Room", "Room")
                         .WithMany()
-                        .HasForeignKey("RoomId");
+                        .HasForeignKey("RoomId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("Classes");
+                    b.Navigation("Class");
 
                     b.Navigation("Course");
 

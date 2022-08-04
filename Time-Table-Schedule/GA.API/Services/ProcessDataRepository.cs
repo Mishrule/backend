@@ -15,9 +15,10 @@ namespace GA.API.Services
         {
             _db = db;
         }
-        public Task<bool> CreateAsync(ProcessData entity)
+        public async Task<bool> CreateAsync(ProcessData entity)
         {
-            throw new NotImplementedException();
+            await _db.Datas.AddAsync(entity);
+            return await SaveAsync();
         }
 
         public Task<bool> Delete(ProcessData entity)
@@ -32,11 +33,11 @@ namespace GA.API.Services
                 .Include(co => co.Course)
                 .Include(r=>r.Room)
                 .Include(g=>g.Group)
-                .Include(c=>c.Classes)
+                .Include(c=>c.Class)
                 .ToListAsync();
             return data;
         }
-
+        
         public Task<ProcessData> GetById(int id)
         {
             throw new NotImplementedException();
@@ -47,9 +48,10 @@ namespace GA.API.Services
             throw new NotImplementedException();
         }
 
-        public Task<bool> SaveAsync()
+        public async Task<bool> SaveAsync()
         {
-            throw new NotImplementedException();
+            var changes = await _db.SaveChangesAsync();
+            return changes > 0;
         }
 
         public Task<bool> UpdateAsync(ProcessData entity)
