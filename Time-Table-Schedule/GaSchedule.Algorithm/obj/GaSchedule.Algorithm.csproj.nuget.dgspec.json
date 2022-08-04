@@ -11,7 +11,7 @@
         "projectName": "GaSchedule.Algorithm",
         "projectPath": "C:\\Users\\mishr\\source\\repos\\Mishrule\\backend\\Time-Table-Schedule\\GaSchedule.Algorithm\\GaSchedule.Algorithm.csproj",
         "packagesPath": "C:\\Users\\mishr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mishr\\Source\\Repos\\Mishrule\\backend\\Time-Table-Schedule\\GaSchedule.Algorithm\\obj\\",
+        "outputPath": "C:\\Users\\mishr\\source\\repos\\Mishrule\\backend\\Time-Table-Schedule\\GaSchedule.Algorithm\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
