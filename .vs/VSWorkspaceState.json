@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Time-Table-Schedule"
   ],
-  "SelectedNode": "\\GaSchedule.sln",
+  "SelectedNode": "\\Time-Table-Schedule\\GaSchedule.sln",
   "PreviewInSolutionExplorer": false
 }
