@@ -57,7 +57,7 @@ namespace GA.API
 op.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore); 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "GA.API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Time Table Api", Version = "v1" });
             });
         }
 
