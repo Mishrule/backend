@@ -35,13 +35,14 @@
         "dependencies": {
           "AutoMapper": "11.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
+          "GaSchedule": "1.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.0",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "5.0.7",
           "Microsoft.EntityFrameworkCore": "5.0.0",
           "Microsoft.EntityFrameworkCore.Design": "5.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.0",
-          "Serilog.AspNetCore": "6.0.0",
+          "Serilog.AspNetCore": "5.0.0",
           "Serilog.Expressions": "3.4.0",
           "Serilog.Sinks.Seq": "5.1.1",
           "Swashbuckle.AspNetCore": "5.6.3",
@@ -875,12 +876,12 @@
           "lib/netstandard2.1/Serilog.dll": {}
         }
       },
-      "Serilog.AspNetCore/6.0.0": {
+      "Serilog.AspNetCore/5.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "5.0.0",
           "Microsoft.Extensions.Logging": "5.0.0",
           "Serilog": "2.10.0",
-          "Serilog.Extensions.Hosting": "5.0.0",
+          "Serilog.Extensions.Hosting": "4.2.0",
           "Serilog.Formatting.Compact": "1.1.0",
           "Serilog.Settings.Configuration": "3.3.0",
           "Serilog.Sinks.Console": "4.0.1",
@@ -890,7 +891,7 @@
         "runtime": {
           "lib/net5.0/Serilog.AspNetCore.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "6.0.0.0"
+            "fileVersion": "5.0.0.0"
           }
         },
         "compile": {
@@ -911,7 +912,7 @@
           "lib/net5.0/Serilog.Expressions.dll": {}
         }
       },
-      "Serilog.Extensions.Hosting/5.0.0": {
+      "Serilog.Extensions.Hosting/4.2.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
           "Microsoft.Extensions.Hosting.Abstractions": "3.1.8",
@@ -922,7 +923,7 @@
         "runtime": {
           "lib/netstandard2.1/Serilog.Extensions.Hosting.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "5.0.0.0"
+            "fileVersion": "4.2.0.0"
           }
         },
         "compile": {
@@ -1664,6 +1665,25 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
+        }
+      },
+      "GaSchedule/1.2.0": {
+        "dependencies": {
+          "GaSchedule.Algorithm": "1.0.0"
+        },
+        "runtime": {
+          "GaSchedule.dll": {}
+        },
+        "compile": {
+          "GaSchedule.dll": {}
+        }
+      },
+      "GaSchedule.Algorithm/1.0.0": {
+        "runtime": {
+          "GaSchedule.Algorithm.dll": {}
+        },
+        "compile": {
+          "GaSchedule.Algorithm.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -3705,12 +3725,12 @@
       "path": "serilog/2.10.0",
       "hashPath": "serilog.2.10.0.nupkg.sha512"
     },
-    "Serilog.AspNetCore/6.0.0": {
+    "Serilog.AspNetCore/5.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-k631Oy0B2Kx2WhVec9LCC49bM8x/QUI+JMwOVVzR6YrMO8xSBtrMwEqAUoooM9hfSn7XQscL2v1Ds7K0uS6IGA==",
-      "path": "serilog.aspnetcore/6.0.0",
-      "hashPath": "serilog.aspnetcore.6.0.0.nupkg.sha512"
+      "sha512": "sha512-/JO/txIxRR61x1UXQAgUzG2Sx05o1QHCkokVBWrKzmAoDu+p5EtCAj7L/TVVg7Ezhh3GPiZ0JI9OJCmRO9tSRw==",
+      "path": "serilog.aspnetcore/5.0.0",
+      "hashPath": "serilog.aspnetcore.5.0.0.nupkg.sha512"
     },
     "Serilog.Expressions/3.4.0": {
       "type": "package",
@@ -3719,12 +3739,12 @@
       "path": "serilog.expressions/3.4.0",
       "hashPath": "serilog.expressions.3.4.0.nupkg.sha512"
     },
-    "Serilog.Extensions.Hosting/5.0.0": {
+    "Serilog.Extensions.Hosting/4.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Dea1bCvizIhPWwv/a9JdQRSrOyqE0L8XCtvq7BkBeM/cqlvZRqPKPyo7XqvrC80LG6Owb8fw1UiGeifOqM0cIw==",
-      "path": "serilog.extensions.hosting/5.0.0",
-      "hashPath": "serilog.extensions.hosting.5.0.0.nupkg.sha512"
+      "sha512": "sha512-gT2keceCmPQR9EX0VpXQZvUgELdfE7yqJ7MOxBhm3WLCblcvRgswEOOTgok/DHObbM15A3V/DtF3VdVDQPIZzQ==",
+      "path": "serilog.extensions.hosting/4.2.0",
+      "hashPath": "serilog.extensions.hosting.4.2.0.nupkg.sha512"
     },
     "Serilog.Extensions.Logging/3.1.0": {
       "type": "package",
@@ -4257,6 +4277,16 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "GaSchedule/1.2.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GaSchedule.Algorithm/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
       "type": "referenceassembly",

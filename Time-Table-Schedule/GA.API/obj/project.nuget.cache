@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xxurm4Y2On7MMhid2ZjLOAp7SPMLuDmhcVjNK4xTmQ2wc47XZmiG35dG6OQxLTrGvTgqy1gIPJCep8LtRraV5w==",
+  "dgSpecHash": "dC2hKyAGGuFhlVdfpWFEC9sv4Gny5PP7vx1AIEJhUcFOuKUJqee4/sHUyfpIPVoMbaR4YrKGXKNsfAs/Ls1ofQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\mishr\\source\\repos\\Mishrule\\backend\\Time-Table-Schedule\\GA.API\\GA.API.csproj",
   "expectedPackageFiles": [
@@ -55,9 +55,9 @@
     "C:\\Users\\mishr\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\mishr\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\mishr\\.nuget\\packages\\serilog\\2.10.0\\serilog.2.10.0.nupkg.sha512",
-    "C:\\Users\\mishr\\.nuget\\packages\\serilog.aspnetcore\\6.0.0\\serilog.aspnetcore.6.0.0.nupkg.sha512",
+    "C:\\Users\\mishr\\.nuget\\packages\\serilog.aspnetcore\\5.0.0\\serilog.aspnetcore.5.0.0.nupkg.sha512",
     "C:\\Users\\mishr\\.nuget\\packages\\serilog.expressions\\3.4.0\\serilog.expressions.3.4.0.nupkg.sha512",
-    "C:\\Users\\mishr\\.nuget\\packages\\serilog.extensions.hosting\\5.0.0\\serilog.extensions.hosting.5.0.0.nupkg.sha512",
+    "C:\\Users\\mishr\\.nuget\\packages\\serilog.extensions.hosting\\4.2.0\\serilog.extensions.hosting.4.2.0.nupkg.sha512",
     "C:\\Users\\mishr\\.nuget\\packages\\serilog.extensions.logging\\3.1.0\\serilog.extensions.logging.3.1.0.nupkg.sha512",
     "C:\\Users\\mishr\\.nuget\\packages\\serilog.formatting.compact\\1.1.0\\serilog.formatting.compact.1.1.0.nupkg.sha512",
     "C:\\Users\\mishr\\.nuget\\packages\\serilog.settings.configuration\\3.3.0\\serilog.settings.configuration.3.3.0.nupkg.sha512",

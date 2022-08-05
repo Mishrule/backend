@@ -50,6 +50,26 @@ namespace GA.API.Controllers
             }
         }
 
+        [HttpGet("GetJsonData")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> GetJsonData()
+        {
+            var location = GetControllerActionNames();
+            try
+            {
+                _logger.LogInformation($"{location}: Attempted Call");
+                var json = await _dataRepository.GetFileToJson();
+                var response = _mapper.Map<IList<ProcessDataDto>>(json);
+                _logger.LogInformation($"{location}: Successful");
+                return Ok(response);
+            }
+            catch (Exception e)
+            {
+                return InternalError($"{location}: {e.Message} - {e.InnerException}");
+            }
+        }
+
         /// <summary>
         /// Creates a new Group
         /// </summary>

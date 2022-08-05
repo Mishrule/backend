@@ -419,6 +419,21 @@
         }
       }
     },
+    "/api/Data/GetJsonData": {
+      "get": {
+        "tags": [
+          "Data"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
     "/api/Group": {
       "get": {
         "tags": [

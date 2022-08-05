@@ -2,9 +2,13 @@
 using GA.API.Data;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
+using JsonSerializer = Newtonsoft.Json.JsonSerializer;
 
 namespace GA.API.Services
 {
@@ -37,7 +41,24 @@ namespace GA.API.Services
                 .ToListAsync();
             return data;
         }
-        
+
+        public async Task<IList<ProcessData>> GetFileToJson()
+        {
+            var data = await _db.Datas.Include(c => c.Course)
+                .Include(p => p.Prof)
+                .Include(co => co.Course)
+                .Include(r => r.Room)
+                .Include(g => g.Group)
+                .Include(c => c.Class)
+
+                .ToListAsync();
+
+           string strResultJson = JsonConvert.SerializeObject(data);
+           //JsonSerializer.Deserialize<Dictionary<string, Dictionary<string, JsonElement>>[]>(File.ReadAllText("GaSchedule.json"));
+            File.WriteAllText(@"C:\Users\mishr\source\repos\Mishrule\backend\Time-Table-Schedule\GaSchedule.Console\GaSchedule.json",
+                strResultJson);
+            return data;
+        }
         public Task<ProcessData> GetById(int id)
         {
             throw new NotImplementedException();

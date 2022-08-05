@@ -266,7 +266,7 @@ namespace GaSchedule.Algorithm
 
 			Room.RestartIDs();
 
-			// read file into a string and deserialize JSON to a type
+			// read file into a string and deserialize JSON to a type 
 			var data = JsonSerializer.Deserialize<Dictionary<string, Dictionary<string, JsonElement> >[]>(File.ReadAllText(fileName));
 			foreach (Dictionary<string, Dictionary<string, JsonElement> > item in data)
 			{

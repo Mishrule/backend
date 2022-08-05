@@ -696,13 +696,13 @@
           "lib/netstandard2.1/Serilog.dll": {}
         }
       },
-      "Serilog.AspNetCore/6.0.0": {
+      "Serilog.AspNetCore/5.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "5.0.0",
           "Microsoft.Extensions.Logging": "5.0.0",
           "Serilog": "2.10.0",
-          "Serilog.Extensions.Hosting": "5.0.0",
+          "Serilog.Extensions.Hosting": "4.2.0",
           "Serilog.Formatting.Compact": "1.1.0",
           "Serilog.Settings.Configuration": "3.3.0",
           "Serilog.Sinks.Console": "4.0.1",
@@ -731,7 +731,7 @@
           "lib/net5.0/Serilog.Expressions.dll": {}
         }
       },
-      "Serilog.Extensions.Hosting/5.0.0": {
+      "Serilog.Extensions.Hosting/4.2.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.8",
@@ -1890,6 +1890,29 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "GaSchedule/1.2.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "GaSchedule.Algorithm": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GaSchedule.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GaSchedule.dll": {}
+        }
+      },
+      "GaSchedule.Algorithm/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/GaSchedule.Algorithm.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GaSchedule.Algorithm.dll": {}
+        }
       }
     }
   },
@@ -2993,10 +3016,10 @@
         "serilog.nuspec"
       ]
     },
-    "Serilog.AspNetCore/6.0.0": {
-      "sha512": "k631Oy0B2Kx2WhVec9LCC49bM8x/QUI+JMwOVVzR6YrMO8xSBtrMwEqAUoooM9hfSn7XQscL2v1Ds7K0uS6IGA==",
+    "Serilog.AspNetCore/5.0.0": {
+      "sha512": "/JO/txIxRR61x1UXQAgUzG2Sx05o1QHCkokVBWrKzmAoDu+p5EtCAj7L/TVVg7Ezhh3GPiZ0JI9OJCmRO9tSRw==",
       "type": "package",
-      "path": "serilog.aspnetcore/6.0.0",
+      "path": "serilog.aspnetcore/5.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3009,7 +3032,7 @@
         "lib/netstandard2.0/Serilog.AspNetCore.xml",
         "lib/netstandard2.1/Serilog.AspNetCore.dll",
         "lib/netstandard2.1/Serilog.AspNetCore.xml",
-        "serilog.aspnetcore.6.0.0.nupkg.sha512",
+        "serilog.aspnetcore.5.0.0.nupkg.sha512",
         "serilog.aspnetcore.nuspec"
       ]
     },
@@ -3031,10 +3054,10 @@
         "serilog.expressions.nuspec"
       ]
     },
-    "Serilog.Extensions.Hosting/5.0.0": {
-      "sha512": "Dea1bCvizIhPWwv/a9JdQRSrOyqE0L8XCtvq7BkBeM/cqlvZRqPKPyo7XqvrC80LG6Owb8fw1UiGeifOqM0cIw==",
+    "Serilog.Extensions.Hosting/4.2.0": {
+      "sha512": "gT2keceCmPQR9EX0VpXQZvUgELdfE7yqJ7MOxBhm3WLCblcvRgswEOOTgok/DHObbM15A3V/DtF3VdVDQPIZzQ==",
       "type": "package",
-      "path": "serilog.extensions.hosting/5.0.0",
+      "path": "serilog.extensions.hosting/4.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3043,7 +3066,7 @@
         "lib/netstandard2.0/Serilog.Extensions.Hosting.xml",
         "lib/netstandard2.1/Serilog.Extensions.Hosting.dll",
         "lib/netstandard2.1/Serilog.Extensions.Hosting.xml",
-        "serilog.extensions.hosting.5.0.0.nupkg.sha512",
+        "serilog.extensions.hosting.4.2.0.nupkg.sha512",
         "serilog.extensions.hosting.nuspec"
       ]
     },
@@ -6584,51 +6607,75 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "GaSchedule/1.2.0": {
+      "type": "project",
+      "path": "../GaSchedule.Console/GaSchedule.Console.csproj",
+      "msbuildProject": "../GaSchedule.Console/GaSchedule.Console.csproj"
+    },
+    "GaSchedule.Algorithm/1.0.0": {
+      "type": "project",
+      "path": "../GaSchedule.Algorithm/GaSchedule.Algorithm.csproj",
+      "msbuildProject": "../GaSchedule.Algorithm/GaSchedule.Algorithm.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "AutoMapper >= 11.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 11.0.0",
+      "GaSchedule >= 1.2.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.0",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 5.0.7",
       "Microsoft.EntityFrameworkCore >= 5.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.0",
-      "Serilog.AspNetCore >= 6.0.0",
+      "Serilog.AspNetCore >= 5.0.0",
       "Serilog.Expressions >= 3.4.0",
       "Serilog.Sinks.Seq >= 5.1.1",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mensah\\.nuget\\packages\\": {}
+    "C:\\Users\\mishr\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mensah\\Source\\Repos\\backend\\Time-Table-Schedule\\GA.API\\GA.API.csproj",
+      "projectUniqueName": "C:\\Users\\mishr\\source\\repos\\Mishrule\\backend\\Time-Table-Schedule\\GA.API\\GA.API.csproj",
       "projectName": "GA.API",
-      "projectPath": "C:\\Users\\Mensah\\Source\\Repos\\backend\\Time-Table-Schedule\\GA.API\\GA.API.csproj",
-      "packagesPath": "C:\\Users\\Mensah\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mensah\\Source\\Repos\\backend\\Time-Table-Schedule\\GA.API\\obj\\",
+      "projectPath": "C:\\Users\\mishr\\source\\repos\\Mishrule\\backend\\Time-Table-Schedule\\GA.API\\GA.API.csproj",
+      "packagesPath": "C:\\Users\\mishr\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mishr\\source\\repos\\Mishrule\\backend\\Time-Table-Schedule\\GA.API\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Mensah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mishr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.2.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\mishr\\source\\repos\\Mishrule\\backend\\Time-Table-Schedule\\GaSchedule.Console\\GaSchedule.Console.csproj": {
+              "projectPath": "C:\\Users\\mishr\\source\\repos\\Mishrule\\backend\\Time-Table-Schedule\\GaSchedule.Console\\GaSchedule.Console.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -6679,7 +6726,7 @@
           },
           "Serilog.AspNetCore": {
             "target": "Package",
-            "version": "[6.0.0, )"
+            "version": "[5.0.0, )"
           },
           "Serilog.Expressions": {
             "target": "Package",
@@ -6712,7 +6759,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.410\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
