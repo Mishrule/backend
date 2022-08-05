@@ -57,3 +57,13 @@ C:\Users\Mish\Source\Repos\Time-Table-Schedule\GA.API\obj\Debug\net5.0\GA.API.dl
 C:\Users\Mish\Source\Repos\Time-Table-Schedule\GA.API\obj\Debug\net5.0\ref\GA.API.dll
 C:\Users\Mish\Source\Repos\Time-Table-Schedule\GA.API\obj\Debug\net5.0\GA.API.pdb
 C:\Users\Mish\Source\Repos\Time-Table-Schedule\GA.API\obj\Debug\net5.0\GA.API.genruntimeconfig.cache
+C:\Users\mishr\source\repos\Mishrule\backend\Time-Table-Schedule\GA.API\obj\Debug\net5.0\GA.API.csproj.AssemblyReference.cache
+C:\Users\mishr\source\repos\Mishrule\backend\Time-Table-Schedule\GA.API\obj\Debug\net5.0\GA.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mishr\source\repos\Mishrule\backend\Time-Table-Schedule\GA.API\obj\Debug\net5.0\GA.API.AssemblyInfoInputs.cache
+C:\Users\mishr\source\repos\Mishrule\backend\Time-Table-Schedule\GA.API\obj\Debug\net5.0\GA.API.AssemblyInfo.cs
+C:\Users\mishr\source\repos\Mishrule\backend\Time-Table-Schedule\GA.API\obj\Debug\net5.0\GA.API.csproj.CoreCompileInputs.cache
+C:\Users\mishr\source\repos\Mishrule\backend\Time-Table-Schedule\GA.API\obj\Debug\net5.0\GA.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\mishr\source\repos\Mishrule\backend\Time-Table-Schedule\GA.API\obj\Debug\net5.0\GA.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\mishr\source\repos\Mishrule\backend\Time-Table-Schedule\GA.API\obj\Debug\net5.0\GA.API.dll
+C:\Users\mishr\source\repos\Mishrule\backend\Time-Table-Schedule\GA.API\obj\Debug\net5.0\refint\GA.API.dll
+C:\Users\mishr\source\repos\Mishrule\backend\Time-Table-Schedule\GA.API\obj\Debug\net5.0\GA.API.pdb
