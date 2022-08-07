@@ -449,6 +449,18 @@
         }
       }
     },
+    "/api/Data/StartConsole": {
+      "get": {
+        "tags": [
+          "Data"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/Group": {
       "get": {
         "tags": [

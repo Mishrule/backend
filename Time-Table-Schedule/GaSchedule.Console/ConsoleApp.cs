@@ -6,9 +6,9 @@ using GaSchedule.Algorithm;
 
 namespace GaSchedule
 {
-    class ConsoleApp
+   public class ConsoleApp
     {
-        static void Main(string[] args)
+      public  static void Main(string[] args)
         {       
             Stopwatch stopwatch = Stopwatch.StartNew();
 
