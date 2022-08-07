@@ -37,7 +37,7 @@ namespace GA.API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetCourses()
         {
-            List<CourseObject> Data = new();
+            List<dynamic> Data = new();
             try
             {
                 _logger.LogInformation("Endpoint Initialized");
@@ -45,10 +45,10 @@ namespace GA.API.Controllers
                 var response = _mapper.Map<IList<CourseDto>>(courses); 
                 foreach (var dat in response)
                 {
-                    Data.Add(JsonConvert.DeserializeObject<CourseObject>(dat.course));
+                    Data.Add(JsonConvert.DeserializeObject<dynamic>(dat.name));
                 }
                 _logger.LogInformation("Endpoint Complete");
-                return Ok(response);
+                return Ok(Data);
             }
             catch (Exception e)
             {
@@ -78,7 +78,7 @@ namespace GA.API.Controllers
                 }
 
                 var response = _mapper.Map<CourseDto>(course);
-                var data = JsonConvert.DeserializeObject<RoomDto>(response.course);
+                var data = JsonConvert.DeserializeObject<RoomDto>(response.name);
                 _logger.LogInformation($"Successfully got record with id: {id}");
                 return Ok(response);
             }

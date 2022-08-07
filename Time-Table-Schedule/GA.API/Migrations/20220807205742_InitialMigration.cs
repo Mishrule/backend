@@ -73,12 +73,25 @@ namespace GA.API.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Datum",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    data = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Datum", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Groups",
                 columns: table => new
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    group = table.Column<int>(type: "int", nullable: false)
+                    group = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -91,7 +104,7 @@ namespace GA.API.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    prof = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    name = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -348,6 +361,9 @@ namespace GA.API.Migrations
 
             migrationBuilder.DropTable(
                 name: "Datas");
+
+            migrationBuilder.DropTable(
+                name: "Datum");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

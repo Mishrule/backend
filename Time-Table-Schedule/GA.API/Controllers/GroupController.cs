@@ -38,22 +38,8 @@ namespace GA.API.Controllers
 
         public async Task<IActionResult> GetGroups()
         {
-            //var location = GetControllerActionNames();
-            //try
-            //{
-            //    _logger.LogInformation($"{location}: Endpoint Initialized");
-            //    var groups = await _groupRepository.GetAll();
-            //    var response = _mapper.Map<IList<GroupDto>>(groups);
-            //    _logger.LogInformation($"{location}: Endpoint Complete");
-            //    return Ok(response);
-            //}
-            //catch (Exception e)
-            //{
-            //    _logger.LogError($"{location}: Error got @ {e.Message}");
-            //    return InternalError($"{location}: {e.Message} - {e.InnerException}");
-            //}
-
-            List<GroupObject> Data = new();
+           
+            List<dynamic> Data = new();
             var location = GetControllerActionNames();
             try
             {
@@ -62,10 +48,10 @@ namespace GA.API.Controllers
                 var response = _mapper.Map<IList<GroupDto>>(groups);
                 foreach (var dat in response)
                 {
-                    Data.Add(JsonConvert.DeserializeObject<GroupObject>(dat.group));
+                    Data.Add(JsonConvert.DeserializeObject<dynamic>(dat.group));
                 }
                 _logger.LogInformation($"{location}: Successful");
-                return Ok(response);
+                return Ok(Data);
             }
             catch (Exception e)
             {

@@ -36,7 +36,7 @@ namespace GA.API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetRooms()
         {
-            List<RoomObject> Data = new();
+            List<dynamic> Data = new();
             var location = GetControllerActionNames();
             try
             {
@@ -45,10 +45,10 @@ namespace GA.API.Controllers
                 var response = _mapper.Map<IList<RoomDto>>(rooms);
                 foreach (var dat in response)
                 {
-                    Data.Add(JsonConvert.DeserializeObject<RoomObject>(dat.room));
+                    Data.Add(JsonConvert.DeserializeObject<dynamic>(dat.room));
                 }
                 _logger.LogInformation($"{location}: Successful");
-                return Ok(response);
+                return Ok(Data);
             }
             catch (Exception e)
             {

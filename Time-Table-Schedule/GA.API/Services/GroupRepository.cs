@@ -27,30 +27,34 @@ namespace GA.API.Services
 
         public async Task<bool> CreateAsync(Group entity, GroupObject groupObject)
         {
-            var data = new GroupObject
-            {
-                id=groupObject.id,
-                name=groupObject.name,
-                size=groupObject.size
-            };
-            var groupSerialize = JsonConvert.SerializeObject(data);
-            entity = new Group
-            {
-                group = groupSerialize
+   
+             var group = new
+             {
+                 group = new GroupObject
+                 {
+                     id= groupObject.id,
+                     name = groupObject.name,
+                     size = groupObject.size,
+                   
+                 }
+             };
 
-            };
-           var groupJson = new Group
-            {
-                group = groupSerialize
+            var serializeGroup = JsonConvert.SerializeObject(group);
 
-            };
-            var groupJsonSerialize = JsonConvert.SerializeObject(groupJson);
-            var serializeGroup = new Dataa
+            var groupEntity = new Group
             {
-                data = groupJsonSerialize
+                group = serializeGroup
             };
-            await _db.Groups.AddAsync(entity);
-            await _db.Datum.AddAsync(serializeGroup);
+
+            var groupData = new Dataa
+            {
+                data = serializeGroup
+            };
+
+
+
+            await _db.Groups.AddAsync(groupEntity);
+            await _db.Datum.AddAsync(groupData);
             return await SaveAsync();
         }
 

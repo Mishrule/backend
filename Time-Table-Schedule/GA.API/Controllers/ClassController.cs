@@ -40,7 +40,7 @@ namespace GA.API.Controllers
 
         public async Task<IActionResult> GetClasses()
         {
-            List<ClassObject> Data = new();
+            List<dynamic> Data = new();
             var location = GetControllerActionNames();
             try
             {
@@ -50,10 +50,10 @@ namespace GA.API.Controllers
                 var response = _mapper.Map<IList<ClassDto>>(classes);
                 foreach (var dat in response)
                 {
-                    Data.Add(JsonConvert.DeserializeObject<ClassObject>(dat.@class));
+                    Data.Add(JsonConvert.DeserializeObject<dynamic>(dat.@class));
                 }
                 _logger.LogInformation("Endpoint Complete");
-                return Ok(response);
+                return Ok(Data);
             }
             catch (Exception e)
             {

@@ -15,7 +15,7 @@ namespace GA.API.DTOs
     public class CourseDto
     {
         public int id { get; set; }
-        public string course { get; set; }
+        public string name { get; set; }
     }
 
     public class GroupDto
@@ -67,7 +67,7 @@ namespace GA.API.DTOs
     public class ProfDto
     {
         public int id { get; set; }
-        public string prof { get; set; }
+        public string name { get; set; }
     }
     public class RoomDto
     {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Dynamic;
+using System.IO;
 using System.Threading.Tasks;
 using AutoMapper;
 using GA.API.Contracts;
@@ -90,9 +91,8 @@ namespace GA.API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetData()
         {
-            IDictionary<string, object> ss;
             List<dynamic> Data = new();
-            List<dynamic> d = new();
+           // List<dynamic> d = new();
 
             //List<DataDto> dataResponse = new List<DataDto>();
             var location = GetControllerActionNames();
@@ -118,7 +118,7 @@ namespace GA.API.Controllers
                 //{
                 //    var dd = JsonConvert.DeserializeObject<dynamic>(Data[i]);
                 //}
-
+                
                 _logger.LogInformation($"{location}: Successful");
                // return Ok(JsonConvert.SerializeObject(response));
                 return Ok(Data);

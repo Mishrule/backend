@@ -94,29 +94,31 @@ namespace GA.API.Services
 
         public async Task<bool> CreateAsync(Room entity, RoomObject roomObject)
         {
-            var data = new RoomObject
+           var room = new
             {
-                lab = roomObject.lab,
-                name= roomObject.name,
-                size=roomObject.size
-            };
-            var roomSerialize = JsonConvert.SerializeObject(data);
-            entity = new Room
-            {
-                room = roomSerialize
+                room = new RoomObject
+                {
+                    name = roomObject.name,
+                    lab = roomObject.lab,
+                    size=roomObject.size
+                }
             };
 
-           var roomJson = new Room
+            var serializeRoom = JsonConvert.SerializeObject(room);
+
+            var roomEntity = new Room
             {
-                room = roomSerialize
+                room = serializeRoom
             };
-            var roomJsonSerialize = JsonConvert.SerializeObject(roomJson);
-            var serializeRoom = new Dataa
+
+            var roomData = new Dataa
             {
-                data = roomJsonSerialize
+                data = serializeRoom
             };
-            await _db.Rooms.AddAsync(entity);
-            await _db.Datum.AddAsync(serializeRoom);
+
+
+            await _db.Rooms.AddAsync(roomEntity);
+            await _db.Datum.AddAsync(roomData);
             return await SaveAsync();
         }
 

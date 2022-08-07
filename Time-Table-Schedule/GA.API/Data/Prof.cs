@@ -12,7 +12,7 @@ namespace GA.API.Data
     {
         public int id { get; set; }
         
-        public string prof { get; set; }
+        public string name { get; set; }
         //[NotMapped]
         //public ProfObject profs { get; set; }
     }

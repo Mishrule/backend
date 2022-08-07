@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GA.API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220806202957_AddedDataAsTest")]
-    partial class AddedDataAsTest
+    [Migration("20220807205742_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -53,8 +53,15 @@ namespace GA.API.Migrations
 
             modelBuilder.Entity("GA.API.Data.Dataa", b =>
                 {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
                     b.Property<string>("data")
                         .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
 
                     b.ToTable("Datum");
                 });
@@ -118,7 +125,7 @@ namespace GA.API.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<string>("prof")
+                    b.Property<string>("name")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");

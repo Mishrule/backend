@@ -41,7 +41,7 @@ namespace GA.API.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<string>("course")
+                    b.Property<string>("name")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
@@ -123,7 +123,7 @@ namespace GA.API.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<string>("prof")
+                    b.Property<string>("name")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");

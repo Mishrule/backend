@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GA.API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220806132413_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20220807212257_InitialMigrations")]
+    partial class InitialMigrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -43,12 +43,27 @@ namespace GA.API.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<string>("course")
+                    b.Property<string>("name")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
 
                     b.ToTable("Courses");
+                });
+
+            modelBuilder.Entity("GA.API.Data.Dataa", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("data")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Datum");
                 });
 
             modelBuilder.Entity("GA.API.Data.Group", b =>
@@ -58,8 +73,8 @@ namespace GA.API.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("group")
-                        .HasColumnType("int");
+                    b.Property<string>("group")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
 
@@ -110,7 +125,7 @@ namespace GA.API.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<string>("prof")
+                    b.Property<string>("name")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");

@@ -267,7 +267,7 @@ namespace GA.API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetProfs()
         {
-            List<ProfObject> Data = new();
+            List<dynamic> Data = new();
             var location = GetControllerActionNames();
             try
             {
@@ -276,7 +276,7 @@ namespace GA.API.Controllers
                 var response = _mapper.Map<IList<ProfDto>>(professors);
                 foreach(var dat in response)
                 {
-                    Data.Add(JsonConvert.DeserializeObject<ProfObject>(dat.prof));
+                    Data.Add(JsonConvert.DeserializeObject<dynamic>(dat.name));
                 }
                // ProfDto data = JsonConvert.DeserializeObject<ProfDto>(response);
                 _logger.LogInformation($"{location}: Successful");
@@ -310,7 +310,7 @@ namespace GA.API.Controllers
                 }
 
                 var response = _mapper.Map<ProfDto>(prof);
-                var data = JsonConvert.DeserializeObject<ProfObject>(response.prof);
+                var data = JsonConvert.DeserializeObject<ProfObject>(response.name);
                 _logger.LogInformation($"{location}: Successfully got record with id: {id}");
                 return Ok(data);
             }

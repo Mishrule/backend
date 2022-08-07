@@ -28,38 +28,77 @@ namespace GA.API.Services
 
         public async Task<bool> CreateAsync(Class entity, ClassObject classObject)
         {
-            List<int> groupData = new();
-            foreach (var item in classObject.group)
+   //         List<int> groupData = new();
+   //         foreach (var item in classObject.group)
+   //         {
+   //             groupData.Add(item);
+   //         }
+   //         var data = new ClassObject
+   //         {
+   //             professor=classObject.professor,
+   //             course=classObject.course,
+   //             duration=classObject.duration,
+   //             group= groupData,
+   //             lab=classObject.lab
+   //         };
+   //         var classSerialize = JsonConvert.SerializeObject(data);
+   //         entity = new Class
+   //         {
+   //             @class = classSerialize
+   //         };
+
+   //        var classJson = new Class
+   //         {
+   //             @class = classSerialize
+   //         };
+   //         var classJsonSerialize = JsonConvert.SerializeObject(classJson);
+   //         var serializeRoom = new Dataa
+   //         {
+   //             data = classJsonSerialize
+   //         };
+
+   //         {
+   //             "class": {
+   //                 "professor": 3,
+			//"course": 3,
+			//"duration": 3,
+			//"group": 1,
+			//"lab": false
+        
+   //     }
+   //         },
+
+             var @class = new
+             {
+                 @class = new ClassObject
+                 {
+                     professor = classObject.professor,
+                     course = classObject.course,
+                     duration = classObject.duration,
+                     group = classObject.group,
+                     lab = classObject.lab
+                    
+                 }
+             };
+
+            var serializeClass = JsonConvert.SerializeObject(@class);
+
+            var classEntity = new Class
             {
-                groupData.Add(item);
-            }
-            var data = new ClassObject
-            {
-                professor=classObject.professor,
-                course=classObject.course,
-                duration=classObject.duration,
-                group= groupData,
-                lab=classObject.lab
-            };
-            var classSerialize = JsonConvert.SerializeObject(data);
-            entity = new Class
-            {
-                @class = classSerialize
+                @class = serializeClass
             };
 
-           var classJson = new Class
+            var classData = new Dataa
             {
-                @class = classSerialize
-            };
-            var classJsonSerialize = JsonConvert.SerializeObject(classJson);
-            var serializeRoom = new Dataa
-            {
-                data = classJsonSerialize
+                data = serializeClass
             };
 
-            
-            await _db.Classes.AddAsync(entity);
-            await _db.Datum.AddAsync(serializeRoom);
+
+
+
+
+            await _db.Classes.AddAsync(classEntity);
+            await _db.Datum.AddAsync(classData);
             return await SaveAsync();
         }
 

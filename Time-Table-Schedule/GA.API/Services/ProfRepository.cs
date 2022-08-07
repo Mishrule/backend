@@ -28,28 +28,29 @@ namespace GA.API.Services
 
         public async Task<bool> CreateAsync(Prof entity, ProfObject profObject)
         {
-            var data = new ProfObject
+            
+            var prof = new
             {
-                id = profObject.id,
-                name = profObject.name
+                prof = new Prof
+                {
+                    id = profObject.id,
+                    name = profObject.name
+                }
             };
-            var name = JsonConvert.SerializeObject(data);
-            entity = new Prof
+            var serializeProf = JsonConvert.SerializeObject(prof);
+
+            var profEntity = new Prof
             {
-                prof = name
+                name = serializeProf
+            };
+
+            var profData = new Dataa
+            {
+                data = serializeProf
             };
             
-            var profJson = new Prof()
-            {
-                prof = name
-            };
-            var profJsonSerialize = JsonConvert.SerializeObject(profJson);
-            var serializeProf = new Dataa
-            {
-                data = profJsonSerialize
-            };
-            await _db.Profs.AddAsync(entity);
-            await _db.Datum.AddAsync(serializeProf);
+            await _db.Profs.AddAsync(profEntity);
+            await _db.Datum.AddAsync(profData);
             return await SaveAsync();
         }
 
@@ -96,7 +97,7 @@ namespace GA.API.Services
             entity = new Prof
             {
                 id= data.id,
-                prof = name
+                name = name
             };
 
 

@@ -27,27 +27,32 @@ namespace GA.API.Services
 
         public async Task<bool> CreateAsync(Course entity, CourseObject courseObject)
         {
-            var data = new CourseObject
+
+            
+            var course = new
             {
-                id = courseObject.id,
-                name=courseObject.name
+                course = new Course
+                {
+                    id = courseObject.id,
+                    name = courseObject.name
+                }
             };
-            var courseSerialize = JsonConvert.SerializeObject(data);
-            entity = new Course
+
+            var serializeCourse = JsonConvert.SerializeObject(course);
+
+            var courseEntity = new Course
             {
-                course = courseSerialize
+                name = serializeCourse
             };
-            var courseJson = new Course
+
+            var courseData = new Dataa
             {
-                course = courseSerialize
+                data = serializeCourse
             };
-            var courseJsonSerialize = JsonConvert.SerializeObject(courseJson);
-            var serializeCourse = new Dataa
-            {
-                data = courseJsonSerialize
-            };
-            await _db.Courses.AddAsync(entity);
-            await _db.Datum.AddAsync(serializeCourse);
+
+           
+            await _db.Courses.AddAsync(courseEntity);
+            await _db.Datum.AddAsync(courseData);
             return await SaveAsync();
         }
 
@@ -73,7 +78,7 @@ namespace GA.API.Services
             else
             {
                 return new Course()
-                {course= $"Sorry Nothing Matches the {id} Selected"
+                {name= $"Sorry Nothing Matches the {id} Selected"
                 };
             }
 
@@ -106,7 +111,7 @@ namespace GA.API.Services
                 name = courseObject.name
             };
             var serialized = JsonConvert.SerializeObject(data);
-            entity.course = serialized;
+            entity.name = serialized;
             entity.id = entity.id;
             
 

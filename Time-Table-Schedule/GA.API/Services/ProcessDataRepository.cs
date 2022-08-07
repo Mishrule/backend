@@ -56,7 +56,7 @@ namespace GA.API.Services
 
           //  string strResultJson = JsonConvert.SerializeObject(data);
             //JsonSerializer.Deserialize<Dictionary<string, Dictionary<string, JsonElement>>[]>(File.ReadAllText("GaSchedule.json"));
-          //  File.WriteAllText(@"C:\Users\mishr\source\repos\Mishrule\backend\Time-Table-Schedule\GaSchedule.Console\GaSchedule.json",
+           // File.WriteAllText(@"C:\Users\mishr\source\repos\Mishrule\backend\Time-Table-Schedule\GaSchedule.Console\GaSchedule.json",
               //  strResultJson);
             return data;
         }
@@ -83,7 +83,18 @@ namespace GA.API.Services
 
         public async Task<IList<Dataa>> GetData()
         {
-            var data = await _db.Datum.ToArrayAsync();
+            List<dynamic> Data = new();
+
+            var data = await _db.Datum.ToListAsync();
+            //var json = JsonConvert.SerializeObject(data);
+            //foreach (var item in data)
+            //{
+            //    Data.Add(JsonConvert.DeserializeObject<dynamic>(item.data));
+            //}
+
+
+            // File.WriteAllText(@"C:\Users\mishr\source\repos\Mishrule\backend\Time-Table-Schedule\GaSchedule.Console\GaSchedule.json",
+          //  await File.WriteAllText(@"C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GaSchedule.Console\GaSchedule.json", Data);
             return data;
         }
     }
