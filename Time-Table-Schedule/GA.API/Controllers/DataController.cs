@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Threading.Tasks;
 using AutoMapper;
 using GA.API.Contracts;
@@ -8,6 +9,7 @@ using GA.API.DTOs;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 
 namespace GA.API.Controllers
 {
@@ -33,14 +35,14 @@ namespace GA.API.Controllers
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> GetData()
+        public async Task<IActionResult> GetDatum()
         {
             var location = GetControllerActionNames();
             try
             {
                 _logger.LogInformation($"{location}: Attempted Call");
                 var data = await _dataRepository.GetAll();
-                var response = _mapper.Map<IList<ProcessDataDto>>(data);
+                var response = _mapper.Map<IList<GetDataDto>>(data);
                 _logger.LogInformation($"{location}: Successful");
                 return Ok(response);
             }
@@ -60,9 +62,42 @@ namespace GA.API.Controllers
             {
                 _logger.LogInformation($"{location}: Attempted Call");
                 var json = await _dataRepository.GetFileToJson();
-                var response = _mapper.Map<IList<ProcessDataDto>>(json);
+                var response = _mapper.Map<IList<GetDataDto>>(json);
                 _logger.LogInformation($"{location}: Successful");
                 return Ok(response);
+            }
+            catch (Exception e)
+            {
+                return InternalError($"{location}: {e.Message} - {e.InnerException}");
+            }
+        }
+
+        [HttpGet("GetData")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> GetData()
+        {
+            List<DataClass> Data = new();
+
+            //List<DataDto> dataResponse = new List<DataDto>();
+            var location = GetControllerActionNames();
+            try
+            {
+                _logger.LogInformation($"{location}: Attempted Call");
+                var json = await _dataRepository.GetData();
+                var response = _mapper.Map<IList<DataDto>>(json);
+                foreach (var item in response)
+                {
+                    //  var aa = JsonConvert.DeserializeObject(item.data);
+                   // Data.Add(JsonConvert.DeserializeObject<DataClass>(item.data));
+                    List<string> l = JsonConvert.DeserializeObject<List<string>>(item.data);
+                }
+                
+                //  JsonConvert.SerializeObject(response);
+
+                _logger.LogInformation($"{location}: Successful");
+               // return Ok(JsonConvert.SerializeObject(response));
+                return Ok(Data);
             }
             catch (Exception e)
             {
@@ -105,7 +140,7 @@ namespace GA.API.Controllers
                 }
 
                 _logger.LogInformation($"{location}: Creation was successful");
-                return Created("Create", new {data = data});
+                return Created("Create", new { data = data });
             }
             catch (Exception e)
             {

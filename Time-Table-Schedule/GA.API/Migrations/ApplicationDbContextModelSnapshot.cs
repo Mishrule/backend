@@ -21,162 +21,127 @@ namespace GA.API.Migrations
 
             modelBuilder.Entity("GA.API.Data.Class", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("CourseId")
-                        .HasColumnType("int");
+                    b.Property<string>("class")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Duration")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("Lab")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("ProfId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
                     b.ToTable("Classes");
                 });
 
-            modelBuilder.Entity("GA.API.Data.ClassFilter", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<int>("CourseId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Duration")
-                        .HasColumnType("int");
-
-                    b.Property<int>("GroupId")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("Lab")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("ProfId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ClassFilters");
-                });
-
             modelBuilder.Entity("GA.API.Data.Course", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<string>("Name")
+                    b.Property<string>("course")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
                     b.ToTable("Courses");
                 });
 
-            modelBuilder.Entity("GA.API.Data.Group", b =>
+            modelBuilder.Entity("GA.API.Data.Dataa", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("ClassId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
+                    b.Property<string>("data")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Size")
-                        .HasColumnType("int");
+                    b.HasKey("id");
 
-                    b.HasKey("Id");
+                    b.ToTable("Datum");
+                });
 
-                    b.HasIndex("ClassId");
+            modelBuilder.Entity("GA.API.Data.Group", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("group")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
 
                     b.ToTable("Groups");
                 });
 
             modelBuilder.Entity("GA.API.Data.ProcessData", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("ClassId")
+                    b.Property<int>("classId")
                         .HasColumnType("int");
 
-                    b.Property<int>("CourseId")
+                    b.Property<int>("courseId")
                         .HasColumnType("int");
 
-                    b.Property<int>("GroupId")
+                    b.Property<int>("groupId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ProfId")
+                    b.Property<int>("profId")
                         .HasColumnType("int");
 
-                    b.Property<int>("RoomId")
+                    b.Property<int>("roomId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
-                    b.HasIndex("ClassId");
+                    b.HasIndex("classId");
 
-                    b.HasIndex("CourseId");
+                    b.HasIndex("courseId");
 
-                    b.HasIndex("GroupId");
+                    b.HasIndex("groupId");
 
-                    b.HasIndex("ProfId");
+                    b.HasIndex("profId");
 
-                    b.HasIndex("RoomId");
+                    b.HasIndex("roomId");
 
                     b.ToTable("Datas");
                 });
 
             modelBuilder.Entity("GA.API.Data.Prof", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<string>("Name")
+                    b.Property<string>("prof")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
                     b.ToTable("Profs");
                 });
 
             modelBuilder.Entity("GA.API.Data.Room", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<bool>("Lab")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Name")
+                    b.Property<string>("room")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Size")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
                     b.ToTable("Rooms");
                 });
@@ -377,56 +342,47 @@ namespace GA.API.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("GA.API.Data.Group", b =>
-                {
-                    b.HasOne("GA.API.Data.Class", null)
-                        .WithMany("Groups")
-                        .HasForeignKey("ClassId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("GA.API.Data.ProcessData", b =>
                 {
-                    b.HasOne("GA.API.Data.Class", "Class")
+                    b.HasOne("GA.API.Data.Class", "class")
                         .WithMany()
-                        .HasForeignKey("ClassId")
+                        .HasForeignKey("classId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("GA.API.Data.Course", "Course")
+                    b.HasOne("GA.API.Data.Course", "course")
                         .WithMany()
-                        .HasForeignKey("CourseId")
+                        .HasForeignKey("courseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("GA.API.Data.Group", "Group")
+                    b.HasOne("GA.API.Data.Group", "group")
                         .WithMany()
-                        .HasForeignKey("GroupId")
+                        .HasForeignKey("groupId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("GA.API.Data.Prof", "Prof")
+                    b.HasOne("GA.API.Data.Prof", "prof")
                         .WithMany()
-                        .HasForeignKey("ProfId")
+                        .HasForeignKey("profId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("GA.API.Data.Room", "Room")
+                    b.HasOne("GA.API.Data.Room", "room")
                         .WithMany()
-                        .HasForeignKey("RoomId")
+                        .HasForeignKey("roomId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Class");
+                    b.Navigation("class");
 
-                    b.Navigation("Course");
+                    b.Navigation("course");
 
-                    b.Navigation("Group");
+                    b.Navigation("group");
 
-                    b.Navigation("Prof");
+                    b.Navigation("prof");
 
-                    b.Navigation("Room");
+                    b.Navigation("room");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -478,11 +434,6 @@ namespace GA.API.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("GA.API.Data.Class", b =>
-                {
-                    b.Navigation("Groups");
                 });
 #pragma warning restore 612, 618
         }

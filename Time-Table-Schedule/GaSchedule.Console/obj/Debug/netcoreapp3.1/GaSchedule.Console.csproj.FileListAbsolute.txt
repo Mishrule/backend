@@ -52,7 +52,6 @@ C:\Users\mishr\Source\Repos\backend\Time-Table-Schedule\GaSchedule.Console\obj\D
 C:\Users\mishr\Source\Repos\backend\Time-Table-Schedule\GaSchedule.Console\obj\Debug\netcoreapp3.1\GaSchedule.dll
 C:\Users\mishr\Source\Repos\backend\Time-Table-Schedule\GaSchedule.Console\obj\Debug\netcoreapp3.1\GaSchedule.pdb
 C:\Users\mishr\Source\Repos\backend\Time-Table-Schedule\GaSchedule.Console\obj\Debug\netcoreapp3.1\GaSchedule.Console.genruntimeconfig.cache
-C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GaSchedule.Console\bin\Debug\netcoreapp3.1\GaSchedule.json
 C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GaSchedule.Console\bin\Debug\netcoreapp3.1\GaSchedule.exe
 C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GaSchedule.Console\bin\Debug\netcoreapp3.1\GaSchedule.deps.json
 C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GaSchedule.Console\bin\Debug\netcoreapp3.1\GaSchedule.runtimeconfig.json
@@ -88,3 +87,4 @@ C:\Users\mishr\source\repos\Mishrule\backend\Time-Table-Schedule\GaSchedule.Cons
 C:\Users\mishr\source\repos\Mishrule\backend\Time-Table-Schedule\GaSchedule.Console\obj\Debug\netcoreapp3.1\GaSchedule.dll
 C:\Users\mishr\source\repos\Mishrule\backend\Time-Table-Schedule\GaSchedule.Console\obj\Debug\netcoreapp3.1\GaSchedule.pdb
 C:\Users\mishr\source\repos\Mishrule\backend\Time-Table-Schedule\GaSchedule.Console\obj\Debug\netcoreapp3.1\GaSchedule.Console.genruntimeconfig.cache
+C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GaSchedule.Console\bin\Debug\netcoreapp3.1\GaSchedule.json

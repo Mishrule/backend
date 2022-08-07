@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Abstractions;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 
 namespace GA.API.Controllers
 {
@@ -19,7 +20,7 @@ namespace GA.API.Controllers
         private readonly IGroupRepository _groupRepository;
         private readonly ILogger<GroupController> _logger;
         private readonly IMapper _mapper;
-
+        public GroupDto groupDto { get; set; }
         public GroupController(IGroupRepository groupRepository, ILogger<GroupController> logger, IMapper mapper)
         {
             _groupRepository = groupRepository;
@@ -37,20 +38,45 @@ namespace GA.API.Controllers
 
         public async Task<IActionResult> GetGroups()
         {
+            //var location = GetControllerActionNames();
+            //try
+            //{
+            //    _logger.LogInformation($"{location}: Endpoint Initialized");
+            //    var groups = await _groupRepository.GetAll();
+            //    var response = _mapper.Map<IList<GroupDto>>(groups);
+            //    _logger.LogInformation($"{location}: Endpoint Complete");
+            //    return Ok(response);
+            //}
+            //catch (Exception e)
+            //{
+            //    _logger.LogError($"{location}: Error got @ {e.Message}");
+            //    return InternalError($"{location}: {e.Message} - {e.InnerException}");
+            //}
+
+            List<GroupObject> Data = new();
             var location = GetControllerActionNames();
             try
             {
                 _logger.LogInformation($"{location}: Endpoint Initialized");
                 var groups = await _groupRepository.GetAll();
                 var response = _mapper.Map<IList<GroupDto>>(groups);
-                _logger.LogInformation($"{location}: Endpoint Complete");
+                foreach (var dat in response)
+                {
+                    Data.Add(JsonConvert.DeserializeObject<GroupObject>(dat.group));
+                }
+                _logger.LogInformation($"{location}: Successful");
                 return Ok(response);
             }
             catch (Exception e)
             {
-                _logger.LogError($"{location}: Error got @ {e.Message}");
                 return InternalError($"{location}: {e.Message} - {e.InnerException}");
             }
+
+
+
+
+
+
         }
 
         /// <summary>
@@ -76,6 +102,7 @@ namespace GA.API.Controllers
                 }
 
                 var response = _mapper.Map<GroupDto>(group);
+                var data = JsonConvert.DeserializeObject<GroupDto>(response.group);
                 _logger.LogInformation($"{location}: Successfully got record with id: {id}");
                 return Ok(response);
             }
@@ -94,13 +121,13 @@ namespace GA.API.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Create(CreateGroupDto groupDto)
+        public async Task<IActionResult> Create(GroupObject groupObject)
         {
             var location = GetControllerActionNames();
             try
             {
                 _logger.LogInformation($"{location}: Create Attempted");
-                if (groupDto == null)
+                if (groupObject == null)
                 {
                     _logger.LogWarning($"{location}: Empty Request was submitted");
                     return BadRequest(ModelState);
@@ -111,13 +138,13 @@ namespace GA.API.Controllers
                     return BadRequest(ModelState);
                 }
                 var group = _mapper.Map<Group>(groupDto);
-                var isSuccess = await _groupRepository.CreateAsync(group);
+                var isSuccess = await _groupRepository.CreateAsync(group, groupObject);
                 if (!isSuccess)
                 {
                     return InternalError($"{location}: Creation failed");
                 }
                 _logger.LogInformation($"{location}: Creation was successful");
-                return Created("Create", new {group = group });
+                return Created("Create", new { group = groupObject });
             }
             catch (Exception e)
             {
@@ -135,13 +162,13 @@ namespace GA.API.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Update(int id, GroupDto groupDto)
+        public async Task<IActionResult> Update(int id, GroupObject groupObject)
         {
             var location = GetControllerActionNames();
             try
             {
                 _logger.LogInformation($"{location}: Update Attempted on record with id: {id} ");
-                if (id < 1 || groupDto == null || id != groupDto.Id)
+                if (id < 1 || groupObject == null)
                 {
                     _logger.LogWarning($"{location}: Update failed with bad data - id: {id}");
                     return BadRequest();
@@ -158,7 +185,11 @@ namespace GA.API.Controllers
                     return BadRequest(ModelState);
                 }
                 var group = _mapper.Map<Group>(groupDto);
-                var isSuccess = await _groupRepository.UpdateAsync(group);
+                group = new Group
+                {
+                    id = id
+                };
+                var isSuccess = await _groupRepository.UpdateAsync(group, groupObject);
                 if (!isSuccess)
                 {
                     return InternalError($"{location}: Update failed for record with id: {id}");

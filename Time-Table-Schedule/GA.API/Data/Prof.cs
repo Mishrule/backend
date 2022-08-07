@@ -1,13 +1,21 @@
-﻿using System;
+﻿using GA.API.DTOs;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace GA.API.Data
 {
+   // [Serializable]
     public class Prof
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public int id { get; set; }
+        
+        public string prof { get; set; }
+        //[NotMapped]
+        //public ProfObject profs { get; set; }
     }
+
+
 }
