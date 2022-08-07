@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using GA.API.DTOs;
+using Newtonsoft.Json;
 
 namespace GA.API.Services
 {
@@ -23,6 +25,35 @@ namespace GA.API.Services
             return await SaveAsync();
         }
 
+        public async Task<bool> CreateAsync(Group entity, GroupObject groupObject)
+        {
+            var data = new GroupObject
+            {
+                id=groupObject.id,
+                name=groupObject.name,
+                size=groupObject.size
+            };
+            var groupSerialize = JsonConvert.SerializeObject(data);
+            entity = new Group
+            {
+                group = groupSerialize
+
+            };
+           var groupJson = new Group
+            {
+                group = groupSerialize
+
+            };
+            var groupJsonSerialize = JsonConvert.SerializeObject(groupJson);
+            var serializeGroup = new Dataa
+            {
+                data = groupJsonSerialize
+            };
+            await _db.Groups.AddAsync(entity);
+            await _db.Datum.AddAsync(serializeGroup);
+            return await SaveAsync();
+        }
+
         public async Task<bool> Delete(Group entity)
         {
             _db.Groups.Remove(entity);
@@ -37,13 +68,13 @@ namespace GA.API.Services
 
         public async Task<Group> GetById(int id)
         {
-            var group = await _db.Groups.FirstOrDefaultAsync(g => g.Id == id);
+            var group = await _db.Groups.FirstOrDefaultAsync(g => g.id == id);
             return group;
         }
 
         public async Task<bool> isExists(int id)
         {
-            var isExists = await _db.Groups.AnyAsync(q => q.Id == id);
+            var isExists = await _db.Groups.AnyAsync(q => q.id == id);
             return isExists;
         }
 
@@ -55,6 +86,23 @@ namespace GA.API.Services
 
         public async Task<bool> UpdateAsync(Group entity)
         {
+            _db.Groups.Update(entity);
+            return await SaveAsync();
+        }
+
+        public async Task<bool> UpdateAsync(Group entity, GroupObject groupObject)
+        {
+            var data = new GroupObject
+            {
+               id = groupObject.id,
+               name = groupObject.name,
+               size= groupObject.size
+            };
+            var serialized = JsonConvert.SerializeObject(data);
+            entity.id = entity.id;
+            entity.group = serialized;
+
+
             _db.Groups.Update(entity);
             return await SaveAsync();
         }

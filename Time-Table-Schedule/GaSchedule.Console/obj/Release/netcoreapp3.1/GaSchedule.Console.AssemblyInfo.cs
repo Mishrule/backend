@@ -11,9 +11,9 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("DNAssist ®")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Teamwork ®")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
-[assembly: System.Reflection.AssemblyCopyrightAttribute("Copyright © Miller Cy Chan 2021")]
+[assembly: System.Reflection.AssemblyCopyrightAttribute("MishrulTeam UMaT")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.2.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.2.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("GaSchedule.cs")]

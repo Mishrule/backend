@@ -9,11 +9,15 @@ namespace GA.API.Data
 {
     public class Group
     {
-        public int Id { get; set; }
-        public int ClassId { get; set; }
-        //public Class Class { get; set; }
+        public int id { get; set; }
+        public string group { get; set; }
+        //public int ClassId { get; set; }
+        ////public Class Class { get; set; }
 
-        public string Name { get; set; }
-        public int Size { get; set; }
+        //public string Name { get; set; }
+        //public int Size { get; set; }
     }
+
+
+
 }

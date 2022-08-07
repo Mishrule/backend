@@ -5,14 +5,8 @@ using System.Threading.Tasks;
 
 namespace GA.API.DTOs
 {
-    public class ProfDto: CreateProfDto
+    public class ProfData
     {
-        public int Id { get; set; }
-       
-    }
-
-    public class CreateProfDto
-    {
-        public string Name { get; set; }
+        public string prof { get; set; }
     }
 }

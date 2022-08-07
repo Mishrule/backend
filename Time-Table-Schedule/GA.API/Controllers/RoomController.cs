@@ -8,6 +8,7 @@ using GA.API.DTOs;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 
 namespace GA.API.Controllers
 {
@@ -18,7 +19,7 @@ namespace GA.API.Controllers
         private readonly ILogger<RoomController> _logger;
         private readonly IRoomRepository _roomRepository;
         private readonly IMapper _mapper;
-
+        public RoomDto roomDto { get; set; }
         public RoomController(ILogger<RoomController> logger, IRoomRepository roomRepository, IMapper mapper)
         {
             _logger = logger;
@@ -35,12 +36,17 @@ namespace GA.API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetRooms()
         {
+            List<RoomObject> Data = new();
             var location = GetControllerActionNames();
             try
             {
                 _logger.LogInformation($"{location}: Attempted Call");
                 var rooms = await _roomRepository.GetAll();
                 var response = _mapper.Map<IList<RoomDto>>(rooms);
+                foreach (var dat in response)
+                {
+                    Data.Add(JsonConvert.DeserializeObject<RoomObject>(dat.room));
+                }
                 _logger.LogInformation($"{location}: Successful");
                 return Ok(response);
             }
@@ -58,7 +64,7 @@ namespace GA.API.Controllers
         [HttpGet("{id:int}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> GetBook(int id)
+        public async Task<IActionResult> GetRoom(int id)
         {
             var location = GetControllerActionNames();
             try
@@ -71,6 +77,7 @@ namespace GA.API.Controllers
                     return NotFound();
                 }
                 var response = _mapper.Map<RoomDto>(room);
+                var data = JsonConvert.DeserializeObject<RoomDto>(response.room);
                 _logger.LogInformation($"{location}: Successfully got record with id: {id}");
                 return Ok(response);
             }
@@ -88,13 +95,13 @@ namespace GA.API.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Create(CreateRoomDto roomDto)
+        public async Task<IActionResult> Create(RoomObject roomObject)
         {
             var location = GetControllerActionNames();
             try
             {
                 _logger.LogInformation($"{location}: Create Attempted");
-                if (roomDto == null)
+                if (roomObject == null)
                 {
                     _logger.LogWarning($"{location}: Empty Request was submitted");
                     return BadRequest(ModelState);
@@ -105,13 +112,13 @@ namespace GA.API.Controllers
                     return BadRequest(ModelState);
                 }
                 var room = _mapper.Map<Room>(roomDto);
-                var isSuccess = await _roomRepository.CreateAsync(room);
+                var isSuccess = await _roomRepository.CreateAsync(room, roomObject);
                 if (!isSuccess)
                 {
                     return InternalError($"{location}: Creation failed");
                 }
                 _logger.LogInformation($"{location}: Creation was successful");
-                return Created("Create", new {book = room });
+                return Created("Create", new { room = roomObject });
             }
             catch (Exception e)
             {
@@ -129,13 +136,13 @@ namespace GA.API.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Update(int id, RoomDto roomDTO)
+        public async Task<IActionResult> Update(int id, RoomObject roomObject)
         {
             var location = GetControllerActionNames();
             try
             {
                 _logger.LogInformation($"{location}: Update Attempted on record with name: {id} ");
-                if (id < 1 || roomDTO == null || id != roomDTO.Id)
+                if (id < 1 || roomObject == null )
                 {
                     _logger.LogWarning($"{location}: Update failed with bad data - name: {id}");
                     return BadRequest();
@@ -151,8 +158,12 @@ namespace GA.API.Controllers
                     _logger.LogWarning($"{location}: Data was Incomplete");
                     return BadRequest(ModelState);
                 }
-                var room = _mapper.Map<Room>(roomDTO);
-                var isSuccess = await _roomRepository.UpdateAsync(room);
+                var room = _mapper.Map<Room>(roomDto);
+                room = new Room
+                {
+                    id = id
+                };
+                var isSuccess = await _roomRepository.UpdateAsync(room, roomObject);
                 if (!isSuccess)
                 {
                     return InternalError($"{location}: Update failed for record with name: {id}");

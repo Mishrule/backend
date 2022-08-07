@@ -1,13 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Diagnostics;
+using System.Dynamic;
 using System.Threading.Tasks;
 using AutoMapper;
 using GA.API.Contracts;
 using GA.API.Data;
 using GA.API.DTOs;
+using GaSchedule;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 
 namespace GA.API.Controllers
 {
@@ -33,14 +38,22 @@ namespace GA.API.Controllers
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> GetData()
+        public async Task<IActionResult> GetDatum()
         {
             var location = GetControllerActionNames();
+            List<dynamic> Data = new();
+            //IDictionary<string, object> ss ;
             try
             {
                 _logger.LogInformation($"{location}: Attempted Call");
                 var data = await _dataRepository.GetAll();
-                var response = _mapper.Map<IList<ProcessDataDto>>(data);
+                var response = _mapper.Map<IList<GetDataDto>>(data);
+                //foreach (var item in response)
+                //{
+                //    //  var aa = JsonConvert.DeserializeObject(item.data);
+                //    // Data.Add(JsonConvert.DeserializeObject<DataClass>(item.data));
+                //   // Data.Add(JsonConvert.DeserializeObject<dynamic>(item.prof.prof));
+                //}
                 _logger.LogInformation($"{location}: Successful");
                 return Ok(response);
             }
@@ -55,14 +68,60 @@ namespace GA.API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetJsonData()
         {
+            
             var location = GetControllerActionNames();
             try
             {
                 _logger.LogInformation($"{location}: Attempted Call");
                 var json = await _dataRepository.GetFileToJson();
-                var response = _mapper.Map<IList<ProcessDataDto>>(json);
+                var response = _mapper.Map<IList<GetDataDto>>(json);
+                
                 _logger.LogInformation($"{location}: Successful");
                 return Ok(response);
+            }
+            catch (Exception e)
+            {
+                return InternalError($"{location}: {e.Message} - {e.InnerException}");
+            }
+        }
+
+        [HttpGet("GetData")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> GetData()
+        {
+            IDictionary<string, object> ss;
+            List<dynamic> Data = new();
+            List<dynamic> d = new();
+
+            //List<DataDto> dataResponse = new List<DataDto>();
+            var location = GetControllerActionNames();
+            try
+            {
+                _logger.LogInformation($"{location}: Attempted Call");
+                var json = await _dataRepository.GetData();
+                var response = _mapper.Map<IList<DataDto>>(json);
+               
+                foreach (var item in response)
+                {
+                    //  var aa = JsonConvert.DeserializeObject(item.data);
+                    // Data.Add(JsonConvert.DeserializeObject<DataClass>(item.data));
+                    var dd = JsonConvert.DeserializeObject<dynamic>(item.data);
+                    Data.Add(dd);
+
+                   // dynamic dynamicObject = JsonConvert.DeserializeObject<ExpandoObject>(item.data);
+                    
+                }
+
+                //  JsonConvert.SerializeObject(response);
+                //for (int i = 0; i < Data.Count; i++)
+                //{
+                //    var dd = JsonConvert.DeserializeObject<dynamic>(Data[i]);
+                //}
+
+                _logger.LogInformation($"{location}: Successful");
+               // return Ok(JsonConvert.SerializeObject(response));
+                return Ok(Data);
             }
             catch (Exception e)
             {
@@ -105,7 +164,7 @@ namespace GA.API.Controllers
                 }
 
                 _logger.LogInformation($"{location}: Creation was successful");
-                return Created("Create", new {data = data});
+                return Created("Create", new { data = data });
             }
             catch (Exception e)
             {
@@ -113,6 +172,17 @@ namespace GA.API.Controllers
             }
         }
 
+        [HttpGet("StartConsole")]
+        public async void Start()
+        {
+            //ProcessStartInfo startInfo = new ProcessStartInfo();
+            //startInfo.FileName = @"C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GaSchedule.Console\GaSchedule.exe";
+            //startInfo.Arguments = "args";
+            //startInfo.CreateNoWindow = true;
+            //startInfo.UseShellExecute = false;
+            //Process myProcess = Process.Start(startInfo);
+            //myProcess.Start();
+        }
 
         private string GetControllerActionNames()
         {

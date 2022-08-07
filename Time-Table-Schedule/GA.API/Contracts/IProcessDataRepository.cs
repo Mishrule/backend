@@ -9,5 +9,6 @@ namespace GA.API.Contracts
    public interface IProcessDataRepository : IRepositoryBase<ProcessData>
     {
         Task<IList<ProcessData>> GetFileToJson();
+        Task<IList<Dataa>> GetData();
     }
 }

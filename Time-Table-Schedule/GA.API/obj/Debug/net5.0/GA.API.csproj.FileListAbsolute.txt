@@ -147,13 +147,13 @@ C:\Users\mishr\source\repos\Mishrule\backend\Time-Table-Schedule\GA.API\obj\Debu
 C:\Users\mishr\source\repos\Mishrule\backend\Time-Table-Schedule\GA.API\obj\Debug\net5.0\GA.API.pdb
 C:\Users\mishr\source\repos\Mishrule\backend\Time-Table-Schedule\GA.API\obj\Debug\net5.0\GA.API.genruntimeconfig.cache
 C:\Users\mishr\source\repos\Mishrule\backend\Time-Table-Schedule\GA.API\obj\Debug\net5.0\ref\GA.API.dll
-C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GA.API\bin\Debug\net5.0\appsettings.Development.json
-C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GA.API\bin\Debug\net5.0\appsettings.json
 C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GA.API\bin\Debug\net5.0\GaSchedule.deps.json
 C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GA.API\bin\Debug\net5.0\GaSchedule.runtimeconfig.json
 C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GA.API\bin\Debug\net5.0\GaSchedule.runtimeconfig.dev.json
-C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GA.API\bin\Debug\net5.0\GaScheduleOld.json
+C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GA.API\bin\Debug\net5.0\GaSchedule.json
 C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GA.API\bin\Debug\net5.0\GaSchedule.exe
+C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GA.API\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GA.API\bin\Debug\net5.0\appsettings.json
 C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GA.API\bin\Debug\net5.0\GA.API.exe
 C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GA.API\bin\Debug\net5.0\GA.API.deps.json
 C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GA.API\bin\Debug\net5.0\GA.API.runtimeconfig.json
@@ -238,3 +238,6 @@ C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GA.API\obj\Debug\net5.0
 C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GA.API\obj\Debug\net5.0\ref\GA.API.dll
 C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GA.API\obj\Debug\net5.0\GA.API.pdb
 C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GA.API\obj\Debug\net5.0\GA.API.genruntimeconfig.cache
+C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GA.API\bin\Debug\net5.0\GA\GaSchedule.deps.json
+C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GA.API\bin\Debug\net5.0\GA\GaSchedule.json
+C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GA.API\bin\Debug\net5.0\GA\GaSchedule.runtimeconfig.json

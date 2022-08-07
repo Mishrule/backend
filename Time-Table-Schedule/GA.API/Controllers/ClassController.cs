@@ -10,6 +10,7 @@ using GA.API.DTOs;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 
 namespace GA.API.Controllers
 {
@@ -20,6 +21,7 @@ namespace GA.API.Controllers
         private readonly IClassRepository _classRepository;
         private readonly ILogger<ClassController> _logger;
         private readonly IMapper _mapper;
+        public ClassDto classDto { get; set; }
 
         public ClassController(IClassRepository classRepository, ILogger<ClassController> logger, IMapper mapper)
         {
@@ -38,21 +40,18 @@ namespace GA.API.Controllers
 
         public async Task<IActionResult> GetClasses()
         {
+            List<ClassObject> Data = new();
             var location = GetControllerActionNames();
             try
             {
                 _logger.LogInformation("Endpoint Initialized");
                 var classes = await _classRepository.GetAll();
-                
-                var response = _mapper.Map<IList<ClassDto>>(classes);
-                //var stringConvert = "";
-                //foreach (var classDto in response)
-                //{
-                //    stringConvert += classDto.Group;
-                //}
 
-                //var numbers = stringConvert?.Split(',')?.Select(Int32.Parse)?.ToList();
-                //response.Where(q => q.Groups.Add(numbers));
+                var response = _mapper.Map<IList<ClassDto>>(classes);
+                foreach (var dat in response)
+                {
+                    Data.Add(JsonConvert.DeserializeObject<ClassObject>(dat.@class));
+                }
                 _logger.LogInformation("Endpoint Complete");
                 return Ok(response);
             }
@@ -71,10 +70,10 @@ namespace GA.API.Controllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Create(CreateClassDto entity)
+        public async Task<IActionResult> Create(ClassObject classObject)
         {
             _logger.LogInformation("Initializing Create Class Endpoint");
-            if (entity == null)
+            if (classObject == null)
             {
                 _logger.LogWarning("Empty Class Request was Submitted ");
                 return BadRequest(ModelState);
@@ -92,16 +91,16 @@ namespace GA.API.Controllers
             //entity.Group = String.Join(", ", strings);
 
 
-            
-            var createClass = _mapper.Map<Class>(entity);
-            var isSuccess = await _classRepository.CreateAsync(createClass);
+
+            var createClass = _mapper.Map<Class>(classDto);
+            var isSuccess = await _classRepository.CreateAsync(createClass, classObject);
             if (!isSuccess)
             {
                 _logger.LogWarning("Failed to Create Class");
                 return StatusCode(500, "Failed to Create Class");
             }
             _logger.LogInformation("Creating was Success and completed");
-            return Created("Create", new {createClass});
+            return Created("Create", new { @class = classObject });
         }
 
         /*

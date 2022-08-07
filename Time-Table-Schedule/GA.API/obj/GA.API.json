@@ -47,22 +47,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateClassDto"
+                "$ref": "#/components/schemas/ClassObject"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateClassDto"
+                "$ref": "#/components/schemas/ClassObject"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateClassDto"
+                "$ref": "#/components/schemas/ClassObject"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateClassDto"
+                "$ref": "#/components/schemas/ClassObject"
               }
             }
           }
@@ -119,22 +119,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateCourseDto"
+                "$ref": "#/components/schemas/CourseObject"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateCourseDto"
+                "$ref": "#/components/schemas/CourseObject"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateCourseDto"
+                "$ref": "#/components/schemas/CourseObject"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateCourseDto"
+                "$ref": "#/components/schemas/CourseObject"
               }
             }
           }
@@ -213,22 +213,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/CourseDto"
+                "$ref": "#/components/schemas/CourseObject"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CourseDto"
+                "$ref": "#/components/schemas/CourseObject"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CourseDto"
+                "$ref": "#/components/schemas/CourseObject"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CourseDto"
+                "$ref": "#/components/schemas/CourseObject"
               }
             }
           }
@@ -434,6 +434,33 @@
         }
       }
     },
+    "/api/Data/GetData": {
+      "get": {
+        "tags": [
+          "Data"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/api/Data/StartConsole": {
+      "get": {
+        "tags": [
+          "Data"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/Group": {
       "get": {
         "tags": [
@@ -476,22 +503,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateGroupDto"
+                "$ref": "#/components/schemas/GroupObject"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateGroupDto"
+                "$ref": "#/components/schemas/GroupObject"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateGroupDto"
+                "$ref": "#/components/schemas/GroupObject"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateGroupDto"
+                "$ref": "#/components/schemas/GroupObject"
               }
             }
           }
@@ -570,22 +597,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/GroupDto"
+                "$ref": "#/components/schemas/GroupObject"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/GroupDto"
+                "$ref": "#/components/schemas/GroupObject"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/GroupDto"
+                "$ref": "#/components/schemas/GroupObject"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/GroupDto"
+                "$ref": "#/components/schemas/GroupObject"
               }
             }
           }
@@ -726,22 +753,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateProfDto"
+                "$ref": "#/components/schemas/ProfObject"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateProfDto"
+                "$ref": "#/components/schemas/ProfObject"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateProfDto"
+                "$ref": "#/components/schemas/ProfObject"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateProfDto"
+                "$ref": "#/components/schemas/ProfObject"
               }
             }
           }
@@ -820,22 +847,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/ProfDto"
+                "$ref": "#/components/schemas/ProfObject"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ProfDto"
+                "$ref": "#/components/schemas/ProfObject"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ProfDto"
+                "$ref": "#/components/schemas/ProfObject"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ProfDto"
+                "$ref": "#/components/schemas/ProfObject"
               }
             }
           }
@@ -976,22 +1003,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateRoomDto"
+                "$ref": "#/components/schemas/RoomObject"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateRoomDto"
+                "$ref": "#/components/schemas/RoomObject"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateRoomDto"
+                "$ref": "#/components/schemas/RoomObject"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateRoomDto"
+                "$ref": "#/components/schemas/RoomObject"
               }
             }
           }
@@ -1070,22 +1097,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/RoomDto"
+                "$ref": "#/components/schemas/RoomObject"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RoomDto"
+                "$ref": "#/components/schemas/RoomObject"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/RoomDto"
+                "$ref": "#/components/schemas/RoomObject"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/RoomDto"
+                "$ref": "#/components/schemas/RoomObject"
               }
             }
           }
@@ -1272,14 +1299,14 @@
         },
         "additionalProperties": { }
       },
-      "CreateClassDto": {
+      "ClassObject": {
         "type": "object",
         "properties": {
-          "profId": {
+          "professor": {
             "type": "integer",
             "format": "int32"
           },
-          "courseId": {
+          "course": {
             "type": "integer",
             "format": "int32"
           },
@@ -1287,32 +1314,30 @@
             "type": "integer",
             "format": "int32"
           },
+          "group": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
           "lab": {
             "type": "boolean"
           }
         },
         "additionalProperties": false
       },
-      "CreateCourseDto": {
+      "CourseObject": {
         "type": "object",
         "properties": {
-          "name": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "CourseDto": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
           "id": {
             "type": "integer",
             "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1343,16 +1368,16 @@
         },
         "additionalProperties": false
       },
-      "CreateGroupDto": {
+      "GroupObject": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
           "name": {
             "type": "string",
             "nullable": true
-          },
-          "classId": {
-            "type": "integer",
-            "format": "int32"
           },
           "size": {
             "type": "integer",
@@ -1361,53 +1386,21 @@
         },
         "additionalProperties": false
       },
-      "GroupDto": {
+      "ProfObject": {
         "type": "object",
         "properties": {
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "classId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "size": {
-            "type": "integer",
-            "format": "int32"
-          },
           "id": {
             "type": "integer",
             "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "CreateProfDto": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "ProfDto": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "nullable": true
           },
-          "id": {
-            "type": "integer",
-            "format": "int32"
+          "name": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "CreateRoomDto": {
+      "RoomObject": {
         "type": "object",
         "properties": {
           "name": {
@@ -1418,27 +1411,6 @@
             "type": "boolean"
           },
           "size": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "RoomDto": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "lab": {
-            "type": "boolean"
-          },
-          "size": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "id": {
             "type": "integer",
             "format": "int32"
           }

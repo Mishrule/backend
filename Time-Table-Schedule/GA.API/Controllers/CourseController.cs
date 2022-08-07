@@ -8,6 +8,7 @@ using GA.API.DTOs;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 
 namespace GA.API.Controllers
 {
@@ -18,6 +19,7 @@ namespace GA.API.Controllers
         private readonly ICourseRepository _courseRepository;
         private readonly ILogger<CourseController> _logger;
         private readonly IMapper _mapper;
+        public CourseDto courseDto { get; set; }
 
         public CourseController(ICourseRepository courseRepository, ILogger<CourseController> logger, IMapper mapper)
         {
@@ -35,11 +37,16 @@ namespace GA.API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetCourses()
         {
+            List<CourseObject> Data = new();
             try
             {
                 _logger.LogInformation("Endpoint Initialized");
                 var courses = await _courseRepository.GetAll();
-                var response = _mapper.Map<IList<CourseDto>>(courses);
+                var response = _mapper.Map<IList<CourseDto>>(courses); 
+                foreach (var dat in response)
+                {
+                    Data.Add(JsonConvert.DeserializeObject<CourseObject>(dat.course));
+                }
                 _logger.LogInformation("Endpoint Complete");
                 return Ok(response);
             }
@@ -71,13 +78,14 @@ namespace GA.API.Controllers
                 }
 
                 var response = _mapper.Map<CourseDto>(course);
+                var data = JsonConvert.DeserializeObject<RoomDto>(response.course);
                 _logger.LogInformation($"Successfully got record with id: {id}");
                 return Ok(response);
             }
             catch (Exception e)
             {
-                 _logger.LogInformation($"Error getting record with id: {e.Message}", e);
-                 return null;
+                _logger.LogInformation($"Error getting record with id: {e.Message}", e);
+                return null;
             }
         }
 
@@ -90,12 +98,12 @@ namespace GA.API.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Create(CreateCourseDto courseDto)
+        public async Task<IActionResult> Create(CourseObject courseObject)
         {
             try
             {
                 _logger.LogInformation($"Create Attempted");
-                if (courseDto == null)
+                if (courseObject == null)
                 {
                     _logger.LogWarning($"Empty Request was submitted");
                     return BadRequest(ModelState);
@@ -108,7 +116,7 @@ namespace GA.API.Controllers
                 }
 
                 var courseToCreate = _mapper.Map<Course>(courseDto);
-                var isSuccess = await _courseRepository.CreateAsync(courseToCreate);
+                var isSuccess = await _courseRepository.CreateAsync(courseToCreate, courseObject);
                 if (!isSuccess)
                 {
                     _logger.LogError("Course Creating Failed");
@@ -116,12 +124,12 @@ namespace GA.API.Controllers
                 }
 
                 _logger.LogInformation($"Creation was successful");
-                return Created("Create", new {courseToCreate});
+                return Created("Create", new { course=courseObject });
             }
             catch (Exception e)
             {
-                 
-                    _logger.LogError($"{e.Message} - {e.InnerException}");
+
+                _logger.LogError($"{e.Message} - {e.InnerException}");
                 return null;
             }
         }
@@ -137,12 +145,12 @@ namespace GA.API.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Update(int id, CourseDto courseDto)
+        public async Task<IActionResult> Update(int id, CourseObject courseObject)
         {
             try
             {
                 _logger.LogInformation($"Update Attempted on record with id: {id} ");
-                if (id < 1 || courseDto == null || id != courseDto.Id)
+                if (id < 1 || courseObject == null)
                 {
                     _logger.LogWarning($"Update failed with bad data - id: {id}");
                     return BadRequest();
@@ -159,7 +167,11 @@ namespace GA.API.Controllers
                     return BadRequest(ModelState);
                 }
                 var couseToCreate = _mapper.Map<Course>(courseDto);
-                var isSuccess = await _courseRepository.UpdateAsync(couseToCreate);
+                couseToCreate = new Course
+                {
+                    id = id
+                };
+                var isSuccess = await _courseRepository.UpdateAsync(couseToCreate, courseObject);
                 if (!isSuccess)
                 {
                     _logger.LogError($"Update failed for record with id: {id}");
@@ -216,8 +228,8 @@ namespace GA.API.Controllers
             }
             catch (Exception e)
             {
-               _logger.LogError($" {e.Message} - {e.InnerException}");
-               return null;
+                _logger.LogError($" {e.Message} - {e.InnerException}");
+                return null;
             }
         }
 

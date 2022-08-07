@@ -7,8 +7,10 @@ using GA.API.DTOs;
 
 namespace GA.API.Contracts
 {
+    
     public interface IClassRepository : IRepositoryBase<Class>
     {
-        Task<IList<ClassFilter>> GetAllClassFilter();
+        Task<bool> CreateAsync(Class entity, ClassObject classObject);
+        Task<bool> UpdateAsync(Class entity, ClassObject classObject);
     }
 }
