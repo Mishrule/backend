@@ -9,7 +9,8 @@ namespace GaSchedule
    public class ConsoleApp
     {
       public  static void Main(string[] args)
-        {       
+      {
+            CallingEndpoint.GetData();
             Stopwatch stopwatch = Stopwatch.StartNew();
 
             var FILE_NAME = args.Length > 0 ? args[0] : "GaSchedule.json";

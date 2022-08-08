@@ -4,12 +4,15 @@ using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Dynamic;
 using System.IO;
+using System.Reflection;
 using System.Threading.Tasks;
 using AutoMapper;
 using GA.API.Contracts;
 using GA.API.Data;
 using GA.API.DTOs;
 using GaSchedule;
+using GaSchedule.Algorithm;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -25,11 +28,15 @@ namespace GA.API.Controllers
         private readonly IProcessDataRepository _dataRepository;
         private readonly IMapper _mapper;
 
-        public DataController(ILogger<DataController> logger, IProcessDataRepository dataRepository, IMapper mapper)
+        private readonly IWebHostEnvironment _env;
+
+        public DataController(ILogger<DataController> logger, IProcessDataRepository dataRepository, IMapper mapper,
+            IWebHostEnvironment env)
         {
             _logger = logger;
             _dataRepository = dataRepository;
             _mapper = mapper;
+            _env = env;
         }
 
         /// <summary>
@@ -69,14 +76,14 @@ namespace GA.API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetJsonData()
         {
-            
+
             var location = GetControllerActionNames();
             try
             {
                 _logger.LogInformation($"{location}: Attempted Call");
                 var json = await _dataRepository.GetFileToJson();
                 var response = _mapper.Map<IList<GetDataDto>>(json);
-                
+
                 _logger.LogInformation($"{location}: Successful");
                 return Ok(response);
             }
@@ -92,7 +99,7 @@ namespace GA.API.Controllers
         public async Task<IActionResult> GetData()
         {
             List<dynamic> Data = new();
-           // List<dynamic> d = new();
+            // List<dynamic> d = new();
 
             //List<DataDto> dataResponse = new List<DataDto>();
             var location = GetControllerActionNames();
@@ -101,7 +108,7 @@ namespace GA.API.Controllers
                 _logger.LogInformation($"{location}: Attempted Call");
                 var json = await _dataRepository.GetData();
                 var response = _mapper.Map<IList<DataDto>>(json);
-               
+
                 foreach (var item in response)
                 {
                     //  var aa = JsonConvert.DeserializeObject(item.data);
@@ -109,8 +116,8 @@ namespace GA.API.Controllers
                     var dd = JsonConvert.DeserializeObject<dynamic>(item.data);
                     Data.Add(dd);
 
-                   // dynamic dynamicObject = JsonConvert.DeserializeObject<ExpandoObject>(item.data);
-                    
+                    // dynamic dynamicObject = JsonConvert.DeserializeObject<ExpandoObject>(item.data);
+
                 }
 
                 //  JsonConvert.SerializeObject(response);
@@ -118,9 +125,9 @@ namespace GA.API.Controllers
                 //{
                 //    var dd = JsonConvert.DeserializeObject<dynamic>(Data[i]);
                 //}
-                
+
                 _logger.LogInformation($"{location}: Successful");
-               // return Ok(JsonConvert.SerializeObject(response));
+                // return Ok(JsonConvert.SerializeObject(response));
                 return Ok(Data);
             }
             catch (Exception e)
@@ -164,7 +171,7 @@ namespace GA.API.Controllers
                 }
 
                 _logger.LogInformation($"{location}: Creation was successful");
-                return Created("Create", new { data = data });
+                return Created("Create", new {data = data});
             }
             catch (Exception e)
             {
@@ -172,19 +179,57 @@ namespace GA.API.Controllers
             }
         }
 
-        [HttpGet("StartConsole")]
-        public async void Start()
+
+
+        [HttpGet("RunAlgorithm")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public void RunAlgorithm()
         {
-            //ProcessStartInfo startInfo = new ProcessStartInfo();
-            //startInfo.FileName = @"C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GaSchedule.Console\GaSchedule.exe";
-            //startInfo.Arguments = "args";
-            //startInfo.CreateNoWindow = true;
-            //startInfo.UseShellExecute = false;
-            //Process myProcess = Process.Start(startInfo);
-            //myProcess.Start();
+            CallingEndpoint.GetData();
+            Stopwatch stopwatch = Stopwatch.StartNew();
+
+            var FILE_NAME =  "GaSchedule.json";
+            var configuration = new GaSchedule.Algorithm.Configuration();
+            configuration.ParseFile(FILE_NAME);
+
+            // var alg = new GeneticAlgorithm<Schedule>(new Schedule(configuration));
+            var alg = new Amga2<Schedule>(new Schedule(configuration));
+
+            System.Console.WriteLine("GA Schedule Version {0} C# .NET Core. Making a Class Schedule Using {1}.",
+                Assembly.GetExecutingAssembly().GetName().Version, alg.ToString());
+            System.Console.WriteLine(".......");
+
+            alg.Run();
+            var htmlResult = HtmlOutput.GetResult(alg.Result);
+
+            var tempFilePath = Path.GetTempPath() + FILE_NAME.Replace(".json", ".htm");
+            using (StreamWriter outputFile = new StreamWriter(tempFilePath))
+            {
+                outputFile.WriteLine(htmlResult);
+            }
+
+            System.Console.WriteLine("");
+            System.Console.WriteLine(@"Completed in {0:s\.fff} secs with peak memory usage of {1}.", stopwatch.Elapsed,
+                Process.GetCurrentProcess().PeakWorkingSet64.ToString("#,#"));
+
+            using (var proc = new Process())
+            {
+                proc.StartInfo.FileName = tempFilePath;
+                proc.StartInfo.UseShellExecute = true;
+                proc.StartInfo.Verb = "open";
+                proc.Start();
+            }
         }
 
-        private string GetControllerActionNames()
+
+    
+
+
+
+
+    private string GetControllerActionNames()
         {
             var controller = ControllerContext.ActionDescriptor.ControllerName;
             var action = ControllerContext.ActionDescriptor.ActionName;

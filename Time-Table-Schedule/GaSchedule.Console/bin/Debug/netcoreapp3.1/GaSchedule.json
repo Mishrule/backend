@@ -6,14 +6,8 @@
     }
   },
   {
-    "course": {
-      "id": 1,
-      "name": "Programming"
-    }
-  },
-  {
     "room": {
-      "name": "LH1",
+      "name": "LH 1",
       "lab": true,
       "size": 50
     }
@@ -23,6 +17,12 @@
       "id": 1,
       "name": "CE 1A",
       "size": 20
+    }
+  },
+  {
+    "course": {
+      "id": 1,
+      "name": "Introduction To Programming"
     }
   },
   {
