@@ -1,0 +1,77 @@
+[
+  {
+    "prof": {
+      "id": 1,
+      "name": "Prof 1"
+    }
+  },
+  {
+    "room": {
+      "name": "LH 1",
+      "lab": true,
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 1,
+      "name": "CE 1A",
+      "size": 20
+    }
+  },
+  {
+    "course": {
+      "id": 1,
+      "name": "Introduction To Programming"
+    }
+  },
+  {
+    "class": {
+      "professor": 1,
+      "course": 1,
+      "duration": 1,
+      "group": [
+        1
+      ],
+      "lab": true
+    }
+  },
+  {
+    "room": {
+      "name": "LH2",
+      "lab": false,
+      "size": 80
+    }
+  },
+  {
+    "prof": {
+      "id": 2,
+      "name": "Pro KK"
+    }
+  },
+  {
+    "group": {
+      "id": 2,
+      "name": "CE 1A",
+      "size": 40
+    }
+  },
+  {
+    "course": {
+      "id": 2,
+      "name": "Data Structures and Algorithm"
+    }
+  },
+  {
+    "class": {
+      "professor": 2,
+      "course": 2,
+      "duration": 2,
+      "group": [
+        1,
+        2
+      ],
+      "lab": false
+    }
+  }
+]

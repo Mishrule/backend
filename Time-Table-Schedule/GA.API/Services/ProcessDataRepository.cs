@@ -86,14 +86,30 @@ namespace GA.API.Services
             List<dynamic> Data = new();
 
             var data = await _db.Datum.ToListAsync();
-            //var json = JsonConvert.SerializeObject(data);
-            //foreach (var item in data)
-            //{
-            //    Data.Add(JsonConvert.DeserializeObject<dynamic>(item.data));
-            //}
+            var json = JsonConvert.SerializeObject(data);
+            foreach (var item in data)
+            {
+                Data.Add(JsonConvert.DeserializeObject<dynamic>(item.data));
+            }
 
+           
+            string workingDirectory = Environment.CurrentDirectory;
+            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
 
-            // File.WriteAllText(@"C:\Users\mishr\source\repos\Mishrule\backend\Time-Table-Schedule\GaSchedule.Console\GaSchedule.json",
+            Console.WriteLine(projectDirectory);
+
+            //string _path = $@"C:\Users\mishr\source\repos\Mishrule\backend\Time-Table-Schedule\GaSchedule.Console\GaSchedule.json";
+            string _path = $@"{projectDirectory}\backend\Time-Table-Schedule\GA.API\GaSchedule.json";
+            Console.WriteLine("Full Path: "+_path);
+            var jsonToWrite = JsonConvert.SerializeObject(Data, Formatting.Indented);
+            using (var writer = new StreamWriter(_path))
+            {
+                writer.Write(jsonToWrite);
+            }
+            
+            
+            
+            // File.WriteAllText(@"C:\Users\mishr\source\repos\Mishrule\backend\Time-Table-Schedule\GaSchedule.Console\GaSchedule.json", json);
           //  await File.WriteAllText(@"C:\Users\Mensah\Source\Repos\backend\Time-Table-Schedule\GaSchedule.Console\GaSchedule.json", Data);
             return data;
         }
