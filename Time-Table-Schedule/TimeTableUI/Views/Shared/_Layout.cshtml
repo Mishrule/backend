@@ -1,105 +1,133 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 @*<head>*@
-    <head>
-        <base href="">
-        <meta charset="utf-8" />
-        <title>@ViewData["Title"] - TimeTableUI</title>
-        <meta name="description" content="Metronic admin dashboard live demo. Check out all the features of the admin panel. A large number of settings, additional services and widgets." />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <link rel="canonical" href="https://keenthemes.com/metronic" />
-        <!--begin::Fonts-->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
-        <!--end::Fonts-->
-        <!--begin::Page Vendors Styles(used by this page)-->
-        <link href="~/assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
-        <!--end::Page Vendors Styles-->
-        <!--begin::Global Theme Styles(used by all pages)-->
-        <link href="~/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-        <link href="~/assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
-        <link href="~/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
-        <!--end::Global Theme Styles-->
-        <!--begin::Layout Themes(used by all pages)-->
-        <link href="~/assets/css/themes/layout/header/base/light.css" rel="stylesheet" type="text/css" />
-        <link href="~/assets/css/themes/layout/header/menu/light.css" rel="stylesheet" type="text/css" />
-        <link href="~/assets/css/themes/layout/brand/dark.css" rel="stylesheet" type="text/css" />
-        <link href="~/assets/css/themes/layout/aside/dark.css" rel="stylesheet" type="text/css" />
-        <!--end::Layout Themes-->
-        <link rel="shortcut icon" href="~/assets/media/logos/favicon.ico" />
+<head>
+    <base href="">
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - TimeTableUI</title>
+    <meta name="description" content="Metronic admin dashboard live demo. Check out all the features of the admin panel. A large number of settings, additional services and widgets." />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="canonical" href="https://keenthemes.com/metronic" />
+    <!--begin::Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+    <!--end::Fonts-->
+    <!--begin::Page Vendors Styles(used by this page)-->
+    <link href="~/assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+    <!--end::Page Vendors Styles-->
+    <!--begin::Global Theme Styles(used by all pages)-->
+    <link href="~/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <!--end::Global Theme Styles-->
+    <!--begin::Layout Themes(used by all pages)-->
+    <link href="~/assets/css/themes/layout/header/base/light.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/themes/layout/header/menu/light.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/themes/layout/brand/dark.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/themes/layout/aside/dark.css" rel="stylesheet" type="text/css" />
+    <!--end::Layout Themes-->
+    <link rel="shortcut icon" href="~/assets/media/logos/favicon.ico" />
 
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
-    </head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <script src = "~/lib/jquery/dist/jquery.min.js"></script>
+</head>
 
 
-    @*<meta charset="utf-8" />*@
-    @*<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+@*<meta charset="utf-8" />*@
+@*<meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - TimeTableUI</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />*@
 
 @*</head>*@
-<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
-    <!--begin::Main-->
-    @await RenderSectionAsync("_Mobile", required: true) 
-    <div class="d-flex flex-column flex-root">
-        <!--begin::Page-->
-        <div class="d-flex flex-row flex-column-fluid page">
-            <!--begin::Aside-->
-            @await RenderSectionAsync("_Aside", required: true)
-            <!--end::Aside-->
-            <!--begin::Wrapper-->
-            <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
-                <!--begin::Header-->
-               @await RenderSectionAsync("_Header", required: true)
-                <!--end::Header-->
-                <!--begin::Content-->
-                <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-                    <!--begin::Subheader-->
-                    @await RenderSectionAsync("_SubHeader", required: true) 
-                    <!--end::Subheader-->
-                    <!--begin::Entry-->
-                    <div class="d-flex flex-column-fluid">
-                        <!--begin::Container-->
-                        <div class="container">
-                            <!--begin::Dashboard-->
-                            @RenderBody() 
-                            <!--end::Dashboard-->
-                        </div>
-                        <!--end::Container-->
+<body id = "kt_body" class = "header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
+<h1 id = "base_url" hidden>@Url.Content("~")</h1>
+<!--begin::Main-->
+@await Html.PartialAsync("_Mobile")
+<div class = "d-flex flex-column flex-root">
+    <!--begin::Page-->
+    <div class = "d-flex flex-row flex-column-fluid page">
+        <!--begin::Aside-->
+        @await Html.PartialAsync("_Aside")
+        <!--end::Aside-->
+        <!--begin::Wrapper-->
+        <div class = "d-flex flex-column flex-row-fluid wrapper" id = "kt_wrapper">
+            <!--begin::Header-->
+            @await Html.PartialAsync("_Header")
+            <!--end::Header-->
+            <!--begin::Content-->
+            <div class = "content d-flex flex-column flex-column-fluid" id = "kt_content">
+                <!--begin::Subheader-->
+                @await Html.PartialAsync("_SubHeader")
+                <!--end::Subheader-->
+                <!--begin::Entry-->
+                <div class = "d-flex flex-column-fluid">
+                    <!--begin::Container-->
+                    <div class = "container">
+                        <!--begin::Dashboard-->
+                        @RenderBody()
+                        <!--end::Dashboard-->
                     </div>
-                    <!--end::Entry-->
+                    <!--end::Container-->
                 </div>
-                <!--end::Content-->
-                <!--begin::Footer-->
-                @await RenderSectionAsync("_Footer", required: true)
-                <!--end::Footer-->
+                <!--end::Entry-->
             </div>
-            <!--end::Wrapper-->
+            <!--end::Content-->
+            <!--begin::Footer-->
+
+            @*@await Html.PartialAsync("_Footer")*@
+            <!--end::Footer-->
         </div>
-        <!--end::Page-->
+        <!--end::Wrapper-->
     </div>
-    <!--end::Main-->
-    @*@await RenderSectionAsync("_Panels", required: false)*@
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    <!--end::Demo Panel-->
-    @*<script>var HOST_URL = "https://preview.keenthemes.com/metronic/theme/html/tools/preview";</script>*@
-    <!--begin::Global Config(global config for global JS scripts)-->
-    <script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1400 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#3699FF", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#E4E6EF", "dark": "#181C32" }, "light": { "white": "#ffffff", "primary": "#E1F0FF", "secondary": "#EBEDF3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#3F4254", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#EBEDF3", "gray-300": "#E4E6EF", "gray-400": "#D1D3E0", "gray-500": "#B5B5C3", "gray-600": "#7E8299", "gray-700": "#5E6278", "gray-800": "#3F4254", "gray-900": "#181C32" } }, "font-family": "Poppins" };</script>
-    <!--end::Global Config-->
-    <!--begin::Global Theme Bundle(used by all pages)-->
-    <script src="~/assets/plugins/global/plugins.bundle.js"></script>
-    <script src="~/assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
-    <script src="~/assets/js/scripts.bundle.js"></script>
-    <!--end::Global Theme Bundle-->
-    <!--begin::Page Vendors(used by this page)-->
-    <script src="~/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
-    <!--end::Page Vendors-->
-    <!--begin::Page Scripts(used by this page)-->
-    <script src="~/assets/js/pages/widgets.js"></script>
-    <!--end::Page Scripts-->
-    @await RenderSectionAsync("Scripts", required: false)
+    <!--end::Page-->
+</div>
+<!--end::Main-->
+@*@await RenderSectionAsync("_Panels", required: false)*@
+<script src = "~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src = "~/js/site.js" asp-append-version = "true"></script>
+<!--end::Demo Panel-->
+@*<script>var HOST_URL = "https://preview.keenthemes.com/metronic/theme/html/tools/preview";</script>*@
+<!--begin::Global Config(global config for global JS scripts)-->
+<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1400 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#3699FF", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#E4E6EF", "dark": "#181C32" }, "light": { "white": "#ffffff", "primary": "#E1F0FF", "secondary": "#EBEDF3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#3F4254", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#EBEDF3", "gray-300": "#E4E6EF", "gray-400": "#D1D3E0", "gray-500": "#B5B5C3", "gray-600": "#7E8299", "gray-700": "#5E6278", "gray-800": "#3F4254", "gray-900": "#181C32" } }, "font-family": "Poppins" };</script>
+<!--end::Global Config-->
+<!--begin::Global Theme Bundle(used by all pages)-->
+<script src = "~/assets/plugins/global/plugins.bundle.js"></script>
+<script src = "~/assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
+<script src = "~/assets/js/scripts.bundle.js"></script>
+<script src = "~/assets/js/select2.js"></script>
+<!--end::Global Theme Bundle-->
+<!--begin::Page Vendors(used by this page)-->
+<script src = "~/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+<!--end::Page Vendors-->
+<!--begin::Page Scripts(used by this page)-->
+<script src = "~/assets/js/pages/widgets.js"></script>
+<script src = "~/assets/js/bootstrap-select.js"></script>
+<!--end::Page Scripts-->
+@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+<script>
+    // Class definition
+
+    var KTBootstrapSelect = function() {
+
+        // Private functions
+        var demos = function() {
+            // minimum setup
+            $('.kt-selectpicker').selectpicker();
+        }
+
+        return {
+            // public functions
+            init: function() {
+                demos();
+            }
+        };
+    }();
+
+    jQuery(document).ready(function() {
+        KTBootstrapSelect.init();
+    });
+</script>

@@ -6,16 +6,34 @@ using System.Threading.Tasks;
 namespace GA.API.DTOs
 {
    
-    public class ClassObject
+    //public class 
+    //{
+    //    public int professor { get; set; }
+    //    public int course { get; set; }
+    //    public int duration { get; set; }
+    //    public List<int> group { get; set; }
+    //    public bool lab { get; set; }
+    //   // public GroupObject group { get; set; }
+    //}
+
+    public class Classe
     {
         public int professor { get; set; }
         public int course { get; set; }
         public int duration { get; set; }
         public List<int> group { get; set; }
         public bool lab { get; set; }
-       // public GroupObject group { get; set; }
     }
-     
+
+    public class ClassObject
+{
+        public Classe @class { get; set; }
+    }
+
+
+    
+
+
     public class CourseObject
     {
         public int id { get; set; }

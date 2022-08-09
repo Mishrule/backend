@@ -73,5 +73,99 @@
       ],
       "lab": false
     }
+  },
+  {
+    "room": {
+      "name": "LH 3",
+      "lab": false,
+      "size": 200
+    }
+  },
+  {
+    "room": {
+      "name": "LH 4",
+      "lab": false,
+      "size": 250
+    }
+  },
+  {
+    "room": {
+      "name": "LH 4",
+      "lab": true,
+      "size": 250
+    }
+  },
+  {
+    "room": {
+      "name": "LH 6",
+      "lab": true,
+      "size": 250
+    }
+  },
+  {
+    "prof": {
+      "id": 3,
+      "name": "Prof Ernest"
+    }
+  },
+  {
+    "course": {
+      "id": 0,
+      "name": null
+    }
+  },
+  {
+    "prof": {
+      "id": 0,
+      "name": null
+    }
+  },
+  {
+    "prof": {
+      "id": 0,
+      "name": null
+    }
+  },
+  {
+    "prof": {
+      "id": 0,
+      "name": null
+    }
+  },
+  {
+    "prof": {
+      "id": 0,
+      "name": null
+    }
+  },
+  {
+    "group": {
+      "id": 2,
+      "name": "CE 232A",
+      "size": 25
+    }
+  },
+  {
+    "group": {
+      "id": 7,
+      "name": "RN 4",
+      "size": 45
+    }
+  },
+  {
+    "group": {
+      "id": 0,
+      "name": null,
+      "size": 0
+    }
+  },
+  {
+    "class": {
+      "professor": 0,
+      "course": 0,
+      "duration": 0,
+      "group": null,
+      "lab": false
+    }
   }
 ]

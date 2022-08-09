@@ -1,0 +1,103 @@
+﻿<div class = "row">
+    <div class = "col-md-6 col-lg-6">
+        <div class = "card card-custom">
+            <div class = "card-header">
+                <h3 class = "card-title">
+                    Create Groups
+                </h3>
+                <div class = "card-toolbar">
+                    <div class = "example-tools justify-content-center">
+                        <span class = "example-toggle" data-toggle = "tooltip" title = "View code"></span>
+                        <span class = "example-copy" data-toggle = "tooltip" title = "Copy code"></span>
+                    </div>
+                </div>
+            </div>
+            <!--begin::Form-->
+            <form id = "groupForm">
+                <div class = "card-body">
+                    <div class = "form-group mb-8">
+                        <div id = "showMessage"></div>
+                    </div>
+                    <div class = "form-group input-group-lg">
+                        <label>Id: <span class = "text-danger">*</span></label>
+                        <input type = "number" class = "form-control" name = "id" placeholder = ""/>
+                    </div>
+                   
+                    <div class = "form-group input-group-lg">
+                        <label>Name <span class = "text-danger">*</span></label>
+                        <input type = "text" class = "form-control" id = "exampleInputPassword1" name = "name" placeholder = "eg. CE 1A"/>
+                    </div>
+                    
+                    <div class = "form-group input-group-lg">
+                        <label>Size <span class = "text-danger">*</span></label>
+                        <input type = "number" class = "form-control" id = "" name = "size" placeholder = ""/>
+                    </div>
+                    
+                   
+                </div>
+                <div class = "card-footer">
+                    <button type = "button" id = "saveRoomBtn" class = "btn btn-primary mr-2">Submit</button>
+                    <button type = "reset" class = "btn btn-secondary">Cancel</button>
+                </div>
+            </form>
+            <!--end::Form-->
+        </div>
+    </div>
+    
+    
+    
+    <div class = "col-md-6 col-lg-6">
+       
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        $(document).on('click',
+            '#saveRoomBtn',
+            function() {
+               
+                var data = $('#groupForm').serialize();
+
+                $.ajax({
+                    url: $('#base_url').text() + '/Group/Create',
+                    type: 'POST',
+                    data: data,
+                    success: function(data) {
+                        if (data == "Group Created Successfully") {
+                            $('#showMessage').html(`
+
+                            <div class="alert alert-custom alert-light-primary fade show mb-5" role="alert">
+                                <div class="alert-icon"><i class="flaticon-info"></i></div>
+                                <div class="alert-text">${data.message}</div>
+                                <div class="alert-close">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true"><i class="ki ki-close"></i></span>
+                                    </button>
+                                </div>
+                            </div>
+
+
+                                                    
+                        `);
+                        } else {
+                            $('#showMessage').html(`
+                        <div class="alert alert-custom alert-light-primary fade show mb-5" role="alert">
+                            <div class="alert-icon"><i class="flaticon-warning"></i></div>
+                            <div class="alert-text">${data.message}</div>
+                            <div class="alert-close">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true"><i class="ki ki-close"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        `);
+                        }
+                        $('#groupForm').reset;
+                    }
+
+                });
+            });
+        
+    })
+</script>

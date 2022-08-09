@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TimeTableUI.Contracts;
+using TimeTableUI.Services;
 
 namespace TimeTableUI
 {
@@ -24,6 +26,13 @@ namespace TimeTableUI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddHttpClient();
+            services.AddTransient(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+            services.AddTransient<IRoomRepository, RoomRepository>();
+            services.AddTransient<ILecturerRepository, LecturerRepository>();
+            services.AddTransient<ICourseRepository, CourseRepository>();
+            services.AddTransient<IGroupRepository, GroupRepository>();
+            services.AddTransient<IClassRepository, ClassRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

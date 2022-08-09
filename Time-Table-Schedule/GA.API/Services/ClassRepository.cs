@@ -72,11 +72,12 @@ namespace GA.API.Services
              {
                  @class = new ClassObject
                  {
-                     professor = classObject.professor,
-                     course = classObject.course,
-                     duration = classObject.duration,
-                     group = classObject.group,
-                     lab = classObject.lab
+                     @class = classObject.@class,
+                     //professor = classObject.professor,
+                     //course = classObject.course,
+                     //duration = classObject.duration,
+                     //group = classObject.group,
+                     //lab = classObject.lab
                     
                  }
              };
@@ -143,17 +144,21 @@ namespace GA.API.Services
         public async Task<bool> UpdateAsync(Class entity, ClassObject classObject)
         {
             List<int> groupData = new();
-            foreach (var item in classObject.group)
+            foreach (var item in classObject.@class.group)
             {
                 groupData.Add(item);
             }
             var data = new ClassObject
             {
-               professor= classObject.professor,
-               course=classObject.course,
-               duration=classObject.duration,
-               group= groupData,
-               lab=classObject.lab
+                @class  = classObject.@class
+
+
+
+               //professor = classObject.professor,
+               //course=classObject.course,
+               //duration=classObject.duration,
+               //group= groupData,
+               //lab=classObject.lab
             };
             var serialized = JsonConvert.SerializeObject(data);
             entity.@class = serialized;

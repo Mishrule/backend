@@ -1322,7 +1322,7 @@
         },
         "additionalProperties": { }
       },
-      "ClassObject": {
+      "Classe": {
         "type": "object",
         "properties": {
           "professor": {
@@ -1347,6 +1347,15 @@
           },
           "lab": {
             "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ClassObject": {
+        "type": "object",
+        "properties": {
+          "class": {
+            "$ref": "#/components/schemas/Classe"
           }
         },
         "additionalProperties": false
