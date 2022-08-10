@@ -35,5 +35,43 @@
       ],
       "lab": false
     }
+  },
+  {
+    "room": {
+      "name": "LH 2",
+      "lab": false,
+      "size": 180
+    }
+  },
+  {
+    "prof": {
+      "id": 2,
+      "name": "Pro KK Fletcher"
+    }
+  },
+  {
+    "course": {
+      "id": 2,
+      "name": "Basic Mechanics"
+    }
+  },
+  {
+    "group": {
+      "id": 2,
+      "name": "CE 111",
+      "size": 25
+    }
+  },
+  {
+    "class": {
+      "professor": 2,
+      "course": 1,
+      "duration": 2,
+      "group": [
+        1,
+        1
+      ],
+      "lab": false
+    }
   }
 ]
