@@ -1,4 +1,5 @@
-﻿<div class = "row">
+﻿@model IEnumerable<TimeTableUI.Models.VMs.RootLecturerVM>
+<div class = "row">
     <div class = "col-md-6 col-lg-6">
         <div class = "card card-custom">
             <div class = "card-header">
@@ -20,12 +21,12 @@
                     </div>
                     <div class = "form-group input-group-lg">
                         <label>Id: <span class = "text-danger">*</span></label>
-                        <input type = "number" class = "form-control" name = "id" placeholder = ""/>
+                        <input type = "number" class = "form-control" id="profId" name = "id" placeholder = ""/>
                     </div>
                    
                     <div class = "form-group input-group-lg">
                         <label>Name <span class = "text-danger">*</span></label>
-                        <input type = "text" class = "form-control" id = "exampleInputPassword1" name = "name" placeholder = ""/>
+                        <input type = "text" class = "form-control" id = "profName" name = "name" placeholder = ""/>
                     </div>
                     
                     <div class = "float-right">
@@ -44,7 +45,55 @@
     
     
     <div class = "col-md-6 col-lg-6">
-       
+        <div class = "card card-custom">
+            <div class = "card-header flex-wrap py-3">
+                <div class = "card-title">
+                    <h3 class = "card-label">
+                        Created Lecturers
+                    </h3>
+                </div>
+                @*<div class = "card-toolbar">
+                <a href = "#" data-toggle = "modal" data-target = "#kt_modal_Add" id = "addDepartmentBTN" class = "btn btn-primary font-weight-bolder">
+                    <span class = "svg-icon svg-icon-md">
+
+                        <svg xmlns = "http://www.w3.org/2000/svg" xmlns:xlink = "http://www.w3.org/1999/xlink" width = "24px" height = "24px" viewBox = "0 0 24 24" version = "1.1">
+                            <g stroke = "none" stroke-width = "1" fill = "none" fill-rule = "evenodd">
+                                <rect x = "0" y = "0" width = "24" height = "24"></rect>
+                                <circle fill = "#000000" cx = "9" cy = "15" r = "6"></circle>
+                                <path d = "M8.8012943,7.00241953 C9.83837775,5.20768121 11.7781543,4 14,4 C17.3137085,4 20,6.6862915 20,10 C20,12.2218457 18.7923188,14.1616223 16.9975805,15.1987057 C16.9991904,15.1326658 17,15.0664274 17,15 C17,10.581722 13.418278,7 9,7 C8.93357256,7 8.86733422,7.00080962 8.8012943,7.00241953 Z" fill = "#000000" opacity = "0.3"></path>
+                            </g>
+                        </svg>
+
+                    </span>New Record
+                </a>
+
+            </div>*@
+            </div>
+            <table class = "table" id = "roomTable">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var data in Model)
+                {
+                    <tr>
+                        <td>@data.prof.id</td>
+                        <td>@data.prof.name</td>
+                        <td>
+                            <span ><i class = "flaticon2-pen" style = "color: lightseagreen"></i></span>
+                            <span><i class = "flaticon2-rubbish-bin-delete-button" style = "color: red"></i></span>
+                        </td>
+                    </tr>
+                }
+
+                </tbody>
+
+            </table>
+        </div>
     </div>
 </div>
 <script>
@@ -52,19 +101,29 @@
         $(document).on('click',
             '#saveRoomBtn',
             function() {
-               
-                var data = $('#lecturerForm').serialize();
+
+                var profId = $('#profId').val();
+                var profName = $('#profName').val();
+
+                var prof = {
+                    "prof": {
+                        "id": profId,
+                        "name": profName
+                    }
+                }
+
+               // var data = $('#lecturerForm').serialize();
 
                 $.ajax({
                     url: $('#base_url').text() + '/Lecturer/Create',
                     type: 'POST',
-                    data: data,
+                    data: prof,
                     success: function(data) {
                         if (data == "Lecturer Created Successfully") {
                             $('#showMessage').html(`
 
                             <div class="alert alert-custom alert-light-primary fade show mb-5" role="alert">
-                                <div class="alert-icon"><i class="flaticon-info"></i></div>
+                                <div class="alert-icon"><i class="flaticon2-check-mark"></i></div>
                                 <div class="alert-text">${data.message}</div>
                                 <div class="alert-close">
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">

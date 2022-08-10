@@ -33,8 +33,8 @@ namespace GA.API.Services
             {
                 prof = new Prof
                 {
-                    id = profObject.id,
-                    name = profObject.name
+                    id = profObject.prof.id,
+                    name = profObject.prof.name
                 }
             };
             var serializeProf = JsonConvert.SerializeObject(prof);
@@ -90,13 +90,14 @@ namespace GA.API.Services
         {
             var data = new ProfObject
             {
-                id = profObject.id,
-                name = profObject.name
+                prof = profObject.prof
+                //id = profObject.id,
+                //name = profObject.name
             };
             var name = JsonConvert.SerializeObject(data);
             entity = new Prof
             {
-                id= data.id,
+                id= data.prof.id,
                 name = name
             };
 

@@ -9,6 +9,8 @@
             public static string CourseEndpoint = $"{BaseUrl}api/Course/";
             public static string GroupEndpoint = $"{BaseUrl}api/Group/";
             public static string ClassEndpoint = $"{BaseUrl}api/Class/";
+            public static string RunAlgorithm = $"{BaseUrl}api/Data/RunAlgorithm/";
+            public static string WriteToJson = $"{BaseUrl}api/Data/GetData/";
 
        
 

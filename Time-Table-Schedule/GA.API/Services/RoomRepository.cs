@@ -96,12 +96,13 @@ namespace GA.API.Services
         {
            var room = new
             {
-                room = new RoomObject
-                {
-                    name = roomObject.name,
-                    lab = roomObject.lab,
-                    size=roomObject.size
-                }
+                room = roomObject.room
+                //{
+
+                //    name = roomObject.name,
+                //    lab = roomObject.lab,
+                //    size=roomObject.size
+                //}
             };
 
             var serializeRoom = JsonConvert.SerializeObject(room);
@@ -126,9 +127,10 @@ namespace GA.API.Services
         {
             var data = new RoomObject
             {
-                name = roomObject.name,
-                lab = roomObject.lab,
-                size = roomObject.size
+                room = roomObject.room
+                //name = roomObject.name,
+                //lab = roomObject.lab,
+                //size = roomObject.size
             };
             var serialized = JsonConvert.SerializeObject(data);
             entity.room = serialized;

@@ -33,8 +33,8 @@ namespace GA.API.Services
             {
                 course = new Course
                 {
-                    id = courseObject.id,
-                    name = courseObject.name
+                    id = courseObject.course.id,
+                    name = courseObject.course.name
                 }
             };
 
@@ -107,8 +107,9 @@ namespace GA.API.Services
         {
             var data = new CourseObject
             {
-                id = courseObject.id,
-                name = courseObject.name
+                course = courseObject.course
+                //id = courseObject.id,
+                //name = courseObject.name
             };
             var serialized = JsonConvert.SerializeObject(data);
             entity.name = serialized;

@@ -22,10 +22,10 @@ namespace TimeTableUI.Controllers
         }
 
         [HttpGet]
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-
-            return View();
+            var data = await LecturerRepository.GetAll(Endpoints.LecturerEndpoint);
+            return View(data);
 
         }
 

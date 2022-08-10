@@ -5,7 +5,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using TimeTableUI.Contracts;
 using TimeTableUI.Models;
+using TimeTableUI.Static;
 
 namespace TimeTableUI.Controllers
 {
@@ -13,13 +15,17 @@ namespace TimeTableUI.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public IRoomRepository RoomRepository { get; }
+        public HomeController(ILogger<HomeController> logger, IRoomRepository roomRepository)
         {
             _logger = logger;
+            RoomRepository = roomRepository;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+           // var data = await RoomRepository.GetAll(Endpoints.RoomEndpoint);
+            //ViewBag.room = data.Count();
             return View();
         }
 

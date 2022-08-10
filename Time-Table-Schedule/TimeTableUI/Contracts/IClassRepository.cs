@@ -6,6 +6,7 @@ namespace TimeTableUI.Contracts
 {
     public interface IClassRepository : IBaseRepository<ClassVM>
     {
-        
+        void GenerateTimeTable(string url);
+        void WriteToJson(string url);
     }
 }

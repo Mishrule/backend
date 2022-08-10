@@ -1,0 +1,25 @@
+﻿<div class = "row">
+    <div class = "card card-custom gutter-b bg-diagonal bg-diagonal-light-success">
+        <div class = "card-body">
+            <div class = "d-flex align-items-center justify-content-between p-4 flex-lg-wrap flex-xl-nowrap">
+                <div class = "d-flex flex-column mr-5">
+                    <a href = "#" class = "h4 text-dark text-hover-primary mb-5">
+                        Generate Time Table
+                    </a>
+                    <p class = "text-dark-50">
+                        Note:<br/>
+                        1. Make sure all the required settings are made in the settings menu<br />
+                        
+                        Remember wrong settings can cause the timetable to be wrong<br />
+                        Make sure total size of the student does not exceed the room capacity<br />
+                    </p>
+                </div>
+                <div class = "ml-6 ml-lg-0 ml-xxl-6 flex-shrink-0">
+                    <a asp-controller="TimeTable" asp-action="Generate" class = "btn font-weight-bolder text-uppercase btn-success py-4 px-6">
+                        Generate
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
