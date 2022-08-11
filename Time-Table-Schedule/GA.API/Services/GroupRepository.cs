@@ -68,7 +68,7 @@ namespace GA.API.Services
 
         public async Task<IList<Group>> GetAll()
         {
-            var groups = await _db.Groups.ToListAsync();
+            var groups = await _db.Groups.OrderByDescending(o=>o.id).ToListAsync();
             return groups;
         }
 

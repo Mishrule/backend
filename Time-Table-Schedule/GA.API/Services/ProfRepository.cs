@@ -63,7 +63,7 @@ namespace GA.API.Services
 
         public async Task<IList<Prof>> GetAll()
         {
-            var profs = await _db.Profs.ToListAsync();
+            var profs = await _db.Profs.OrderByDescending(q=>q.id).ToListAsync();
             
             return profs;
         }

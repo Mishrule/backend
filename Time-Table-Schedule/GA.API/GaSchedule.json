@@ -2,76 +2,926 @@
   {
     "room": {
       "name": "LH 1",
-      "lab": true,
-      "size": 250
-    }
-  },
-  {
-    "prof": {
-      "id": 1,
-      "name": "Prof Ernest"
-    }
-  },
-  {
-    "course": {
-      "id": 1,
-      "name": "Basic Mechanics"
-    }
-  },
-  {
-    "group": {
-      "id": 1,
-      "name": "MN 245",
-      "size": 20
-    }
-  },
-  {
-    "class": {
-      "professor": 1,
-      "course": 1,
-      "duration": 2,
-      "group": [
-        1
-      ],
-      "lab": false
+      "lab": false,
+      "size": 300
     }
   },
   {
     "room": {
       "name": "LH 2",
       "lab": false,
-      "size": 180
+      "size": 300
+    }
+  },
+  {
+    "room": {
+      "name": "LH 3",
+      "lab": false,
+      "size": 300
+    }
+  },
+  {
+    "room": {
+      "name": "LH 5",
+      "lab": false,
+      "size": 100
+    }
+  },
+  {
+    "room": {
+      "name": "LH 6",
+      "lab": false,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "LH 7",
+      "lab": false,
+      "size": 150
+    }
+  },
+  {
+    "room": {
+      "name": "LH 8",
+      "lab": false,
+      "size": 100
+    }
+  },
+  {
+    "room": {
+      "name": "ED I",
+      "lab": false,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "ED II",
+      "lab": false,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "ED III",
+      "lab": false,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "Mini Auditorium",
+      "lab": false,
+      "size": 170
+    }
+  },
+  {
+    "room": {
+      "name": "Auditorium Foyer",
+      "lab": false,
+      "size": 150
+    }
+  },
+  {
+    "room": {
+      "name": "MRT I",
+      "lab": false,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "MRT II",
+      "lab": false,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "SEM RM 2",
+      "lab": false,
+      "size": 120
+    }
+  },
+  {
+    "room": {
+      "name": "MRT III",
+      "lab": false,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "MC 2",
+      "lab": false,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "CB 1",
+      "lab": false,
+      "size": 300
+    }
+  },
+  {
+    "room": {
+      "name": "CB 2",
+      "lab": false,
+      "size": 80
+    }
+  },
+  {
+    "prof": {
+      "id": 1,
+      "name": "P. J. Darko"
     }
   },
   {
     "prof": {
       "id": 2,
-      "name": "Pro KK Fletcher"
+      "name": "J. K. Dumenya"
+    }
+  },
+  {
+    "prof": {
+      "id": 3,
+      "name": "P. B. Ansah"
+    }
+  },
+  {
+    "prof": {
+      "id": 4,
+      "name": "Assoc Prof Mrs P. B. Mireku-Gyimah"
+    }
+  },
+  {
+    "prof": {
+      "id": 5,
+      "name": "N. E. Akpeke (Ms)"
+    }
+  },
+  {
+    "prof": {
+      "id": 6,
+      "name": "Assoc Prof S. Nunoo"
+    }
+  },
+  {
+    "prof": {
+      "id": 7,
+      "name": "Dr E. N. Wiah"
+    }
+  },
+  {
+    "prof": {
+      "id": 8,
+      "name": "Dr P. Boye"
+    }
+  },
+  {
+    "prof": {
+      "id": 9,
+      "name": "Prof S. O. Seidu"
+    }
+  },
+  {
+    "prof": {
+      "id": 10,
+      "name": "Assoc Prof J. R. Dankwah"
+    }
+  },
+  {
+    "prof": {
+      "id": 11,
+      "name": "E. Yin"
+    }
+  },
+  {
+    "prof": {
+      "id": 12,
+      "name": "E. Ofori-Ntow"
+    }
+  },
+  {
+    "prof": {
+      "id": 13,
+      "name": "E. Seckley"
+    }
+  },
+  {
+    "prof": {
+      "id": 14,
+      "name": "Mrs. E. K. Mills Abbey"
+    }
+  },
+  {
+    "prof": {
+      "id": 15,
+      "name": "Dr K. Kamasa"
+    }
+  },
+  {
+    "prof": {
+      "id": 16,
+      "name": "Prof S. O. Ismaila"
+    }
+  },
+  {
+    "prof": {
+      "id": 17,
+      "name": "P. B. Ansah"
+    }
+  },
+  {
+    "prof": {
+      "id": 18,
+      "name": "S. Akpah"
+    }
+  },
+  {
+    "prof": {
+      "id": 19,
+      "name": "M. Sitti"
+    }
+  },
+  {
+    "prof": {
+      "id": 20,
+      "name": "S. Anokye"
+    }
+  },
+  {
+    "course": {
+      "id": 1,
+      "name": "Basic French II"
     }
   },
   {
     "course": {
       "id": 2,
-      "name": "Basic Mechanics"
+      "name": "Engineering Drawing"
+    }
+  },
+  {
+    "course": {
+      "id": 3,
+      "name": "Communication Skills II"
+    }
+  },
+  {
+    "course": {
+      "id": 4,
+      "name": "Object-Oriented Programming"
+    }
+  },
+  {
+    "course": {
+      "id": 5,
+      "name": "Basic Electronics"
+    }
+  },
+  {
+    "course": {
+      "id": 6,
+      "name": "Calculus"
+    }
+  },
+  {
+    "course": {
+      "id": 7,
+      "name": "Database Systems"
+    }
+  },
+  {
+    "course": {
+      "id": 8,
+      "name": "Web Programming"
+    }
+  },
+  {
+    "course": {
+      "id": 9,
+      "name": "Literature in English II"
+    }
+  },
+  {
+    "course": {
+      "id": 10,
+      "name": "Fieldtrip and Technical Report Writing I"
+    }
+  },
+  {
+    "course": {
+      "id": 11,
+      "name": "Mathematical Analysis"
+    }
+  },
+  {
+    "course": {
+      "id": 12,
+      "name": "Signals and Systems"
+    }
+  },
+  {
+    "course": {
+      "id": 14,
+      "name": "Programming with Java"
+    }
+  },
+  {
+    "course": {
+      "id": 15,
+      "name": "Software Engineering"
+    }
+  },
+  {
+    "course": {
+      "id": 16,
+      "name": "Embedded Systems Design I"
+    }
+  },
+  {
+    "course": {
+      "id": 18,
+      "name": "Manufacturing Technology"
+    }
+  },
+  {
+    "course": {
+      "id": 19,
+      "name": "Machine Design I"
+    }
+  },
+  {
+    "course": {
+      "id": 20,
+      "name": "Strength of Materials II"
+    }
+  },
+  {
+    "course": {
+      "id": 21,
+      "name": "Applied Thermodynamics"
+    }
+  },
+  {
+    "group": {
+      "id": 1,
+      "name": "MC 252",
+      "size": 79
     }
   },
   {
     "group": {
       "id": 2,
-      "name": "CE 111",
+      "name": "EL 252",
+      "size": 71
+    }
+  },
+  {
+    "group": {
+      "id": 3,
+      "name": "MA",
+      "size": 40
+    }
+  },
+  {
+    "group": {
+      "id": 4,
+      "name": "MC 260",
+      "size": 79
+    }
+  },
+  {
+    "group": {
+      "id": 5,
+      "name": "EL 260",
+      "size": 71
+    }
+  },
+  {
+    "group": {
+      "id": 6,
+      "name": "MC 272",
+      "size": 79
+    }
+  },
+  {
+    "group": {
+      "id": 7,
+      "name": "MC 274",
+      "size": 79
+    }
+  },
+  {
+    "group": {
+      "id": 8,
+      "name": "MC 276",
+      "size": 79
+    }
+  },
+  {
+    "group": {
+      "id": 9,
+      "name": "MC 278",
+      "size": 79
+    }
+  },
+  {
+    "group": {
+      "id": 10,
+      "name": "MC 352",
+      "size": 57
+    }
+  },
+  {
+    "group": {
+      "id": 11,
+      "name": "EL 352",
+      "size": 53
+    }
+  },
+  {
+    "group": {
+      "id": 12,
+      "name": "MA 352",
+      "size": 53
+    }
+  },
+  {
+    "group": {
+      "id": 13,
+      "name": "MC 356",
+      "size": 57
+    }
+  },
+  {
+    "group": {
+      "id": 14,
+      "name": "CE 142",
+      "size": 150
+    }
+  },
+  {
+    "group": {
+      "id": 15,
+      "name": "RN 142",
+      "size": 76
+    }
+  },
+  {
+    "group": {
+      "id": 16,
+      "name": "CE 156",
+      "size": 200
+    }
+  },
+  {
+    "group": {
+      "id": 17,
+      "name": "MA 156",
       "size": 25
     }
   },
   {
+    "group": {
+      "id": 18,
+      "name": "CE 158",
+      "size": 200
+    }
+  },
+  {
+    "group": {
+      "id": 19,
+      "name": "CE 272",
+      "size": 85
+    }
+  },
+  {
+    "group": {
+      "id": 20,
+      "name": "CE 267",
+      "size": 85
+    }
+  },
+  {
+    "group": {
+      "id": 21,
+      "name": "MC 278",
+      "size": 29
+    }
+  },
+  {
+    "group": {
+      "id": 22,
+      "name": "MC 142",
+      "size": 202
+    }
+  },
+  {
     "class": {
-      "professor": 2,
+      "professor": 1,
       "course": 1,
-      "duration": 2,
+      "duration": 1,
       "group": [
-        1,
-        1
+        22,
+        3
       ],
       "lab": false
+    }
+  },
+  {
+    "group": {
+      "id": 23,
+      "name": "MC 156",
+      "size": 200
+    }
+  },
+  {
+    "group": {
+      "id": 24,
+      "name": "RN 156",
+      "size": 74
+    }
+  },
+  {
+    "class": {
+      "professor": 11,
+      "course": 2,
+      "duration": 3,
+      "group": [
+        24,
+        23
+      ],
+      "lab": false
+    }
+  },
+  {
+    "group": {
+      "id": 25,
+      "name": "MC 158",
+      "size": 200
+    }
+  },
+  {
+    "group": {
+      "id": 26,
+      "name": "RN 158",
+      "size": 70
+    }
+  },
+  {
+    "class": {
+      "professor": 17,
+      "course": 3,
+      "duration": 2,
+      "group": [
+        26,
+        25
+      ],
+      "lab": false
+    }
+  },
+  {
+    "group": {
+      "id": 27,
+      "name": "MC 164",
+      "size": 180
+    }
+  },
+  {
+    "group": {
+      "id": 28,
+      "name": "RN 164",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 29,
+      "name": "MC 166",
+      "size": 190
+    }
+  },
+  {
+    "group": {
+      "id": 30,
+      "name": "RN 166",
+      "size": 60
+    }
+  },
+  {
+    "group": {
+      "id": 31,
+      "name": "RN 168",
+      "size": 60
+    }
+  },
+  {
+    "group": {
+      "id": 32,
+      "name": "MC 168",
+      "size": 185
+    }
+  },
+  {
+    "group": {
+      "id": 33,
+      "name": "MC 170",
+      "size": 200
+    }
+  },
+  {
+    "group": {
+      "id": 34,
+      "name": "MC 172",
+      "size": 200
+    }
+  },
+  {
+    "group": {
+      "id": 35,
+      "name": "MC 174",
+      "size": 200
+    }
+  },
+  {
+    "class": {
+      "professor": 5,
+      "course": 5,
+      "duration": 3,
+      "group": [
+        28,
+        27
+      ],
+      "lab": false
+    }
+  },
+  {
+    "class": {
+      "professor": 7,
+      "course": 6,
+      "duration": 3,
+      "group": [
+        30,
+        29
+      ],
+      "lab": false
+    }
+  },
+  {
+    "course": {
+      "id": 22,
+      "name": "Basic Materials Science"
+    }
+  },
+  {
+    "course": {
+      "id": 23,
+      "name": "Workshop Technology and Practice"
+    }
+  },
+  {
+    "course": {
+      "id": 24,
+      "name": "Strength of Materials I"
+    }
+  },
+  {
+    "course": {
+      "id": 25,
+      "name": "Mechanics II: Dynamics"
+    }
+  },
+  {
+    "class": {
+      "professor": 9,
+      "course": 22,
+      "duration": 2,
+      "group": [
+        32,
+        31
+      ],
+      "lab": false
+    }
+  },
+  {
+    "prof": {
+      "id": 21,
+      "name": "G. Quartey"
+    }
+  },
+  {
+    "class": {
+      "professor": 21,
+      "course": 23,
+      "duration": 3,
+      "group": [
+        33
+      ],
+      "lab": false
+    }
+  },
+  {
+    "class": {
+      "professor": 13,
+      "course": 24,
+      "duration": 3,
+      "group": [
+        34
+      ],
+      "lab": false
+    }
+  },
+  {
+    "prof": {
+      "id": 22,
+      "name": "Dr A. A. Kwarteng"
+    }
+  },
+  {
+    "class": {
+      "professor": 22,
+      "course": 25,
+      "duration": 2,
+      "group": [
+        35
+      ],
+      "lab": false
+    }
+  },
+  {
+    "class": {
+      "professor": 1,
+      "course": 1,
+      "duration": 1,
+      "group": [
+        15,
+        14
+      ],
+      "lab": false
+    }
+  },
+  {
+    "prof": {
+      "id": 23,
+      "name": "C. Addy"
+    }
+  },
+  {
+    "class": {
+      "professor": 23,
+      "course": 2,
+      "duration": 3,
+      "group": [
+        17,
+        16
+      ],
+      "lab": false
+    }
+  },
+  {
+    "class": {
+      "professor": 4,
+      "course": 3,
+      "duration": 2,
+      "group": [
+        26,
+        18
+      ],
+      "lab": false
+    }
+  },
+  {
+    "prof": {
+      "id": 24,
+      "name": "Dr W. A. Agangiba"
+    }
+  },
+  {
+    "prof": {
+      "id": 25,
+      "name": "Assoc Prof S. Nunoo "
+    }
+  },
+  {
+    "prof": {
+      "id": 26,
+      "name": "Dr L. Brew"
+    }
+  },
+  {
+    "prof": {
+      "id": 27,
+      "name": "G. E. Y. Okai"
+    }
+  },
+  {
+    "group": {
+      "id": 36,
+      "name": "CE 162*",
+      "size": 223
+    }
+  },
+  {
+    "course": {
+      "id": 26,
+      "name": "CE 166"
+    }
+  },
+  {
+    "group": {
+      "id": 37,
+      "name": "CE 166",
+      "size": 223
+    }
+  },
+  {
+    "group": {
+      "id": 38,
+      "name": "CE 170*",
+      "size": 223
+    }
+  },
+  {
+    "group": {
+      "id": 39,
+      "name": "CE 172*",
+      "size": 223
+    }
+  },
+  {
+    "class": {
+      "professor": 24,
+      "course": 4,
+      "duration": 2,
+      "group": [
+        36
+      ],
+      "lab": true
+    }
+  },
+  {
+    "group": {
+      "id": 40,
+      "name": "CE 164",
+      "size": 224
+    }
+  },
+  {
+    "class": {
+      "professor": 25,
+      "course": 5,
+      "duration": 3,
+      "group": [
+        40
+      ],
+      "lab": false
+    }
+  },
+  {
+    "class": {
+      "professor": 27,
+      "course": 26,
+      "duration": 2,
+      "group": [
+        38
+      ],
+      "lab": true
+    }
+  },
+  {
+    "class": {
+      "professor": 24,
+      "course": 8,
+      "duration": 2,
+      "group": [
+        39
+      ],
+      "lab": true
+    }
+  },
+  {
+    "room": {
+      "name": "Computer Room",
+      "lab": true,
+      "size": 250
+    }
+  },
+  {
+    "room": {
+      "name": "Software Lab",
+      "lab": true,
+      "size": 260
+    }
+  },
+  {
+    "room": {
+      "name": "Comp Engineering Lab",
+      "lab": true,
+      "size": 280
     }
   }
 ]

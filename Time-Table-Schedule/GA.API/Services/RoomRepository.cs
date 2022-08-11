@@ -32,7 +32,7 @@ namespace GA.API.Services
 
         public async Task<IList<Room>> GetAll()
         {
-            var rooms = await _db.Rooms.ToListAsync();
+            var rooms = await _db.Rooms.OrderByDescending(q=>q.id).ToListAsync();
             return rooms;
         }
 

@@ -64,7 +64,7 @@ namespace GA.API.Services
 
         public async Task<IList<Course>> GetAll()
         {
-            var courses = await _db.Courses.ToListAsync();
+            var courses = await _db.Courses.OrderByDescending(o=>o.id).ToListAsync();
             return courses;
         }
 
