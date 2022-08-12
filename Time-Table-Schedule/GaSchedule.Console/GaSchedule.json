@@ -1,37 +1,6107 @@
 [
   {
-    "prof": {
-      "id": 1,
-      "name": "Prof 1"
+    "room": {
+      "name": "LH 1",
+      "lab": false,
+      "size": 250
     }
   },
   {
     "room": {
-      "name": "LH 1",
+      "name": "LH 2",
+      "lab": false,
+      "size": 250
+    }
+  },
+  {
+    "room": {
+      "name": "LH 3",
+      "lab": false,
+      "size": 250
+    }
+  },
+  {
+    "room": {
+      "name": "LH 5",
+      "lab": false,
+      "size": 100
+    }
+  },
+  {
+    "room": {
+      "name": "LH 6",
+      "lab": false,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "LH 7",
+      "lab": false,
+      "size": 150
+    }
+  },
+  {
+    "room": {
+      "name": "LH 8",
+      "lab": false,
+      "size": 100
+    }
+  },
+  {
+    "room": {
+      "name": "ED I",
+      "lab": false,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "ED II",
+      "lab": false,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "ED III",
+      "lab": false,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "Mini Auditorium",
+      "lab": false,
+      "size": 170
+    }
+  },
+  {
+    "room": {
+      "name": "Auditorium Foyer",
+      "lab": false,
+      "size": 150
+    }
+  },
+  {
+    "room": {
+      "name": "MRT I",
+      "lab": false,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "MRT II",
+      "lab": false,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "SEM RM 2",
+      "lab": false,
+      "size": 120
+    }
+  },
+  {
+    "room": {
+      "name": "MRT III",
+      "lab": false,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "MC 2",
+      "lab": false,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "CB 1",
+      "lab": false,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "CB 2",
+      "lab": false,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "CL 1",
+      "lab": false,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "PETROLEUM ROOM",
+      "lab": false,
+      "size": 150
+    }
+  },
+  {
+    "room": {
+      "name": "COMP ENG LAB",
       "lab": true,
-      "size": 50
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "GE 1",
+      "lab": false,
+      "size": 150
+    }
+  },
+  {
+    "room": {
+      "name": "MS 1",
+      "lab": false,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "FRENCH MULTI MEDIA ROOM",
+      "lab": true,
+      "size": 150
+    }
+  },
+  {
+    "room": {
+      "name": "MS 2",
+      "lab": false,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "ELECT. LAB.",
+      "lab": true,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "COMPUTER ROOM",
+      "lab": true,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "SOFTWARE LAB",
+      "lab": true,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "GEOL. LAB.",
+      "lab": true,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "MECH. LAB.",
+      "lab": true,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "MECH. WORKSHOP",
+      "lab": true,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "FIELD WORK 1",
+      "lab": true,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "FIELD WORK 2",
+      "lab": true,
+      "size": 80
+    }
+  },
+  {
+    "room": {
+      "name": "MINER. ENG. LAB.",
+      "lab": true,
+      "size": 80
+    }
+  },
+  {
+    "prof": {
+      "id": 1,
+      "name": "P. J. Darko"
+    }
+  },
+  {
+    "prof": {
+      "id": 2,
+      "name": "G. Quartey"
+    }
+  },
+  {
+    "prof": {
+      "id": 3,
+      "name": "P. B. Ansah"
+    }
+  },
+  {
+    "prof": {
+      "id": 4,
+      "name": "N. E. Akpeke (Ms)"
+    }
+  },
+  {
+    "prof": {
+      "id": 5,
+      "name": "Dr E. N. Wiah"
+    }
+  },
+  {
+    "prof": {
+      "id": 6,
+      "name": "Prof S. O. Seidu"
+    }
+  },
+  {
+    "prof": {
+      "id": 7,
+      "name": "E. Yin"
+    }
+  },
+  {
+    "prof": {
+      "id": 8,
+      "name": "E. Seckley"
+    }
+  },
+  {
+    "prof": {
+      "id": 9,
+      "name": "Dr A. A. Kwarteng"
+    }
+  },
+  {
+    "prof": {
+      "id": 10,
+      "name": "Mrs. E. K. Mills Abbey"
+    }
+  },
+  {
+    "prof": {
+      "id": 11,
+      "name": "A. A. Ankrah"
+    }
+  },
+  {
+    "prof": {
+      "id": 12,
+      "name": "Dr. H. Otoo"
+    }
+  },
+  {
+    "prof": {
+      "id": 13,
+      "name": "E. Adaze"
+    }
+  },
+  {
+    "prof": {
+      "id": 14,
+      "name": "E. Ofori-Ntow"
+    }
+  },
+  {
+    "prof": {
+      "id": 15,
+      "name": "Prof S. O. Ismaila"
+    }
+  },
+  {
+    "prof": {
+      "id": 16,
+      "name": "Prof M. A. Akintunde"
+    }
+  },
+  {
+    "prof": {
+      "id": 17,
+      "name": "C. Addy"
+    }
+  },
+  {
+    "prof": {
+      "id": 18,
+      "name": "Assoc Prof Mrs P. B. Mireku-Gyimah"
+    }
+  },
+  {
+    "prof": {
+      "id": 19,
+      "name": "Dr W. A. Agangiba"
+    }
+  },
+  {
+    "prof": {
+      "id": 20,
+      "name": "Assoc Prof S. Nunoo"
+    }
+  },
+  {
+    "prof": {
+      "id": 21,
+      "name": "Dr L. Brew"
+    }
+  },
+  {
+    "prof": {
+      "id": 22,
+      "name": "G. E. Y. Okai"
+    }
+  },
+  {
+    "prof": {
+      "id": 23,
+      "name": "Mrs E. K. Mills Abbey"
+    }
+  },
+  {
+    "prof": {
+      "id": 24,
+      "name": "Dr A. Hamidu"
+    }
+  },
+  {
+    "prof": {
+      "id": 25,
+      "name": "Dr H. Otoo"
+    }
+  },
+  {
+    "prof": {
+      "id": 26,
+      "name": "Dr E. Effah"
+    }
+  },
+  {
+    "prof": {
+      "id": 27,
+      "name": "Dr J. K. Annan"
+    }
+  },
+  {
+    "prof": {
+      "id": 28,
+      "name": "Dr V. M. Nofong"
+    }
+  },
+  {
+    "prof": {
+      "id": 29,
+      "name": "S. Akpah"
+    }
+  },
+  {
+    "prof": {
+      "id": 30,
+      "name": "Dr Mrs M. A. Agangiba"
+    }
+  },
+  {
+    "prof": {
+      "id": 31,
+      "name": "G. K. Ankrah"
+    }
+  },
+  {
+    "prof": {
+      "id": 32,
+      "name": "S. Anokye"
+    }
+  },
+  {
+    "prof": {
+      "id": 33,
+      "name": "Dr I. Botchway"
+    }
+  },
+  {
+    "prof": {
+      "id": 34,
+      "name": "M. Sitti"
+    }
+  },
+  {
+    "prof": {
+      "id": 35,
+      "name": "All Lecturers"
+    }
+  },
+  {
+    "prof": {
+      "id": 36,
+      "name": "Dr Mrs M.A. Agangiba"
+    }
+  },
+  {
+    "prof": {
+      "id": 37,
+      "name": "Dr A. Tetteh"
+    }
+  },
+  {
+    "prof": {
+      "id": 38,
+      "name": "Dr  K. Kamasa"
+    }
+  },
+  {
+    "prof": {
+      "id": 39,
+      "name": "Dr F. Boateng"
+    }
+  },
+  {
+    "prof": {
+      "id": 40,
+      "name": "S. Mensah"
+    }
+  },
+  {
+    "prof": {
+      "id": 41,
+      "name": "Dr E. K. Affum"
+    }
+  },
+  {
+    "prof": {
+      "id": 42,
+      "name": "J. K. Dumenya"
+    }
+  },
+  {
+    "prof": {
+      "id": 43,
+      "name": "Dr (Mrs) M. A. Agangiba"
+    }
+  },
+  {
+    "prof": {
+      "id": 44,
+      "name": "P. Blewushie"
+    }
+  },
+  {
+    "prof": {
+      "id": 45,
+      "name": "K. Agyarko"
+    }
+  },
+  {
+    "prof": {
+      "id": 46,
+      "name": "Prof O. Seidu"
+    }
+  },
+  {
+    "prof": {
+      "id": 47,
+      "name": "Dr (Ms) S. O. Adu"
+    }
+  },
+  {
+    "prof": {
+      "id": 48,
+      "name": "I. Aidoo"
+    }
+  },
+  {
+    "prof": {
+      "id": 49,
+      "name": "K. Abakah-Paintsil"
+    }
+  },
+  {
+    "prof": {
+      "id": 50,
+      "name": "E. Addo"
+    }
+  },
+  {
+    "prof": {
+      "id": 51,
+      "name": "Assoc Prof S. Nunoo"
+    }
+  },
+  {
+    "prof": {
+      "id": 52,
+      "name": "S. Ofori"
+    }
+  },
+  {
+    "prof": {
+      "id": 53,
+      "name": "Dr E. Kokroko"
+    }
+  },
+  {
+    "prof": {
+      "id": 54,
+      "name": "Dr E. I. Asiedu"
+    }
+  },
+  {
+    "prof": {
+      "id": 55,
+      "name": "D. Dzobo"
+    }
+  },
+  {
+    "prof": {
+      "id": 56,
+      "name": "Dr (Mrs) E. B. Fiadonu"
+    }
+  },
+  {
+    "prof": {
+      "id": 57,
+      "name": "Dr C.K. Owusu"
+    }
+  },
+  {
+    "prof": {
+      "id": 58,
+      "name": "Prof Saliu O. Seidu"
+    }
+  },
+  {
+    "prof": {
+      "id": 59,
+      "name": "Dr B. Odoi"
+    }
+  },
+  {
+    "prof": {
+      "id": 60,
+      "name": "E. Abotar"
+    }
+  },
+  {
+    "prof": {
+      "id": 61,
+      "name": "Dr A. A. Kwarteng"
+    }
+  },
+  {
+    "prof": {
+      "id": 62,
+      "name": "D. E. Awuye (Ms)"
+    }
+  },
+  {
+    "prof": {
+      "id": 63,
+      "name": "Prof G Ofori-Sarpong"
+    }
+  },
+  {
+    "prof": {
+      "id": 64,
+      "name": "Dr G. M. Tetteh"
+    }
+  },
+  {
+    "prof": {
+      "id": 65,
+      "name": "M. Beyuo"
+    }
+  },
+  {
+    "prof": {
+      "id": 66,
+      "name": "Dr C. K. Owusu"
+    }
+  },
+  {
+    "prof": {
+      "id": 67,
+      "name": "H. Chireboah-Ansah (Mrs)"
+    }
+  },
+  {
+    "prof": {
+      "id": 68,
+      "name": "Assoc Prof J. R. Dankwah"
+    }
+  },
+  {
+    "prof": {
+      "id": 69,
+      "name": "Prof G Ofori Sarpong"
+    }
+  },
+  {
+    "prof": {
+      "id": 70,
+      "name": "D. Achari"
+    }
+  },
+  {
+    "prof": {
+      "id": 71,
+      "name": "A.     B. Yalley (Ms)"
+    }
+  },
+  {
+    "prof": {
+      "id": 72,
+      "name": "P. Forson (Ms)"
+    }
+  },
+  {
+    "prof": {
+      "id": 73,
+      "name": "Z. Arku (Ms)"
+    }
+  },
+  {
+    "prof": {
+      "id": 74,
+      "name": "Dr E. L. Asiedu"
+    }
+  },
+  {
+    "prof": {
+      "id": 75,
+      "name": "Assoc Prof S. A. Ndur"
+    }
+  },
+  {
+    "prof": {
+      "id": 76,
+      "name": "Dr Mrs C. Addei"
+    }
+  },
+  {
+    "prof": {
+      "id": 77,
+      "name": "Dr Mrs E. B. Fiadonu"
+    }
+  },
+  {
+    "prof": {
+      "id": 78,
+      "name": "Assoc Prof M. Affam"
+    }
+  },
+  {
+    "prof": {
+      "id": 79,
+      "name": "E. D. Sunkari"
+    }
+  },
+  {
+    "prof": {
+      "id": 80,
+      "name": "E. A. A. Kwesi"
+    }
+  },
+  {
+    "prof": {
+      "id": 81,
+      "name": "Prof S. A. Opeloye"
+    }
+  },
+  {
+    "prof": {
+      "id": 82,
+      "name": "Assoc Prof S. Al-Hassan"
+    }
+  },
+  {
+    "prof": {
+      "id": 83,
+      "name": "Dr K. Adomako-Ansah"
+    }
+  },
+  {
+    "prof": {
+      "id": 84,
+      "name": "E.D. Sunkari"
+    }
+  },
+  {
+    "prof": {
+      "id": 85,
+      "name": "Dr A. Asante-Annor"
+    }
+  },
+  {
+    "prof": {
+      "id": 86,
+      "name": "Assoc Prof A. Ewusi"
+    }
+  },
+  {
+    "prof": {
+      "id": 87,
+      "name": "Z. Arku"
+    }
+  },
+  {
+    "prof": {
+      "id": 88,
+      "name": "E. N. Asare"
+    }
+  },
+  {
+    "prof": {
+      "id": 89,
+      "name": "Dr D. Oti"
+    }
+  },
+  {
+    "prof": {
+      "id": 90,
+      "name": "Dr. E. Kokroko"
+    }
+  },
+  {
+    "prof": {
+      "id": 91,
+      "name": "Dr M. V. Crankson"
+    }
+  },
+  {
+    "prof": {
+      "id": 92,
+      "name": "E. Kyekyer"
+    }
+  },
+  {
+    "prof": {
+      "id": 93,
+      "name": "K. Abakah- Paintsil"
+    }
+  },
+  {
+    "prof": {
+      "id": 94,
+      "name": "F. Krampah"
+    }
+  },
+  {
+    "prof": {
+      "id": 95,
+      "name": "Dr E. Stemn"
+    }
+  },
+  {
+    "prof": {
+      "id": 96,
+      "name": "Dr S. Fosu"
+    }
+  },
+  {
+    "prof": {
+      "id": 97,
+      "name": "Dr I. Quaicoe"
+    }
+  },
+  {
+    "prof": {
+      "id": 98,
+      "name": "Prof W. K. Buah"
+    }
+  },
+  {
+    "prof": {
+      "id": 99,
+      "name": "Dr T. Wi-Afedzi"
+    }
+  },
+  {
+    "prof": {
+      "id": 100,
+      "name": "D.  Achari"
+    }
+  },
+  {
+    "prof": {
+      "id": 101,
+      "name": "Priscilla Forson(Miss)"
+    }
+  },
+  {
+    "prof": {
+      "id": 102,
+      "name": "Zelda Arku (Miss)"
+    }
+  },
+  {
+    "prof": {
+      "id": 103,
+      "name": "Assoc Prof S. A. Ndur"
+    }
+  },
+  {
+    "prof": {
+      "id": 104,
+      "name": "Vivian I. Seshie (Ms)"
+    }
+  },
+  {
+    "prof": {
+      "id": 105,
+      "name": "Assoc Prof Mrs P. B. Mireku-Gyimah"
+    }
+  },
+  {
+    "prof": {
+      "id": 106,
+      "name": "J. K. Dumenyah"
+    }
+  },
+  {
+    "prof": {
+      "id": 107,
+      "name": "E. K. Mills Abbey"
+    }
+  },
+  {
+    "prof": {
+      "id": 108,
+      "name": "B. K. Ettih"
+    }
+  },
+  {
+    "prof": {
+      "id": 109,
+      "name": "E. Kyekyere"
+    }
+  },
+  {
+    "prof": {
+      "id": 110,
+      "name": "Dr T. Wi-Afedzi"
+    }
+  },
+  {
+    "prof": {
+      "id": 111,
+      "name": "Dr F. Kunkyin-Saadaari"
+    }
+  },
+  {
+    "prof": {
+      "id": 112,
+      "name": "G. K. Ankrah"
+    }
+  },
+  {
+    "prof": {
+      "id": 113,
+      "name": "R. Gyebuni"
+    }
+  },
+  {
+    "prof": {
+      "id": 114,
+      "name": "J. B. Baidoe"
+    }
+  },
+  {
+    "prof": {
+      "id": 115,
+      "name": "Dr B. O. Afum"
+    }
+  },
+  {
+    "prof": {
+      "id": 116,
+      "name": "S. Yenzanya"
+    }
+  },
+  {
+    "prof": {
+      "id": 117,
+      "name": "E. M. Buaba"
+    }
+  },
+  {
+    "prof": {
+      "id": 118,
+      "name": "Dr C. K. Arthur"
+    }
+  },
+  {
+    "prof": {
+      "id": 119,
+      "name": "A. B. Yalley (Ms)"
+    }
+  },
+  {
+    "prof": {
+      "id": 120,
+      "name": "Priscilla Forson (Ms)"
+    }
+  },
+  {
+    "prof": {
+      "id": 121,
+      "name": "Zelda Arku (Ms)"
+    }
+  },
+  {
+    "prof": {
+      "id": 122,
+      "name": "Assoc Prof G. Agyei"
+    }
+  },
+  {
+    "prof": {
+      "id": 123,
+      "name": "P. B.Ansah"
+    }
+  },
+  {
+    "prof": {
+      "id": 124,
+      "name": "Dr P.K. Nyarko"
+    }
+  },
+  {
+    "prof": {
+      "id": 125,
+      "name": "Dr M. V. Crankson"
+    }
+  },
+  {
+    "prof": {
+      "id": 126,
+      "name": "Dr P. Boye"
+    }
+  },
+  {
+    "prof": {
+      "id": 127,
+      "name": "Dr Mrs C.C. Nyarko"
+    }
+  },
+  {
+    "prof": {
+      "id": 128,
+      "name": "Dr E.L. Asiedu"
+    }
+  },
+  {
+    "prof": {
+      "id": 129,
+      "name": "Dr. P.K. Nyarko"
+    }
+  },
+  {
+    "prof": {
+      "id": 130,
+      "name": "Mrs E. K. Mills Abbey"
+    }
+  },
+  {
+    "prof": {
+      "id": 131,
+      "name": "Dr D.D. Zigli"
+    }
+  },
+  {
+    "prof": {
+      "id": 132,
+      "name": "Dr (Mrs) C. C. Nyarko"
+    }
+  },
+  {
+    "prof": {
+      "id": 133,
+      "name": "M.A. Buah"
+    }
+  },
+  {
+    "prof": {
+      "id": 134,
+      "name": "A. Buabeng"
+    }
+  },
+  {
+    "prof": {
+      "id": 135,
+      "name": "G.K. Ankrah"
+    }
+  },
+  {
+    "prof": {
+      "id": 136,
+      "name": "Dr P. K. Nyarko"
+    }
+  },
+  {
+    "prof": {
+      "id": 137,
+      "name": "Prof Fasoranbaku O. Akin"
+    }
+  },
+  {
+    "prof": {
+      "id": 138,
+      "name": "Dr K. Kamasa"
+    }
+  },
+  {
+    "prof": {
+      "id": 139,
+      "name": "Dr E.K. Affum"
+    }
+  },
+  {
+    "prof": {
+      "id": 140,
+      "name": "M. A. Buah"
+    }
+  },
+  {
+    "prof": {
+      "id": 141,
+      "name": "B.K. Ettih"
+    }
+  },
+  {
+    "prof": {
+      "id": 142,
+      "name": "K.Agyarko"
+    }
+  },
+  {
+    "course": {
+      "id": 1,
+      "name": "Basic French II"
+    }
+  },
+  {
+    "course": {
+      "id": 2,
+      "name": "Engineering Drawing"
+    }
+  },
+  {
+    "course": {
+      "id": 3,
+      "name": "Communication Skills II"
+    }
+  },
+  {
+    "course": {
+      "id": 4,
+      "name": "Object-Oriented Programming"
+    }
+  },
+  {
+    "course": {
+      "id": 5,
+      "name": "Basic Electronics"
+    }
+  },
+  {
+    "course": {
+      "id": 6,
+      "name": "Calculus"
+    }
+  },
+  {
+    "course": {
+      "id": 7,
+      "name": "Database Systems"
+    }
+  },
+  {
+    "course": {
+      "id": 8,
+      "name": "Web Programming"
+    }
+  },
+  {
+    "course": {
+      "id": 9,
+      "name": "Literature in English II"
+    }
+  },
+  {
+    "course": {
+      "id": 10,
+      "name": "Fieldtrip and Technical Report Writing I"
+    }
+  },
+  {
+    "course": {
+      "id": 11,
+      "name": "Mathematical Analysis"
+    }
+  },
+  {
+    "course": {
+      "id": 12,
+      "name": "Signals and Systems"
+    }
+  },
+  {
+    "course": {
+      "id": 13,
+      "name": "Digital Electonics"
+    }
+  },
+  {
+    "course": {
+      "id": 14,
+      "name": "Programming with Java"
+    }
+  },
+  {
+    "course": {
+      "id": 15,
+      "name": "Software Engineering"
+    }
+  },
+  {
+    "course": {
+      "id": 16,
+      "name": "Embedded Systems Design I"
+    }
+  },
+  {
+    "course": {
+      "id": 17,
+      "name": "Public Relations"
+    }
+  },
+  {
+    "course": {
+      "id": 18,
+      "name": "Fieldtrip and Technical Report Writing II"
+    }
+  },
+  {
+    "course": {
+      "id": 19,
+      "name": "Information Security"
+    }
+  },
+  {
+    "course": {
+      "id": 20,
+      "name": "Data Communication and Computer Networks"
+    }
+  },
+  {
+    "course": {
+      "id": 21,
+      "name": "Digital Hardware Design"
+    }
+  },
+  {
+    "course": {
+      "id": 22,
+      "name": "Simulation and Modeling"
+    }
+  },
+  {
+    "course": {
+      "id": 23,
+      "name": "Programming with C#"
+    }
+  },
+  {
+    "course": {
+      "id": 24,
+      "name": "Human Computer Interaction"
+    }
+  },
+  {
+    "course": {
+      "id": 25,
+      "name": "Computer Lab Work II"
+    }
+  },
+  {
+    "course": {
+      "id": 26,
+      "name": "Project Work"
+    }
+  },
+  {
+    "course": {
+      "id": 27,
+      "name": "Colloquium/Seminar"
+    }
+  },
+  {
+    "course": {
+      "id": 28,
+      "name": "Business Entrepreneurship"
+    }
+  },
+  {
+    "course": {
+      "id": 29,
+      "name": "Principles of Management"
+    }
+  },
+  {
+    "course": {
+      "id": 30,
+      "name": "Corporate Social Responsibility"
+    }
+  },
+  {
+    "course": {
+      "id": 31,
+      "name": "Introduction to Robotics"
+    }
+  },
+  {
+    "course": {
+      "id": 32,
+      "name": "Compiler Design"
+    }
+  },
+  {
+    "course": {
+      "id": 33,
+      "name": "Control Systems"
+    }
+  },
+  {
+    "course": {
+      "id": 34,
+      "name": "Law of Contract and Tort"
+    }
+  },
+  {
+    "course": {
+      "id": 35,
+      "name": "Strength of Materials"
+    }
+  },
+  {
+    "course": {
+      "id": 36,
+      "name": "Basic Materials Science"
+    }
+  },
+  {
+    "course": {
+      "id": 37,
+      "name": "Instruments and Measurements"
+    }
+  },
+  {
+    "course": {
+      "id": 38,
+      "name": "Field Trip and Technical Report Writing I"
+    }
+  },
+  {
+    "course": {
+      "id": 39,
+      "name": "Fluid Mechanics"
+    }
+  },
+  {
+    "course": {
+      "id": 40,
+      "name": "Basic Material Science"
+    }
+  },
+  {
+    "course": {
+      "id": 41,
+      "name": "Workshop Technology and Practice"
+    }
+  },
+  {
+    "course": {
+      "id": 42,
+      "name": "DC Machines"
+    }
+  },
+  {
+    "course": {
+      "id": 43,
+      "name": "MATLAB/Simulink for Engineers"
+    }
+  },
+  {
+    "course": {
+      "id": 44,
+      "name": "Digital Electronics"
+    }
+  },
+  {
+    "course": {
+      "id": 45,
+      "name": "Field Trip and Technical Report Writing II"
+    }
+  },
+  {
+    "course": {
+      "id": 46,
+      "name": "Utilisation of Electrical Power"
+    }
+  },
+  {
+    "course": {
+      "id": 47,
+      "name": "Electrical Drive Systems"
+    }
+  },
+  {
+    "course": {
+      "id": 48,
+      "name": "Basic Communications Systems"
+    }
+  },
+  {
+    "course": {
+      "id": 49,
+      "name": "Programming in LabVIEW"
+    }
+  },
+  {
+    "course": {
+      "id": 50,
+      "name": "High Voltage Engineering"
+    }
+  },
+  {
+    "course": {
+      "id": 51,
+      "name": "Microprocessors and Digital Control Systems"
+    }
+  },
+  {
+    "course": {
+      "id": 52,
+      "name": "Industrial and Maintenance Engineering"
+    }
+  },
+  {
+    "course": {
+      "id": 53,
+      "name": "Robotics"
+    }
+  },
+  {
+    "course": {
+      "id": 54,
+      "name": "Electric Haulage Machinery"
+    }
+  },
+  {
+    "course": {
+      "id": 55,
+      "name": "Applied Electronics"
+    }
+  },
+  {
+    "course": {
+      "id": 56,
+      "name": "Electrical Machines"
+    }
+  },
+  {
+    "course": {
+      "id": 57,
+      "name": "Mineralogy and Petrology"
+    }
+  },
+  {
+    "course": {
+      "id": 58,
+      "name": "Princ. of Metallurgical Engineering"
+    }
+  },
+  {
+    "course": {
+      "id": 59,
+      "name": "Physical Chemistry"
+    }
+  },
+  {
+    "course": {
+      "id": 60,
+      "name": "Field Trip & Technical Report Writing I"
+    }
+  },
+  {
+    "course": {
+      "id": 61,
+      "name": "Mineral Separation Processes"
+    }
+  },
+  {
+    "course": {
+      "id": 62,
+      "name": "Materials Science"
+    }
+  },
+  {
+    "course": {
+      "id": 63,
+      "name": "Pyrometallurgy"
+    }
+  },
+  {
+    "course": {
+      "id": 64,
+      "name": "Assaying"
+    }
+  },
+  {
+    "course": {
+      "id": 65,
+      "name": "Ore Mineralogy & Microscopy"
+    }
+  },
+  {
+    "course": {
+      "id": 66,
+      "name": "Fieldtrip & Tech Rep Writ II"
+    }
+  },
+  {
+    "course": {
+      "id": 67,
+      "name": "Heat Transfer"
+    }
+  },
+  {
+    "course": {
+      "id": 68,
+      "name": "Computer Applications in Minerals Engineering"
+    }
+  },
+  {
+    "course": {
+      "id": 69,
+      "name": "Process Control"
+    }
+  },
+  {
+    "course": {
+      "id": 70,
+      "name": "Environmental Management & Safety"
+    }
+  },
+  {
+    "course": {
+      "id": 71,
+      "name": "Ferrous Metallurgy"
+    }
+  },
+  {
+    "course": {
+      "id": 72,
+      "name": "Mining Laws & Regulations"
+    }
+  },
+  {
+    "course": {
+      "id": 73,
+      "name": "Metallurgical Plant Design & Control"
+    }
+  },
+  {
+    "course": {
+      "id": 74,
+      "name": "Principles of Metall. Eng."
+    }
+  },
+  {
+    "course": {
+      "id": 75,
+      "name": "Extractive Metallurgy"
+    }
+  },
+  {
+    "course": {
+      "id": 76,
+      "name": "Hazardous Waste Eng."
+    }
+  },
+  {
+    "course": {
+      "id": 77,
+      "name": "Strength of Materials"
+    }
+  },
+  {
+    "course": {
+      "id": 78,
+      "name": "Physical & Analytical Chemistry"
+    }
+  },
+  {
+    "course": {
+      "id": 79,
+      "name": "Crystallography & Mineralogy"
+    }
+  },
+  {
+    "course": {
+      "id": 80,
+      "name": "Principles of Metallurgical Engineering"
+    }
+  },
+  {
+    "course": {
+      "id": 81,
+      "name": "Soil Mechanics*"
+    }
+  },
+  {
+    "course": {
+      "id": 82,
+      "name": "Field Trip & Tech. Report Writing #"
+    }
+  },
+  {
+    "course": {
+      "id": 83,
+      "name": "Land Surveying"
+    }
+  },
+  {
+    "course": {
+      "id": 84,
+      "name": "Igneous & Metamorphic Petrology"
+    }
+  },
+  {
+    "course": {
+      "id": 85,
+      "name": "Principles of Field Mapping**"
+    }
+  },
+  {
+    "course": {
+      "id": 86,
+      "name": "Mineral Resource Estimation"
+    }
+  },
+  {
+    "course": {
+      "id": 87,
+      "name": "Ore Mineralogy & Microscopy*"
+    }
+  },
+  {
+    "course": {
+      "id": 88,
+      "name": "Field Trip & Tech. Report Writing II**"
+    }
+  },
+  {
+    "course": {
+      "id": 89,
+      "name": "Environmental Geology"
+    }
+  },
+  {
+    "course": {
+      "id": 90,
+      "name": "Exploration Geochemistry"
+    }
+  },
+  {
+    "course": {
+      "id": 91,
+      "name": "Groundwater Geochemistry"
+    }
+  },
+  {
+    "course": {
+      "id": 92,
+      "name": "Exploration Geophysics"
+    }
+  },
+  {
+    "course": {
+      "id": 93,
+      "name": "Colloquium Seminar"
+    }
+  },
+  {
+    "course": {
+      "id": 94,
+      "name": "Corporate Social Responsibility & Sustainability"
+    }
+  },
+  {
+    "course": {
+      "id": 95,
+      "name": "Law of Contract & Tort"
+    }
+  },
+  {
+    "course": {
+      "id": 96,
+      "name": "Foundation Engineering**#"
+    }
+  },
+  {
+    "course": {
+      "id": 97,
+      "name": "Applied Geotechnics**#"
+    }
+  },
+  {
+    "course": {
+      "id": 98,
+      "name": "Mineralogy & Petrology"
+    }
+  },
+  {
+    "course": {
+      "id": 99,
+      "name": "Hydrology"
+    }
+  },
+  {
+    "course": {
+      "id": 100,
+      "name": "Basic French II"
+    }
+  },
+  {
+    "course": {
+      "id": 101,
+      "name": "Calculus"
+    }
+  },
+  {
+    "course": {
+      "id": 102,
+      "name": "Engineering Drawing"
+    }
+  },
+  {
+    "course": {
+      "id": 103,
+      "name": "Mineralogy and Petrology"
+    }
+  },
+  {
+    "course": {
+      "id": 104,
+      "name": "Applied Electronics"
+    }
+  },
+  {
+    "course": {
+      "id": 105,
+      "name": "Introdution to Safety Management"
+    }
+  },
+  {
+    "course": {
+      "id": 106,
+      "name": "Chemistry for Engineers"
+    }
+  },
+  {
+    "course": {
+      "id": 107,
+      "name": "Mathematical Analysis"
+    }
+  },
+  {
+    "course": {
+      "id": 108,
+      "name": "Literature in English II"
+    }
+  },
+  {
+    "course": {
+      "id": 109,
+      "name": "Land Surveying"
+    }
+  },
+  {
+    "course": {
+      "id": 110,
+      "name": "Fluid Mechanics"
+    }
+  },
+  {
+    "course": {
+      "id": 111,
+      "name": "Fieldtrip & Technical Report Writing I"
+    }
+  },
+  {
+    "course": {
+      "id": 112,
+      "name": "Environmental Chemistry"
+    }
+  },
+  {
+    "course": {
+      "id": 113,
+      "name": "Occupational Health Management"
+    }
+  },
+  {
+    "course": {
+      "id": 114,
+      "name": "Environmental Process Engineering"
+    }
+  },
+  {
+    "course": {
+      "id": 115,
+      "name": "Public Relations"
+    }
+  },
+  {
+    "course": {
+      "id": 116,
+      "name": "Field Trip and Technical Report Writing II"
+    }
+  },
+  {
+    "course": {
+      "id": 117,
+      "name": "Computer Applications in Environmental and Safety Engineering"
+    }
+  },
+  {
+    "course": {
+      "id": 118,
+      "name": "Hydrology"
+    }
+  },
+  {
+    "course": {
+      "id": 119,
+      "name": "Hazardous Waste Engineering"
+    }
+  },
+  {
+    "course": {
+      "id": 120,
+      "name": "Fire and Road Safety"
+    }
+  },
+  {
+    "course": {
+      "id": 121,
+      "name": "Environmental Modelling"
+    }
+  },
+  {
+    "course": {
+      "id": 122,
+      "name": "Colloquium/ Seminar"
+    }
+  },
+  {
+    "course": {
+      "id": 123,
+      "name": "Business Entrepreneurship"
+    }
+  },
+  {
+    "course": {
+      "id": 124,
+      "name": "Principles of Management"
+    }
+  },
+  {
+    "course": {
+      "id": 125,
+      "name": "Corporate Social Responsibility"
+    }
+  },
+  {
+    "course": {
+      "id": 126,
+      "name": "Water and Wastewater Treatment"
+    }
+  },
+  {
+    "course": {
+      "id": 127,
+      "name": "Laws on Safety, Environment, Labour &&and"
+    }
+  },
+  {
+    "course": {
+      "id": 128,
+      "name": "Soil Mechanics"
+    }
+  },
+  {
+    "course": {
+      "id": 129,
+      "name": "Ground Fragmentation"
+    }
+  },
+  {
+    "course": {
+      "id": 130,
+      "name": "Alluvial & Ocean Mining"
+    }
+  },
+  {
+    "course": {
+      "id": 131,
+      "name": "Rock Physics"
+    }
+  },
+  {
+    "course": {
+      "id": 132,
+      "name": "Field Trip & Technical Report Writing II"
+    }
+  },
+  {
+    "course": {
+      "id": 133,
+      "name": "Computer Applications in Mining I"
+    }
+  },
+  {
+    "course": {
+      "id": 134,
+      "name": "Underground Mining Systems"
+    }
+  },
+  {
+    "course": {
+      "id": 135,
+      "name": "Surface Mining Systems"
+    }
+  },
+  {
+    "course": {
+      "id": 136,
+      "name": "Mine Ventilation & Safety"
+    }
+  },
+  {
+    "course": {
+      "id": 137,
+      "name": "Mine Drainage"
+    }
+  },
+  {
+    "course": {
+      "id": 138,
+      "name": "Mining Laws and Regulations"
+    }
+  },
+  {
+    "course": {
+      "id": 139,
+      "name": "Small Scale Mining and Processing"
+    }
+  },
+  {
+    "course": {
+      "id": 140,
+      "name": "Discrete Mathematics and Theory of Proof II"
+    }
+  },
+  {
+    "course": {
+      "id": 141,
+      "name": "Calculus of Single Variables"
+    }
+  },
+  {
+    "course": {
+      "id": 142,
+      "name": "Linear Algebra"
+    }
+  },
+  {
+    "course": {
+      "id": 143,
+      "name": "Statistical Methods"
+    }
+  },
+  {
+    "course": {
+      "id": 144,
+      "name": "Vector Applications"
+    }
+  },
+  {
+    "course": {
+      "id": 145,
+      "name": "Fundamentals of Economics"
+    }
+  },
+  {
+    "course": {
+      "id": 146,
+      "name": "Chaos, Fractal and Dynamical System"
+    }
+  },
+  {
+    "course": {
+      "id": 147,
+      "name": "Regression Analysis"
+    }
+  },
+  {
+    "course": {
+      "id": 148,
+      "name": "Ordinary Differential Equations"
+    }
+  },
+  {
+    "course": {
+      "id": 149,
+      "name": "Numerical Methods and Scientific Computing"
+    }
+  },
+  {
+    "course": {
+      "id": 150,
+      "name": "Theoretical Mechanics"
+    }
+  },
+  {
+    "course": {
+      "id": 151,
+      "name": "Programming with R and Python"
+    }
+  },
+  {
+    "course": {
+      "id": 152,
+      "name": "Special Mathematical Functions"
+    }
+  },
+  {
+    "course": {
+      "id": 153,
+      "name": "Elements of Abstract Algebra"
+    }
+  },
+  {
+    "course": {
+      "id": 154,
+      "name": "Optimisation Techniques"
+    }
+  },
+  {
+    "course": {
+      "id": 155,
+      "name": "Complex Analysis"
+    }
+  },
+  {
+    "course": {
+      "id": 156,
+      "name": "Statistical Inference"
+    }
+  },
+  {
+    "course": {
+      "id": 157,
+      "name": "Colloqium/Seminar"
+    }
+  },
+  {
+    "course": {
+      "id": 158,
+      "name": "Design and Analysis of Experiments"
+    }
+  },
+  {
+    "course": {
+      "id": 159,
+      "name": "Mathematical Economics II"
+    }
+  },
+  {
+    "course": {
+      "id": 160,
+      "name": "Time Series And Forecasting II"
+    }
+  },
+  {
+    "course": {
+      "id": 161,
+      "name": "Solid Geometry"
+    }
+  },
+  {
+    "course": {
+      "id": 162,
+      "name": "Probability and Statistics"
+    }
+  },
+  {
+    "course": {
+      "id": 163,
+      "name": "Numerical Methods"
+    }
+  },
+  {
+    "course": {
+      "id": 164,
+      "name": "Physical and Analytical Chemistry"
+    }
+  },
+  {
+    "course": {
+      "id": 165,
+      "name": "Introduction to Oil and Gas Industry"
+    }
+  },
+  {
+    "course": {
+      "id": 166,
+      "name": "Fundamentals of Refining and Petrochemical Engineering"
+    }
+  },
+  {
+    "course": {
+      "id": 167,
+      "name": "Numerical Methods"
+    }
+  },
+  {
+    "course": {
+      "id": 168,
+      "name": "Chemical Process Calculations II"
+    }
+  },
+  {
+    "course": {
+      "id": 169,
+      "name": "Mass Transfer Processes"
+    }
+  },
+  {
+    "course": {
+      "id": 170,
+      "name": "Separation Processes"
+    }
+  },
+  {
+    "course": {
+      "id": 171,
+      "name": "Crystallography and Mineralogy"
+    }
+  },
+  {
+    "course": {
+      "id": 172,
+      "name": "Fundamentals of Petroleum Geosciences and Engineering"
+    }
+  },
+  {
+    "course": {
+      "id": 173,
+      "name": "Field Trip and Technical Report Writing I"
+    }
+  },
+  {
+    "course": {
+      "id": 174,
+      "name": "Igneous and Metamorphic Petrology"
+    }
+  },
+  {
+    "course": {
+      "id": 175,
+      "name": "Structural Geology and Tectonics"
+    }
+  },
+  {
+    "course": {
+      "id": 176,
+      "name": "Principles of Field Mapping"
+    }
+  },
+  {
+    "course": {
+      "id": 177,
+      "name": "Rock and Fluid Physics"
+    }
+  },
+  {
+    "course": {
+      "id": 178,
+      "name": "Petroleum Geology"
+    }
+  },
+  {
+    "course": {
+      "id": 179,
+      "name": "Applied Geophysics"
+    }
+  },
+  {
+    "course": {
+      "id": 180,
+      "name": "Communication Skills II"
+    }
+  },
+  {
+    "course": {
+      "id": 181,
+      "name": "Survey Measurements"
+    }
+  },
+  {
+    "course": {
+      "id": 182,
+      "name": "Applied Optics and Signal Processing"
+    }
+  },
+  {
+    "course": {
+      "id": 183,
+      "name": "Solid Geometry"
+    }
+  },
+  {
+    "course": {
+      "id": 184,
+      "name": "Field Trip & Technical Report Writing I"
+    }
+  },
+  {
+    "course": {
+      "id": 185,
+      "name": "Advanced Photogrammetry"
+    }
+  },
+  {
+    "course": {
+      "id": 186,
+      "name": "SurveyComputation&Adjustment I"
+    }
+  },
+  {
+    "course": {
+      "id": 187,
+      "name": "Principles of Remote Sensing"
+    }
+  },
+  {
+    "course": {
+      "id": 188,
+      "name": "Cartography"
+    }
+  },
+  {
+    "course": {
+      "id": 189,
+      "name": "Survey Camp I"
+    }
+  },
+  {
+    "course": {
+      "id": 190,
+      "name": "Principles of Geographic Information Systems"
+    }
+  },
+  {
+    "course": {
+      "id": 191,
+      "name": "Mineral Resource Estimation"
+    }
+  },
+  {
+    "course": {
+      "id": 192,
+      "name": "Field Trip & Technical Report Writing II"
+    }
+  },
+  {
+    "course": {
+      "id": 193,
+      "name": "Computer Applications in Geomatic Engineering"
+    }
+  },
+  {
+    "course": {
+      "id": 194,
+      "name": "Survey Computation & Adjustment II"
+    }
+  },
+  {
+    "course": {
+      "id": 195,
+      "name": "Hydrographic Surveying"
+    }
+  },
+  {
+    "course": {
+      "id": 196,
+      "name": "Advanced Geodesy"
+    }
+  },
+  {
+    "course": {
+      "id": 197,
+      "name": "Survey Camp II"
+    }
+  },
+  {
+    "course": {
+      "id": 198,
+      "name": "Spatial Statistics"
+    }
+  },
+  {
+    "course": {
+      "id": 199,
+      "name": "Introduction to Engineering Design"
+    }
+  },
+  {
+    "course": {
+      "id": 200,
+      "name": "Computer Applications"
+    }
+  },
+  {
+    "course": {
+      "id": 201,
+      "name": "Energy Storage and Distributions Systems"
+    }
+  },
+  {
+    "course": {
+      "id": 202,
+      "name": "Electrochemical Power Sources"
+    }
+  },
+  {
+    "course": {
+      "id": 203,
+      "name": "Wind Energy and Measurement Techniques"
+    }
+  },
+  {
+    "course": {
+      "id": 204,
+      "name": "Energy Efficiency and Conservation"
+    }
+  },
+  {
+    "course": {
+      "id": 205,
+      "name": "Applications of Solar Energy"
+    }
+  },
+  {
+    "course": {
+      "id": 206,
+      "name": "Internal Combustion Engines"
+    }
+  },
+  {
+    "course": {
+      "id": 207,
+      "name": "Principles of Petroleum Engineering"
+    }
+  },
+  {
+    "course": {
+      "id": 208,
+      "name": "Drilling Engineering I"
+    }
+  },
+  {
+    "course": {
+      "id": 209,
+      "name": "Petroleum Eng Lab. Practices"
+    }
+  },
+  {
+    "course": {
+      "id": 210,
+      "name": "Reservoir Engineering I"
+    }
+  },
+  {
+    "course": {
+      "id": 211,
+      "name": "Properties of Reservoir Rocks and Fluids"
+    }
+  },
+  {
+    "course": {
+      "id": 212,
+      "name": "Computer Applications in Petroleum Eng"
+    }
+  },
+  {
+    "course": {
+      "id": 213,
+      "name": "Environmental Management, Health and Safety"
+    }
+  },
+  {
+    "course": {
+      "id": 214,
+      "name": "Gathering and Transportation of Oil and Gas"
+    }
+  },
+  {
+    "course": {
+      "id": 215,
+      "name": "Enhanced Oil Recovery"
+    }
+  },
+  {
+    "course": {
+      "id": 216,
+      "name": "Well Test Analysis"
+    }
+  },
+  {
+    "course": {
+      "id": 217,
+      "name": "Petroleum Production Engineering"
+    }
+  },
+  {
+    "course": {
+      "id": 218,
+      "name": "Project Work"
+    }
+  },
+  {
+    "course": {
+      "id": 219,
+      "name": "Colloquium/ Seminar"
+    }
+  },
+  {
+    "course": {
+      "id": 220,
+      "name": "Business Entrepreneurship"
+    }
+  },
+  {
+    "course": {
+      "id": 221,
+      "name": "Principles of Management"
+    }
+  },
+  {
+    "course": {
+      "id": 222,
+      "name": "Corporate Social Responsibility"
+    }
+  },
+  {
+    "course": {
+      "id": 223,
+      "name": "Law of Contract and Tort"
+    }
+  },
+  {
+    "course": {
+      "id": 224,
+      "name": "Alternative Energy Sources"
+    }
+  },
+  {
+    "course": {
+      "id": 225,
+      "name": "Petroleum Laws and Regulations"
+    }
+  },
+  {
+    "course": {
+      "id": 226,
+      "name": "Gas Engineering Laboratory Practices"
+    }
+  },
+  {
+    "course": {
+      "id": 227,
+      "name": "Gas Reservoir Engineering I"
+    }
+  },
+  {
+    "course": {
+      "id": 228,
+      "name": "Training on Oil Rig"
     }
   },
   {
     "group": {
       "id": 1,
       "name": "CE 1A",
-      "size": 20
+      "size": 100
     }
   },
   {
-    "course": {
-      "id": 1,
-      "name": "Introduction To Programming"
+    "group": {
+      "id": 2,
+      "name": "MC 142",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 3,
+      "name": "MA 142",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 4,
+      "name": "MC 156",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 5,
+      "name": "RN 156",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 6,
+      "name": "MC 158",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 7,
+      "name": "MA 158",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 8,
+      "name": "MC 164",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 9,
+      "name": "RN 164",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 10,
+      "name": "MC 166",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 11,
+      "name": "RN 168",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 12,
+      "name": "MC 170",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 13,
+      "name": "MC 172",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 14,
+      "name": "MC 174",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 15,
+      "name": "MC 252",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 16,
+      "name": "EL 252",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 17,
+      "name": "MA 252",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 18,
+      "name": "MC 272",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 19,
+      "name": "MC 274",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 20,
+      "name": "MC 276",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 21,
+      "name": "MC 278",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 22,
+      "name": "MC 372*",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 23,
+      "name": "MC 374",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 24,
+      "name": "MC 376",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 25,
+      "name": "MC 450",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 26,
+      "name": "MC 452",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 27,
+      "name": "MC 472",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 28,
+      "name": "MN 152",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 29,
+      "name": "EL 156",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 30,
+      "name": "MN 156",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 31,
+      "name": "GL 130",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 32,
+      "name": "GL 124",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 33,
+      "name": "MC 356",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 34,
+      "name": "MC 256",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 35,
+      "name": "MC 260",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 36,
+      "name": "EL 260",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 37,
+      "name": "MC 264",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 38,
+      "name": "EL 264",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 39,
+      "name": "MA 352",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 40,
+      "name": "EL 352",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 41,
+      "name": "MC 352",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 42,
+      "name": "MC 454",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 43,
+      "name": "EL 152",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 44,
+      "name": "MC 358#",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 45,
+      "name": "RN 358#",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 46,
+      "name": "RN 458",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 47,
+      "name": "EL 458",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 48,
+      "name": "MC 458",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 49,
+      "name": "MC 378",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 50,
+      "name": "RN 378",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 51,
+      "name": "PE 152",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 52,
+      "name": "GL 152",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 53,
+      "name": "MR 152",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 54,
+      "name": "ES 152",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 55,
+      "name": "RN 152",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 56,
+      "name": "CE 156",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 57,
+      "name": "EL 466",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 58,
+      "name": "RN 466",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 59,
+      "name": "MA 156",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 60,
+      "name": "MC 462",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 61,
+      "name": "EL 462",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 62,
+      "name": "RN 462",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 63,
+      "name": "GM 156",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 64,
+      "name": "GL 156",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 65,
+      "name": "RN 460",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 66,
+      "name": "EL 460",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 67,
+      "name": "MC 460",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 68,
+      "name": "PG 156",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 69,
+      "name": "RP 156",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 70,
+      "name": "PG 152",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 71,
+      "name": "RP 152",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 72,
+      "name": "MR 156",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 73,
+      "name": "ES 156",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 74,
+      "name": "PE 264",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 75,
+      "name": "PG 264",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 76,
+      "name": "RP 264",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 77,
+      "name": "NG 264",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 78,
+      "name": "MN 264",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 79,
+      "name": "GL 264",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 80,
+      "name": "MR 264",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 81,
+      "name": "PE 156",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 82,
+      "name": "NG 156",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 83,
+      "name": "RN 264",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 84,
+      "name": "ES 264",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 85,
+      "name": "CE 142",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 86,
+      "name": "CE 158",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 87,
+      "name": "RN 142",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 88,
+      "name": "RN 158",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 89,
+      "name": "CE 162*",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 90,
+      "name": "CE 164",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 91,
+      "name": "CE 166",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 92,
+      "name": "CE 170*",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 93,
+      "name": "CE 172*",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 94,
+      "name": "RN 252",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 95,
+      "name": "CE 256",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 96,
+      "name": "RN 260",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 97,
+      "name": "CE 272",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 98,
+      "name": "CE 262",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 99,
+      "name": "CE 274*",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 100,
+      "name": "CE 276*",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 101,
+      "name": "CE 278#",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 102,
+      "name": "CE 280*",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 103,
+      "name": "EL 278",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 104,
+      "name": "CE 260",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 105,
+      "name": "CE 252",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 106,
+      "name": "CE 352",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 107,
+      "name": "RN 352",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 108,
+      "name": "CE 356",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 109,
+      "name": "CE 372*",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 110,
+      "name": "CE 374#",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 111,
+      "name": "CE 376#",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 112,
+      "name": "CE 378#",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 113,
+      "name": "CE 380*",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 114,
+      "name": "CE 382#",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 115,
+      "name": "CE 384**",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 116,
+      "name": "CE 458",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 117,
+      "name": "CE 460",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 118,
+      "name": "CE 450",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 119,
+      "name": "CE 452",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 120,
+      "name": "MA 454",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 121,
+      "name": "MA 458",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 122,
+      "name": "MA 460",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 123,
+      "name": "CE 464#",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 124,
+      "name": "CE 470*",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 125,
+      "name": "CE 472#",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 126,
+      "name": "MA 466",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 127,
+      "name": "CE 466",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 128,
+      "name": "RN 162",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 129,
+      "name": "CE 454",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 130,
+      "name": "EL 162",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 131,
+      "name": "MC 132",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 132,
+      "name": "MA 162",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 133,
+      "name": "EL 142",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 134,
+      "name": "EL 158",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 135,
+      "name": "EL 164",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 136,
+      "name": "EL 166",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 137,
+      "name": "EL 168",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 138,
+      "name": "EL 172",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 139,
+      "name": "MC 168",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 140,
+      "name": "EL 270",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 141,
+      "name": "EL 256",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 142,
+      "name": "EL 272",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 143,
+      "name": "EL 274",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 144,
+      "name": "EL 276#",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 145,
+      "name": "EL 356",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 146,
+      "name": "EL 372",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 147,
+      "name": "EL 374",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 148,
+      "name": "EL 376",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 149,
+      "name": "EL 378#",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 150,
+      "name": "EL 380",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 151,
+      "name": "EL 382",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 152,
+      "name": "RN 454",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 153,
+      "name": "EL 454",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 154,
+      "name": "EL 464",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 155,
+      "name": "GL 162",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 156,
+      "name": "MR 162",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 157,
+      "name": "PG 162",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 158,
+      "name": "EL 450",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 159,
+      "name": "EL 452",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 160,
+      "name": "EL 472",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 161,
+      "name": "MC 466",
+      "size": 100
+    }
+  },
+  {
+    "group": {
+      "id": 162,
+      "name": "GM 162",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 163,
+      "name": "MN 162",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 164,
+      "name": "ES 162",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 165,
+      "name": "RP 162",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 166,
+      "name": "NG 162",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 167,
+      "name": "ES 142",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 168,
+      "name": "ES 150",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 169,
+      "name": "ES 158",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 170,
+      "name": "MR 160",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 171,
+      "name": "MR 174",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 172,
+      "name": "MR 172",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 173,
+      "name": "GL 250",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 174,
+      "name": "ES 252",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 175,
+      "name": "MR 256",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 176,
+      "name": "MR 272",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 177,
+      "name": "MR 274",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 178,
+      "name": "MR 276",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 179,
+      "name": "MR 280",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 180,
+      "name": "MR 352",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 181,
+      "name": "MR 354",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 182,
+      "name": "MR 356",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 183,
+      "name": "MR 142",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 184,
+      "name": "MR 150",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 185,
+      "name": "MR 158",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 186,
+      "name": "MN 160",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 187,
+      "name": "GL 174",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 188,
+      "name": "MR 250",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 189,
+      "name": "MR 252",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 190,
+      "name": "MN 250",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 191,
+      "name": "PE 252",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 192,
+      "name": "ES 352",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 193,
+      "name": "PE 352",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 194,
+      "name": "PE 454",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 195,
+      "name": "MN 456",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 196,
+      "name": "PE 458",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 197,
+      "name": "PE 460",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 198,
+      "name": "PE 466",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 199,
+      "name": "ES 454",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 200,
+      "name": "ES 458",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 201,
+      "name": "ES 460",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 202,
+      "name": "ES 466",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 203,
+      "name": "GL 142",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 204,
+      "name": "GL 154",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 205,
+      "name": "GL158",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 206,
+      "name": "GL162",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 207,
+      "name": "MR 450",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 208,
+      "name": "MR 452",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 209,
+      "name": "M 454",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 210,
+      "name": "MR 456",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 211,
+      "name": "MR 458",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 212,
+      "name": "MR 460",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 213,
+      "name": "MR 466",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 214,
+      "name": "MR 474",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 215,
+      "name": "MR 358",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 216,
+      "name": "MR 370",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 217,
+      "name": "MR 374",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 218,
+      "name": "MR 376",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 219,
+      "name": "MR 380",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 220,
+      "name": "GL 164",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 221,
+      "name": "MN 258",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 222,
+      "name": "ES 374",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 223,
+      "name": "GM 142",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 224,
+      "name": "GL 150",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 225,
+      "name": "MN 154",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 226,
+      "name": "GL 170",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 227,
+      "name": "GL 252",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 228,
+      "name": "GL 262",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 229,
+      "name": "GM 252",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 230,
+      "name": "GL 254",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 231,
+      "name": "GL 256",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 232,
+      "name": "ES 262",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 233,
+      "name": "GL 272",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 234,
+      "name": "GL 274",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 235,
+      "name": "MN 350",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 236,
+      "name": "MN 352",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 237,
+      "name": "GM 350",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 238,
+      "name": "GM 352",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 239,
+      "name": "GL 354",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 240,
+      "name": "GL 356",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 241,
+      "name": "GL 372",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 242,
+      "name": "GL 374",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 243,
+      "name": "GL 376",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 244,
+      "name": "GL 378",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 245,
+      "name": "GL 350",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 246,
+      "name": "GL 352",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 247,
+      "name": "GL 450",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 248,
+      "name": "GL 454",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 249,
+      "name": "GL 458",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 250,
+      "name": "GL 460",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 251,
+      "name": "GM 466",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 252,
+      "name": "PE 454",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 253,
+      "name": "PE 458",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 254,
+      "name": "PE 460",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 255,
+      "name": "ES 352",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 256,
+      "name": "PE 352",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 257,
+      "name": "ES 454",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 258,
+      "name": "ES 458",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 259,
+      "name": "ES 460",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 260,
+      "name": "ES 250",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 261,
+      "name": "ES 252",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 262,
+      "name": "RN 264",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 263,
+      "name": "PE 250",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 264,
+      "name": "MR 252",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 265,
+      "name": "ES 264",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 266,
+      "name": "ES 256",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 267,
+      "name": "ES 274",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 268,
+      "name": "ES 276",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 269,
+      "name": "ES 278",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 270,
+      "name": "GL 158",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 271,
+      "name": "GM 158",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 272,
+      "name": "MN 158",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 273,
+      "name": "EL158",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 274,
+      "name": "PE 158",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 275,
+      "name": "PG 158",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 276,
+      "name": "MN 142",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 277,
+      "name": "PE 142",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 278,
+      "name": "RP 142",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 279,
+      "name": "PG 252",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 280,
+      "name": "MN 252",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 281,
+      "name": "NG 142",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 282,
+      "name": "CE 352",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 283,
+      "name": "MN 254",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 284,
+      "name": "MN 256",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 285,
+      "name": "RP 252",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 286,
+      "name": "NG 252",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 287,
+      "name": "RN 352",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 288,
+      "name": "MN 460",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 289,
+      "name": "MN 454",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 290,
+      "name": "MN 262",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 291,
+      "name": "MN 270",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 292,
+      "name": "MN 272",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 293,
+      "name": "MN 274",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 294,
+      "name": "MN 458",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 295,
+      "name": "MN 150",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 296,
+      "name": "MN 178",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 297,
+      "name": "MN 356",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 298,
+      "name": "MN 370",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 299,
+      "name": "MN 372",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 300,
+      "name": "MN 374",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 301,
+      "name": "MN 378",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 302,
+      "name": "MN 380",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 303,
+      "name": "MN 450",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 304,
+      "name": "MN 452",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 305,
+      "name": "GM 454",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 306,
+      "name": "GM 458",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 307,
+      "name": "GM 460",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 308,
+      "name": "MN 472",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 309,
+      "name": "GL 466",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 310,
+      "name": "MA 170",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 311,
+      "name": "MA 172",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 312,
+      "name": "MA 174",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 313,
+      "name": "MA 176",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 314,
+      "name": "MA 178",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 315,
+      "name": "MA 180",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 316,
+      "name": "MA 256",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 317,
+      "name": "MA 270",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 318,
+      "name": "MA 272",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 319,
+      "name": "MA 274",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 320,
+      "name": "MA 276*",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 321,
+      "name": "MA 278",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 322,
+      "name": "MA 280*",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 323,
+      "name": "MA 356",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 324,
+      "name": "MA 372",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 325,
+      "name": "MA 374",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 326,
+      "name": "MA 376",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 327,
+      "name": "MA 378",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 328,
+      "name": "MA 380",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 329,
+      "name": "MA 450",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 330,
+      "name": "MA 452",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 331,
+      "name": "MA 470",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 332,
+      "name": "MA 472",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 333,
+      "name": "MA 474",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 334,
+      "name": "GM 150",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 335,
+      "name": "RN 166",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 336,
+      "name": "RP 150",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 337,
+      "name": "PE 150",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 338,
+      "name": "GM 174",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 339,
+      "name": "GL 122",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 340,
+      "name": "NG 250",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 341,
+      "name": "ES 250",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 342,
+      "name": "NG 258",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 343,
+      "name": "RP 258",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 344,
+      "name": "RP  150",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 345,
+      "name": "RP  152",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 346,
+      "name": "PG  154",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 347,
+      "name": "PG  162",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 348,
+      "name": "PG 164",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 349,
+      "name": "PG 170",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 350,
+      "name": "PG 250",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 351,
+      "name": "PG 256*",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 352,
+      "name": "PG  266",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 353,
+      "name": "PG 272",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 354,
+      "name": "PG 274",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 355,
+      "name": "PG 276",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 356,
+      "name": "RP 250",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 357,
+      "name": "PE 276*",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 358,
+      "name": "GL 142",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 359,
+      "name": "GM 150",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 360,
+      "name": "GL 156",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 361,
+      "name": "GL 158",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 362,
+      "name": "GL 162",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 363,
+      "name": "GM 170",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 364,
+      "name": "GM 172#",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 365,
+      "name": "GM 174",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 366,
+      "name": "GL 252",
+      "size": 50
+    }
+  },
+  {
+    "group": {
+      "id": 367,
+      "name": "GM 256",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 368,
+      "name": "GM 272#",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 369,
+      "name": "GM 274",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 370,
+      "name": "GM 276",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 371,
+      "name": "GM 278",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 372,
+      "name": "GM 280**",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 373,
+      "name": "GM 282",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 374,
+      "name": "GM 252",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 375,
+      "name": "MN 350",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 376,
+      "name": "MN 352",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 377,
+      "name": "GM 350",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 378,
+      "name": "GM 352",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 379,
+      "name": "GM 356",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 380,
+      "name": "GM 370*",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 381,
+      "name": "GM 372",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 382,
+      "name": "GM 374",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 383,
+      "name": "GM 376",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 384,
+      "name": "GM 380**",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 385,
+      "name": "GM 382",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 386,
+      "name": "GM 450",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 387,
+      "name": "GM 452",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 388,
+      "name": "GL 454",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 389,
+      "name": "GM 456",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 390,
+      "name": "GM 458",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 391,
+      "name": "GM 460",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 392,
+      "name": "GM 472",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 393,
+      "name": "GM 466",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 394,
+      "name": "GL 262",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 395,
+      "name": "MN 262",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 396,
+      "name": "RN 170",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 397,
+      "name": "RN 262",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 398,
+      "name": "RN 270",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 399,
+      "name": "RN 272",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 400,
+      "name": "RN 274",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 401,
+      "name": "RN 276",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 402,
+      "name": "RN 356",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 403,
+      "name": "RN 358",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 404,
+      "name": "RN 372",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 405,
+      "name": "RN 374",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 406,
+      "name": "RN 376",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 407,
+      "name": "RN 450",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 408,
+      "name": "RN 452",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 409,
+      "name": "NG 152",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 410,
+      "name": "*NG 154",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 411,
+      "name": "PE 170",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 412,
+      "name": "NG 172",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 413,
+      "name": "NG 256",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 414,
+      "name": "PE 272",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 415,
+      "name": "*PE 274",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 416,
+      "name": "PE 276",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 417,
+      "name": "*PE 278",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 418,
+      "name": "PE 280",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 419,
+      "name": "PE 356",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 420,
+      "name": "*PE 370",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 421,
+      "name": "PE 372",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 422,
+      "name": "PE 374",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 423,
+      "name": "PE 376",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 424,
+      "name": "PE 378",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 425,
+      "name": "PE 380",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 426,
+      "name": "PE 450",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 427,
+      "name": "PE 452",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 428,
+      "name": "MR 454",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 429,
+      "name": "PE 472",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 430,
+      "name": "PE 474",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 431,
+      "name": "*PE 154",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 432,
+      "name": "PE 162",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 433,
+      "name": "RP 164",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 434,
+      "name": "PE 172",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 435,
+      "name": "PE 256",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 436,
+      "name": "NG 266",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 437,
+      "name": "*NG 272",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 438,
+      "name": "NG 274",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 439,
+      "name": "GL 234",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 440,
+      "name": "PG 258",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 441,
+      "name": "NG 150",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 442,
+      "name": "NG 158",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 443,
+      "name": "NG 164",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 444,
+      "name": "MC 358",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 445,
+      "name": "EL458",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 446,
+      "name": "PE152",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 447,
+      "name": "PE 250",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 448,
+      "name": "PG 150",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 449,
+      "name": "PE 258",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 450,
+      "name": "PG 142",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 451,
+      "name": "PG  150",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 452,
+      "name": "PG  152",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 453,
+      "name": "RP  154",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 454,
+      "name": "RP 158",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 455,
+      "name": "RP  162",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 456,
+      "name": "GM 142",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 457,
+      "name": "GM 156",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 458,
+      "name": "GM 158",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 459,
+      "name": "GM 162",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 460,
+      "name": "GL 458",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 461,
+      "name": "MN 466",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 462,
+      "name": "GL 466",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 463,
+      "name": "ES 262",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 464,
+      "name": "CE260",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 465,
+      "name": "GL 452",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 466,
+      "name": "GL 472",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 467,
+      "name": "GL 474",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 468,
+      "name": "MN 466",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 469,
+      "name": "MN160",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 470,
+      "name": "MR160",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 471,
+      "name": "ES 160",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 472,
+      "name": "ES 372",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 473,
+      "name": "ES 450",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 474,
+      "name": "ES 452",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 475,
+      "name": "MR 454",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 476,
+      "name": "MR 458",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 477,
+      "name": "MR 460",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 478,
+      "name": "ES 472",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 479,
+      "name": "ES 474",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 480,
+      "name": "MR 352",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 481,
+      "name": "ES 356",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 482,
+      "name": "ES 370",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 483,
+      "name": "ES 372",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 484,
+      "name": "ES 374",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 485,
+      "name": "ES 376",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 486,
+      "name": "ES 378",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 487,
+      "name": "RN 152",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 488,
+      "name": "ES 156",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 489,
+      "name": "ES 158",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 490,
+      "name": "MR 162",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 491,
+      "name": "ES 142",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 492,
+      "name": "MR 142",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 493,
+      "name": "ES 150",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 494,
+      "name": "ES 152",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 495,
+      "name": "MR 156",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 496,
+      "name": "MR 158",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 497,
+      "name": "ES 160",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 498,
+      "name": "ES 162",
+      "size": 70
+    }
+  },
+  {
+    "group": {
+      "id": 499,
+      "name": "ES 172",
+      "size": 70
+    }
+  },
+  {
+    "class": {
+      "professor": 10,
+      "course": 108,
+      "duration": 1,
+      "group": [
+        17,
+        16,
+        15
+      ],
+      "lab": false
+    }
+  },
+  {
+    "class": {
+      "professor": 7,
+      "course": 184,
+      "duration": 1,
+      "group": [
+        34
+      ],
+      "lab": false
+    }
+  },
+  {
+    "class": {
+      "professor": 12,
+      "course": 107,
+      "duration": 3,
+      "group": [
+        36,
+        35
+      ],
+      "lab": false
+    }
+  },
+  {
+    "class": {
+      "professor": 13,
+      "course": 110,
+      "duration": 3,
+      "group": [
+        38,
+        37
+      ],
+      "lab": false
+    }
+  },
+  {
+    "class": {
+      "professor": 15,
+      "course": 42,
+      "duration": 1,
+      "group": [
+        19
+      ],
+      "lab": false
+    }
+  },
+  {
+    "class": {
+      "professor": 16,
+      "course": 162,
+      "duration": 2,
+      "group": [
+        21
+      ],
+      "lab": true
     }
   },
   {
     "class": {
       "professor": 1,
-      "course": 1,
-      "duration": 1,
+      "course": 100,
+      "duration": 2,
       "group": [
-        1
+        87,
+        85
+      ],
+      "lab": false
+    }
+  },
+  {
+    "class": {
+      "professor": 17,
+      "course": 102,
+      "duration": 3,
+      "group": [
+        88,
+        86
+      ],
+      "lab": false
+    }
+  },
+  {
+    "class": {
+      "professor": 19,
+      "course": 4,
+      "duration": 0,
+      "group": [
+        89
+      ],
+      "lab": true
+    }
+  },
+  {
+    "class": {
+      "professor": 51,
+      "course": 5,
+      "duration": 3,
+      "group": [
+        90
+      ],
+      "lab": false
+    }
+  },
+  {
+    "class": {
+      "professor": 21,
+      "course": 101,
+      "duration": 2,
+      "group": [
+        92
+      ],
+      "lab": false
+    }
+  },
+  {
+    "class": {
+      "professor": 19,
+      "course": 8,
+      "duration": 2,
+      "group": [
+        93
+      ],
+      "lab": true
+    }
+  },
+  {
+    "class": {
+      "professor": 22,
+      "course": 7,
+      "duration": 2,
+      "group": [
+        92
       ],
       "lab": true
     }

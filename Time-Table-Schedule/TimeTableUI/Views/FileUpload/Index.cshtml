@@ -1,6 +1,99 @@
 ﻿<div class = "row">
-    <form method = "post" asp-controller = "FileUpload" asp-action = "Import" enctype = "multipart/form-data">
-        <input type = "file" name = "file"/>
-        <button type = "submit">Import from Excel</button>
-    </form>
+    <div class = "col-md-4 col-xl-4">
+        <div class = "card card-custom gutter-b">
+            <div class = "card-header">
+                <div class = "card-title">
+                    <h3 class = "card-label">
+                        Import Room
+                        <small>sub title</small>
+                    </h3>
+                </div>
+            </div>
+            <div class = "card-body">
+                <form method = "post" asp-controller = "FileUpload" asp-action = "Import" class = "form" enctype = "multipart/form-data">
+                    <input type = "file" name = "file" class = "form-control"/>
+                    <div class = "mt-3">
+                        <button class = "btn btn-primary btn-block" type = "submit">Import from Excel</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <div class = "col-md-4 col-xl-4">
+        
+            <div class = "card card-custom gutter-b">
+                <div class = "card-header">
+                    <div class = "card-title">
+                        <h3 class = "card-label">
+                            Import Lecturers
+                            <small>sub title</small>
+                        </h3>
+                    </div>
+                </div>
+                <div class = "card-body">
+                    <form method = "post" asp-controller = "FileUpload" asp-action = "ImportLecturers" class = "form" enctype = "multipart/form-data">
+                    <input type = "file" name = "file" class = "form-control"/>
+                    <div class = "mt-3">
+                        <button class = "btn btn-primary btn-block" type = "submit">Import from Excel</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+            
+
+    </div>
+
+    <div class = "col-md-4 col-xl-4">
+        
+            <div class = "card card-custom gutter-b">
+                <div class = "card-header">
+                    <div class = "card-title">
+                        <h3 class = "card-label">
+                            Import Courses
+                            <small>sub title</small>
+                        </h3>
+                    </div>
+                </div>
+                <div class = "card-body">
+                    <form method = "post" asp-controller = "FileUpload" asp-action = "ImportCourses" class = "form" enctype = "multipart/form-data">
+                        <input type = "file" name = "file" class = "form-control"/>
+                        <div class = "mt-3">
+                            <button class = "btn btn-primary btn-block" type = "submit">Import from Excel</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+           
+            
+    </div>
+
+    <div class = "col-md-4 col-xl-4">
+       
+            <div class = "card card-custom gutter-b">
+                <div class = "card-header">
+                    <div class = "card-title">
+                        <h3 class = "card-label">
+                            Import Course Group
+                            <small>sub title</small>
+                        </h3>
+                    </div>
+                </div>
+                <div class = "card-body">
+                    <form method = "post" asp-controller = "FileUpload" asp-action = "ImportCourseGroups" class = "form" enctype = "multipart/form-data">
+                        <input type = "file" name = "file" class = "form-control"/>
+                        <div class = "mt-3">
+                            <button class = "btn btn-primary btn-block" type = "submit">Import from Excel</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            
+    </div>
+
 </div>

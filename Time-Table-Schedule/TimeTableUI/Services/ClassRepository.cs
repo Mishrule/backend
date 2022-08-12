@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using TimeTableUI.Contracts;
@@ -21,6 +23,7 @@ namespace TimeTableUI.Services
             var request = new HttpRequestMessage(HttpMethod.Get, url);
 
             var client = _client.CreateClient();
+           // client.Timeout = TimeSpan.FromMilliseconds(Timeout.Infinite);
             HttpResponseMessage response = await client.SendAsync(request);
 
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
