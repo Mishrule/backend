@@ -21,17 +21,17 @@ namespace TimeTableUI.Controllers
         }
 
         [HttpGet]
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-
-            return View();
+            var data = await _groupRepository.GetAll(Endpoints.GroupEndpoint);
+            return View(data);
 
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(GroupVM group)
+        public async Task<IActionResult> Create(GroupVM groupVm)
         {
-            var data = await _groupRepository.Create(Endpoints.GroupEndpoint, group);
+            var data = await _groupRepository.Create(Endpoints.GroupEndpoint, groupVm);
             if (data)
             {
                 return Json(new {message = "Group Created Successfully"});

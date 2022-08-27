@@ -2,15 +2,20 @@
 
 namespace TimeTableUI.Models.VMs
 {
-    public class RoomVM
+    public class Rooms
     {
-        [Required]
+     
         public string name { get; set; }
 
-        [Required]
+  
         public bool lab { get; set; }
 
-        [Required]
+     
         public int size { get; set; }
+    }
+
+    public class RoomVM
+    {
+        public Rooms room { get; set; }
     }
 }

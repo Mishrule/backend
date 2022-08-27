@@ -33,8 +33,8 @@ namespace GA.API.Services
             {
                 course = new Course
                 {
-                    id = courseObject.id,
-                    name = courseObject.name
+                    id = courseObject.course.id,
+                    name = courseObject.course.name
                 }
             };
 
@@ -64,7 +64,7 @@ namespace GA.API.Services
 
         public async Task<IList<Course>> GetAll()
         {
-            var courses = await _db.Courses.ToListAsync();
+            var courses = await _db.Courses.OrderByDescending(o=>o.id).ToListAsync();
             return courses;
         }
 
@@ -107,8 +107,9 @@ namespace GA.API.Services
         {
             var data = new CourseObject
             {
-                id = courseObject.id,
-                name = courseObject.name
+                course = courseObject.course
+                //id = courseObject.id,
+                //name = courseObject.name
             };
             var serialized = JsonConvert.SerializeObject(data);
             entity.name = serialized;

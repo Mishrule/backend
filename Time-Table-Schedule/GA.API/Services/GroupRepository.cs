@@ -30,13 +30,15 @@ namespace GA.API.Services
    
              var group = new
              {
-                 group = new GroupObject
-                 {
-                     id= groupObject.id,
-                     name = groupObject.name,
-                     size = groupObject.size,
+                 group = groupObject.group
+                     //group = groupObject.group
+
+
+                     //id = groupObject.id,
+                     //name = groupObject.name,
+                     //size = groupObject.size,
                    
-                 }
+                 
              };
 
             var serializeGroup = JsonConvert.SerializeObject(group);
@@ -66,7 +68,7 @@ namespace GA.API.Services
 
         public async Task<IList<Group>> GetAll()
         {
-            var groups = await _db.Groups.ToListAsync();
+            var groups = await _db.Groups.OrderByDescending(o=>o.id).ToListAsync();
             return groups;
         }
 
@@ -98,9 +100,10 @@ namespace GA.API.Services
         {
             var data = new GroupObject
             {
-               id = groupObject.id,
-               name = groupObject.name,
-               size= groupObject.size
+                group = groupObject.group
+               //id = groupObject.id,
+               //name = groupObject.name,
+               //size= groupObject.size
             };
             var serialized = JsonConvert.SerializeObject(data);
             entity.id = entity.id;

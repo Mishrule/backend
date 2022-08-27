@@ -24,17 +24,17 @@ namespace TimeTableUI.Controllers
 
 
         [HttpGet]
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-
-            return View();
+            var data = await _courseRepository.GetAll(Endpoints.CourseEndpoint);
+            return View(data);
 
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(CourseVM course)
+        public async Task<IActionResult> Create(CourseVM courseVm)
         {
-            var data = await _courseRepository.Create(Endpoints.CourseEndpoint, course);
+            var data = await _courseRepository.Create(Endpoints.CourseEndpoint, courseVm);
             if (data)
             {
                 return Json(new {message = "Course Created Successfully"});

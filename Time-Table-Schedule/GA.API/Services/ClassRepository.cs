@@ -70,16 +70,16 @@ namespace GA.API.Services
 
              var @class = new
              {
-                 @class = new ClassObject
-                 {
-                     @class = classObject.@class,
-                     //professor = classObject.professor,
-                     //course = classObject.course,
-                     //duration = classObject.duration,
-                     //group = classObject.group,
-                     //lab = classObject.lab
-                    
-                 }
+                 @class = classObject.@class
+                 // {
+                 //  @class = classObject.@class,
+                 //professor = classObject.professor,
+                 //course = classObject.course,
+                 //duration = classObject.duration,
+                 //group = classObject.group,
+                 //lab = classObject.lab
+
+                 //}
              };
 
             var serializeClass = JsonConvert.SerializeObject(@class);

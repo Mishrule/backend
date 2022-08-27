@@ -1360,7 +1360,7 @@
         },
         "additionalProperties": false
       },
-      "CourseObject": {
+      "Coursee": {
         "type": "object",
         "properties": {
           "id": {
@@ -1370,6 +1370,15 @@
           "name": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CourseObject": {
+        "type": "object",
+        "properties": {
+          "course": {
+            "$ref": "#/components/schemas/Coursee"
           }
         },
         "additionalProperties": false
@@ -1400,7 +1409,7 @@
         },
         "additionalProperties": false
       },
-      "GroupObject": {
+      "Groupp": {
         "type": "object",
         "properties": {
           "id": {
@@ -1418,7 +1427,16 @@
         },
         "additionalProperties": false
       },
-      "ProfObject": {
+      "GroupObject": {
+        "type": "object",
+        "properties": {
+          "group": {
+            "$ref": "#/components/schemas/Groupp"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LecturerVM": {
         "type": "object",
         "properties": {
           "id": {
@@ -1432,7 +1450,16 @@
         },
         "additionalProperties": false
       },
-      "RoomObject": {
+      "ProfObject": {
+        "type": "object",
+        "properties": {
+          "prof": {
+            "$ref": "#/components/schemas/LecturerVM"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RoomData": {
         "type": "object",
         "properties": {
           "name": {
@@ -1445,6 +1472,15 @@
           "size": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RoomObject": {
+        "type": "object",
+        "properties": {
+          "room": {
+            "$ref": "#/components/schemas/RoomData"
           }
         },
         "additionalProperties": false

@@ -21,17 +21,18 @@ namespace TimeTableUI.Controllers
         }
 
         [HttpGet]
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            
-           return View();
+            var data = await RoomRepository.GetAll(Endpoints.RoomEndpoint);
+           
+            return View(data);
            
         }
         
         [HttpPost]
-        public async Task<IActionResult> Create(RoomVM room)
+        public async Task<IActionResult> Create(RoomVM roomVm)
         {
-            var data = await RoomRepository.Create(Endpoints.RoomEndpoint, room);
+            var data = await RoomRepository.Create(Endpoints.RoomEndpoint, roomVm);
             if (data)
             {
                 return Json(new {message = "Room Created Successfully" });
@@ -45,6 +46,14 @@ namespace TimeTableUI.Controllers
 
             }
 
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetPage()
+        {
+            var data = await RoomRepository.GetAll(Endpoints.RoomEndpoint);
+            ViewBag.room = data;
+            return Ok(data);
         }
     }
 }

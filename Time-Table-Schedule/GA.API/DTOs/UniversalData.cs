@@ -34,30 +34,60 @@ namespace GA.API.DTOs
     
 
 
-    public class CourseObject
+    public class Coursee
     {
         public int id { get; set; }
         public string name { get; set; }
+    }
+
+    public class CourseObject
+    {
+        public Coursee course { get; set; }
+    }
+
+
+
+
+    public class Groupp
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+        public int size { get; set; }
     }
 
     public class GroupObject
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public int size { get; set; }
+        public Groupp group { get; set; }
     }
+    //public class ProfObject
+    //{
+    //    public int id { get; set; }
+    //    public string name { get; set; }
+    //}
 
-    public class ProfObject
+    public class LecturerVM
     {
         public int id { get; set; }
         public string name { get; set; }
     }
 
-    public class RoomObject
+
+
+    public class ProfObject
+    {
+        public LecturerVM prof { get; set; }
+    }
+
+    public class RoomData
     {
         public string name { get; set; }
         public bool lab { get; set; }
         public int size { get; set; }
+    }
+
+    public class RoomObject
+    {
+        public RoomData room { get; set; }
     }
 
     public class RootObject
