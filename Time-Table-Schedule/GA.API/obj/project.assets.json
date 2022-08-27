@@ -6637,27 +6637,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mishr\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Mensah\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mishr\\source\\repos\\Mishrule\\backend\\Time-Table-Schedule\\GA.API\\GA.API.csproj",
+      "projectUniqueName": "C:\\Users\\Mensah\\Source\\Repos\\backend\\Time-Table-Schedule\\GA.API\\GA.API.csproj",
       "projectName": "GA.API",
-      "projectPath": "C:\\Users\\mishr\\source\\repos\\Mishrule\\backend\\Time-Table-Schedule\\GA.API\\GA.API.csproj",
-      "packagesPath": "C:\\Users\\mishr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mishr\\source\\repos\\Mishrule\\backend\\Time-Table-Schedule\\GA.API\\obj\\",
+      "projectPath": "C:\\Users\\Mensah\\Source\\Repos\\backend\\Time-Table-Schedule\\GA.API\\GA.API.csproj",
+      "packagesPath": "C:\\Users\\Mensah\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mensah\\Source\\Repos\\backend\\Time-Table-Schedule\\GA.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages"
       ],
       "configFilePaths": [
-        "C:\\Users\\mishr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mensah\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.2.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6672,8 +6669,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\mishr\\source\\repos\\Mishrule\\backend\\Time-Table-Schedule\\GaSchedule.Console\\GaSchedule.Console.csproj": {
-              "projectPath": "C:\\Users\\mishr\\source\\repos\\Mishrule\\backend\\Time-Table-Schedule\\GaSchedule.Console\\GaSchedule.Console.csproj"
+            "C:\\Users\\Mensah\\Source\\Repos\\backend\\Time-Table-Schedule\\GaSchedule.Console\\GaSchedule.Console.csproj": {
+              "projectPath": "C:\\Users\\Mensah\\Source\\Repos\\backend\\Time-Table-Schedule\\GaSchedule.Console\\GaSchedule.Console.csproj"
             }
           }
         }
@@ -6759,7 +6756,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
